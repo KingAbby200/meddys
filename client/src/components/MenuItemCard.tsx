@@ -11,7 +11,7 @@ interface MenuItemCardProps {
 
 export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
   return (
-    <Card className="overflow-hidden hover-elevate group" data-testid={`menu-item-${item.id}`}>
+    <Card className="overflow-hidden hover-elevate group shadow-lg" data-testid={`menu-item-${item.id}`}>
       <div className="aspect-square relative overflow-hidden">
         <img
           src={item.image}
