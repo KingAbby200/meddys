@@ -1,0 +1,857 @@
+{
+  "menuItems": [
+    {
+      "id": "african-1",
+      "name": "Jollof Rice with Grilled Chicken",
+      "category": "African Dishes",
+      "price": 2500,
+      "image": "/menu/african/Jollof_Rice.jpg",
+      "description": "Classic Nigerian jollof rice served with succulent grilled chicken and fried plantains"
+    },
+    {
+      "id": "african-2",
+      "name": "Egusi Soup with Pounded Yam",
+      "category": "African Dishes",
+      "price": 3000,
+      "image": "/menu/african/Egusi and Goat Meat.jpg",
+      "description": "Rich egusi soup with assorted meat and fish, served with smooth pounded yam"
+    },
+    {
+      "id": "african-3",
+      "name": "Ofada Rice with Ayamase",
+      "category": "African Dishes",
+      "price": 2800,
+      "image": "/menu/african/Ofada.jpg",
+      "description": "Local ofada rice served with spicy designer stew and assorted meat"
+    },
+    {
+      "id": "african-4",
+      "name": "Native Rice",
+      "category": "African Dishes",
+      "price": 2200,
+      "image": "/menu/african/Native Rice.jpg",
+      "description": "Flavorful native rice with mixed vegetables, shrimp, and ponmo"
+    },
+    {
+      "id": "intercontinental-1",
+      "name": "Shredded Beef Rice",
+      "category": "Intercontinental",
+      "price": 2500,
+      "image": "/menu/intercontinental/Shredded Beef Rice.jpg",
+      "description": "Tasty Shredded beef rice with fried fish and grilled chicken"
+    },
+    {
+      "id": "intercontinental-2",
+      "name": "Chinese Fried Rice",
+      "category": "Intercontinental",
+      "price": 2300,
+      "image": "/menu/intercontinental/Chinese_Rice.jpg",
+      "description": "Asian-style fried rice with shrimp, eggs, and mixed vegetables"
+    },
+    {
+      "id": "intercontinental-3",
+      "name": "Basmati White Rice",
+      "category": "Intercontinental",
+      "price": "2500",
+      "image": "/menu/intercontinental/Basmati.jpg",
+      "description": ""
+    },
+    {
+      "id": "intercontinental-4",
+      "name": "Jambalaya Rice",
+      "category": "Intercontinental",
+      "price": "2500",
+      "image": "/menu/intercontinental/Jambalaya_Rice.jpg",
+      "description": "Jambalaya Rice, Grilled Chicken, and Hake Fish"
+    },
+    {
+      "id": "intercontinental-5",
+      "name": "Yamarita",
+      "category": "Intercontinental",
+      "price": "1400",
+      "image": "/menu/intercontinental/Yamarita.jpg",
+      "description": "Yamarita and Snail"
+    },
+    {
+      "id": "grills-1",
+      "name": "Shawarma",
+      "category": "Grills",
+      "price": 3500,
+      "image": "/menu/grills/Shawarma.jpg",
+      "description": "Mouth-watering Shawarma with double sausages"
+    },
+    {
+      "id": "grills-2",
+      "name": "Grilled Chicken",
+      "category": "Grills",
+      "price": 4500,
+      "image": "/menu/grills/Grilled Chicken.jpg",
+      "description": "Juicy grilled chicken with fries"
+    },
+    {
+      "id": "grills-3",
+      "name": "Grilled Fish",
+      "category": "Grills",
+      "price": 4000,
+      "image": "/menu/grills/GrilledFish.jpg",
+      "description": "Whole tilapia fish grilled to perfection with peppers and spices"
+    },
+    {
+      "id": "grills-4",
+      "name": "Grilled Turkey",
+      "category": "Grills",
+      "price": 5000,
+      "image": "/menu/grills/Grilled Turkey.jpg",
+      "description": "Juicy grilled turkey"
+    },
+    {
+      "id": "pastries-1",
+      "name": "Burger",
+      "category": "Pastries",
+      "price": 5000,
+      "image": "/menu/pastries/Burger.JPG",
+      "description": "Fluffy burgers filled with seasoned meat and veggies"
+    },
+    {
+      "id": "pastries-2",
+      "name": "Super Roll",
+      "category": "Pastries",
+      "price": 800,
+      "image": "/menu/pastries/Super_roll.jpg",
+      "description": "Golden pastry filled with savory chicken and vegetables"
+    },
+    {
+      "id": "pastries-3",
+      "name": "Fresh Bread",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Bread.JPG",
+      "description": "Freshly baked bread, soft and warm"
+    },
+    {
+      "id": "pastries-4",
+      "name": "Hot Dog",
+      "category": "Pastries",
+      "price": 1000,
+      "image": "/menu/pastries/Hot Dog.jpg",
+      "description": "Sweet satisfying hot dogs"
+    },
+    {
+      "id": "pastries-5",
+      "name": "Sliced Bread",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/SlicedBread.JPG",
+      "description": "Freshly baked bread, soft and warm"
+    },
+    {
+      "id": "pastries-6",
+      "name": "Meddysto",
+      "category": "Pastries",
+      "price": 1200,
+      "image": "/menu/pastries/Meddysto.JPG",
+      "description": ""
+    },
+    {
+      "id": "pastries-7",
+      "name": "Egg Roll",
+      "category": "Pastries",
+      "price": 700,
+      "image": "/menu/pastries/Egg Roll.jpg",
+      "description": "Sweet satisfying hot dogs"
+    },
+    {
+      "id": "soups-1",
+      "name": "Egusi Soup",
+      "category": "Soups",
+      "price": 1500,
+      "image": "/menu/soups/Egusi and Goat Meat.jpg",
+      "description": "Traditional melon seed soup with leafy vegetables"
+    },
+    {
+      "id": "soups-2",
+      "name": "Efo Riro",
+      "category": "Soups",
+      "price": 1300,
+      "image": "/menu/soups/Eforiro and Goat Meat.JPG",
+      "description": "Fresh efo soup with goat meat"
+    },
+    {
+      "id": "soups-3",
+      "name": "Gbegiri and Ewedu",
+      "category": "Soups",
+      "price": 1400,
+      "image": "/menu/soups/Abula and Goat Meat.jpg",
+      "description": "Tatsy abula and goat meat"
+    },
+    {
+      "id": "soups-4",
+      "name": "Catfish Stew",
+      "category": "Soups",
+      "price": 1400,
+      "image": "/menu/soups/Catfish.JPG",
+      "description": "Spicy catfish stew"
+    },
+    {
+      "id": "swallow-1",
+      "name": "Pounded Yam",
+      "category": "Swallow",
+      "price": 800,
+      "image": "/menu/swallows/Pounded Yam.JPG",
+      "description": "Smooth and stretchy pounded yam, egusi and goat meat"
+    },
+    {
+      "id": "swallow-2",
+      "name": "Eba (Garri)",
+      "category": "Swallow",
+      "price": 500,
+      "image": "/menu/swallows/Eba.JPG",
+      "description": "Traditional cassava swallow"
+    },
+    {
+      "id": "swallow-3",
+      "name": "Amala",
+      "category": "Swallow",
+      "price": 300,
+      "image": "/menu/swallows/Amala.jpg",
+      "description": "Soft and smooth semolina swallow"
+    },
+    {
+      "id": "swallow-4",
+      "name": "Fufu",
+      "category": "Swallow",
+      "price": 700,
+      "image": "/menu/swallows/Fufu.jpg",
+      "description": "Traditional cassava and plantain swallow"
+    },
+    {
+      "id": "protein-1",
+      "name": "Goat Meat",
+      "category": "Proteins",
+      "price": 1000,
+      "image": "/menu/proteins/Goat Meat.JPG",
+      "description": "Tender goat meat portion"
+    },
+    {
+      "id": "protein-2",
+      "name": "Snail",
+      "category": "Proteins",
+      "price": 800,
+      "image": "/menu/proteins/Snail.jpg",
+      "description": "Succulent snails"
+    },
+    {
+      "id": "protein-3",
+      "name": "Chicken",
+      "category": "Proteins",
+      "price": 1200,
+      "image": "/menu/grills/Grilled Chicken.jpg",
+      "description": "Grilled or fried chicken"
+    },
+    {
+      "id": "protein-4",
+      "name": "Turkey",
+      "category": "Proteins",
+      "price": 1500,
+      "image": "/menu/proteins/Turkey.jpg",
+      "description": "Succulent turkey portion"
+    },
+    {
+      "id": "protein-5",
+      "name": "Ponmo",
+      "category": "Proteins",
+      "price": 200,
+      "image": "/menu/proteins/Pomo.jpg",
+      "description": ""
+    },
+    {
+      "id": "protein-6",
+      "name": "Panla",
+      "category": "Proteins",
+      "price": 1800,
+      "image": "/menu/proteins/Panla.JPG",
+      "description": "Tasty panla portion"
+    },
+    {
+      "id": "protein-7",
+      "name": "Boiled Titus",
+      "category": "Proteins",
+      "price": 400,
+      "image": "/menu/proteins/Boiled Titus.JPG",
+      "description": "Boiled titus"
+    },
+    {
+      "id": "protein-8",
+      "name": "Fried Titus",
+      "category": "Proteins",
+      "price": 400,
+      "image": "/menu/proteins/Fried Titus.jpg",
+      "description": "Fried titus"
+    },
+    {
+      "id": "protein-9",
+      "name": "Boiled Catfish",
+      "category": "Proteins",
+      "price": 400,
+      "image": "/menu/proteins/Boiled Catfish.JPG",
+      "description": "Fried titus"
+    },
+    {
+      "id": "food-1",
+      "name": "Asun Rice",
+      "category": "Food",
+      "price": 6500,
+      "image": "/menu/foods/Asun Rice and Croker Fish.JPG",
+      "description": "Spicy asun rice and croker fish"
+    },
+    {
+      "id": "food-2",
+      "name": "Bread and Beans",
+      "category": "Food",
+      "price": 1500,
+      "image": "/menu/foods/Bread and Beans.jpg",
+      "description": "Tasty bread and beans with zobo"
+    },
+    {
+      "id": "food-3",
+      "name": "Chinese Rice",
+      "category": "Food",
+      "price": 2300,
+      "image": "/menu/foods/Chinese Rice and Grilled Turkeys.JPG",
+      "description": "Asian-style fried rice"
+    },
+    {
+      "id": "food-4",
+      "name": "Asun Spaghetti",
+      "category": "Food",
+      "price": 4800,
+      "image": "/menu/foods/Asun Spaghetti and Grilled Turkey.jpg",
+      "description": "Asun spaghetti and grilled turkey"
+    },
+    {
+      "id": "food-5",
+      "name": "Jollof Spaghetti",
+      "category": "Food",
+      "price": 2500,
+      "image": "/menu/foods/Jollof Spaghetti and Titus Fish.JPG",
+      "description": "Jollof spaghetti and titus fish"
+    },
+    {
+      "id": "food-6",
+      "name": "Coconut Rice",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/Coconut Rice, Stick Gizzard, Plantain, and Coleslaw.JPG",
+      "description": "Coconut rice, stick gizzard, plantain, and coleslaw"
+    },
+    {
+      "id": "food-7",
+      "name": "Yam Porridge",
+      "category": "Food",
+      "price": 1500,
+      "image": "/menu/foods/Yam Porridge and Grilled Chicken.jpg",
+      "description": "Tasty yam porridge with grilled chicken"
+    },
+    {
+      "id": "food-8",
+      "name": "White Rice",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/White Rice, Plantain, Chicken and Sauce.JPG",
+      "description": "White rice, plantain, chicken and sauce"
+    },
+    {
+      "id": "food-9",
+      "name": "Meddy Sure",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/Meddy Sure.jpg",
+      "description": "Enjoy meddy sure with croker fish, plantain and grilled chicken"
+    },
+    {
+      "id": "food-10",
+      "name": "Jollof Rice",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/Jollof Rice, Plantain, and Croker Fish.JPG",
+      "description": "Jollof rice, plantain, and croker fish"
+    },
+    {
+      "id": "food-11",
+      "name": "Boiled Plantain",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/Boiled Plantain, Eforiro, and Grilled Turkey.JPG",
+      "description": "Boiled plantain, eforiro, and grilled turkey"
+    }
+  ],
+  "orderItems": [
+    {
+      "id": "african-1",
+      "name": "Jollof Rice",
+      "category": "African Dishes",
+      "price": 1500,
+      "image": "/menu/african/Jollof_Rice.jpg",
+      "description": "Classic Nigerian jollof rice served with succulent grilled chicken and fried plantains"
+    },
+    {
+      "id": "african-3",
+      "name": "Ofada Rice",
+      "category": "African Dishes",
+      "price": 2800,
+      "image": "/menu/african/Ofada.jpg",
+      "description": "Local ofada rice served with spicy designer stew and assorted meat"
+    },
+    {
+      "id": "african-4",
+      "name": "Native Rice",
+      "category": "African Dishes",
+      "price": 2200,
+      "image": "/menu/african/Native Rice.jpg",
+      "description": "Flavorful native rice with mixed vegetables, shrimp, and ponmo"
+    },
+    {
+      "id": "intercontinental-1",
+      "name": "Shredded Beef Rice",
+      "category": "Intercontinental",
+      "price": 2500,
+      "image": "/menu/intercontinental/Shredded Beef Rice.jpg",
+      "description": "Tasty Shredded beef rice with fried fish and grilled chicken"
+    },
+    {
+      "id": "intercontinental-2",
+      "name": "Chinese Fried Rice",
+      "category": "Intercontinental",
+      "price": 2300,
+      "image": "/menu/intercontinental/Chinese_Rice.jpg",
+      "description": "Asian-style fried rice with shrimp, eggs, and mixed vegetables"
+    },
+    {
+      "id": "intercontinental-3",
+      "name": "Basmati White Rice",
+      "category": "Intercontinental",
+      "price": "2500",
+      "image": "/menu/intercontinental/Basmati.jpg",
+      "description": ""
+    },
+    {
+      "id": "intercontinental-4",
+      "name": "Jambalaya Rice",
+      "category": "Intercontinental",
+      "price": "2500",
+      "image": "/menu/intercontinental/Jambalaya_Rice.jpg",
+      "description": "Jambalaya Rice, Grilled Chicken, and Hake Fish"
+    },
+    {
+      "id": "intercontinental-5",
+      "name": "Yamarita",
+      "category": "Intercontinental",
+      "price": "1400",
+      "image": "/menu/intercontinental/Yamarita.jpg",
+      "description": "Yamarita and Snail"
+    },
+    {
+      "id": "grills-1",
+      "name": "Shawarma",
+      "category": "Grills",
+      "price": 3500,
+      "image": "/menu/grills/Shawarma.jpg",
+      "description": "Mouth-watering Shawarma with double sausages"
+    },
+    {
+      "id": "grills-2",
+      "name": "Grilled Chicken",
+      "category": "Grills",
+      "price": 4500,
+      "image": "/menu/grills/Grilled Chicken.jpg",
+      "description": "Juicy grilled chicken with fries"
+    },
+    {
+      "id": "grills-3",
+      "name": "Grilled Fish",
+      "category": "Grills",
+      "price": 4000,
+      "image": "/menu/grills/GrilledFish.jpg",
+      "description": "Whole tilapia fish grilled to perfection with peppers and spices"
+    },
+    {
+      "id": "grills-4",
+      "name": "Grilled Turkey",
+      "category": "Grills",
+      "price": 5000,
+      "image": "/menu/grills/Grilled Turkey.jpg",
+      "description": "Juicy grilled turkey"
+    },
+    {
+      "id": "pastries-1",
+      "name": "Burger",
+      "category": "Pastries",
+      "price": 5000,
+      "image": "/menu/pastries/Burger.JPG",
+      "description": "Fluffy burgers filled with seasoned meat and veggies"
+    },
+    {
+      "id": "pastries-2",
+      "name": "Super Roll",
+      "category": "Pastries",
+      "price": 800,
+      "image": "/menu/pastries/Super_roll.jpg",
+      "description": "Golden pastry filled with savory chicken and vegetables"
+    },
+    {
+      "id": "pastries-3",
+      "name": "Fresh Bread",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Bread.JPG",
+      "description": "Freshly baked bread, soft and warm"
+    },
+    {
+      "id": "pastries-4",
+      "name": "Hot Dog",
+      "category": "Pastries",
+      "price": 1000,
+      "image": "/menu/pastries/Hot Dog.jpg",
+      "description": "Sweet satisfying hot dogs"
+    },
+    {
+      "id": "pastries-5",
+      "name": "Sliced Bread",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/SlicedBread.JPG",
+      "description": "Freshly baked bread, soft and warm"
+    },
+    {
+      "id": "pastries-6",
+      "name": "Meddysto",
+      "category": "Pastries",
+      "price": 1200,
+      "image": "/menu/pastries/Meddysto.JPG",
+      "description": ""
+    },
+    {
+      "id": "pastries-7",
+      "name": "Egg Roll",
+      "category": "Pastries",
+      "price": 700,
+      "image": "/menu/pastries/Egg Roll.JPG",
+      "description": "Sweet satisfying hot dogs"
+    },
+    {
+      "id": "soups-1",
+      "name": "Egusi Soup",
+      "category": "Soups",
+      "price": 1500,
+      "image": "/menu/soups/Egusi and Goat Meat.JPG",
+      "description": "Traditional melon seed soup with leafy vegetables"
+    },
+    {
+      "id": "soups-2",
+      "name": "Efo Riro",
+      "category": "Soups",
+      "price": 1300,
+      "image": "/menu/soups/Eforiro and Goat Meat.jpg",
+      "description": "Fresh efo soup with goat meat"
+    },
+    {
+      "id": "soups-3",
+      "name": "Gbegiri and Ewedu",
+      "category": "Soups",
+      "price": 1400,
+      "image": "/menu/soups/Abula and Goat Meat.jpg",
+      "description": "Tatsy abula and goat meat"
+    },
+    {
+      "id": "soups-4",
+      "name": "Catfish Stew",
+      "category": "Soups",
+      "price": 1400,
+      "image": "/menu/soups/Catfish.JPG",
+      "description": "Spicy catfish stew"
+    },
+    {
+      "id": "swallow-1",
+      "name": "Pounded Yam",
+      "category": "Swallow",
+      "price": 800,
+      "image": "/menu/swallows/Punded Yam.JPG",
+      "description": "Smooth and stretchy pounded yam, egusi and goat meat"
+    },
+    {
+      "id": "swallow-2",
+      "name": "Eba (Garri)",
+      "category": "Swallow",
+      "price": 500,
+      "image": "/menu/swallows/Eba.JPG",
+      "description": "Traditional cassava swallow"
+    },
+    {
+      "id": "swallow-3",
+      "name": "Amala",
+      "category": "Swallow",
+      "price": 300,
+      "image": "/menu/swallows/Amala.jpg",
+      "description": "Soft and smooth semolina swallow"
+    },
+    {
+      "id": "swallow-4",
+      "name": "Fufu",
+      "category": "Swallow",
+      "price": 700,
+      "image": "/menu/swallows/Fufu.jpg",
+      "description": "Traditional cassava and plantain swallow"
+    },
+    {
+      "id": "protein-1",
+      "name": "Goat Meat",
+      "category": "Proteins",
+      "price": 1000,
+      "image": "/menu/proteins/Goat Meat.JPG",
+      "description": "Tender goat meat portion"
+    },
+    {
+      "id": "protein-2",
+      "name": "Snail",
+      "category": "Proteins",
+      "price": 800,
+      "image": "/menu/proteins/Snail.jpg",
+      "description": "Succulent snails"
+    },
+    {
+      "id": "protein-3",
+      "name": "Chicken",
+      "category": "Proteins",
+      "price": 1200,
+      "image": "/menu/grills/Grilled Chicken.jpg",
+      "description": "Grilled or fried chicken"
+    },
+    {
+      "id": "protein-4",
+      "name": "Turkey",
+      "category": "Proteins",
+      "price": 1500,
+      "image": "/menu/proteins/Turkey.jpg",
+      "description": "Succulent turkey portion"
+    },
+    {
+      "id": "protein-5",
+      "name": "Ponmo",
+      "category": "Proteins",
+      "price": 200,
+      "image": "/menu/proteins/Pomo.jpg",
+      "description": ""
+    },
+    {
+      "id": "protein-6",
+      "name": "Panla",
+      "category": "Proteins",
+      "price": 1800,
+      "image": "/menu/proteins/Panla.JPG",
+      "description": "Tasty panla portion"
+    },
+    {
+      "id": "protein-7",
+      "name": "Boiled Titus",
+      "category": "Proteins",
+      "price": 400,
+      "image": "/menu/proteins/Boiled Titus.JPG",
+      "description": "Boiled titus"
+    },
+    {
+      "id": "protein-8",
+      "name": "Fried Titus",
+      "category": "Proteins",
+      "price": 400,
+      "image": "/menu/proteins/Fried Titus.JPG",
+      "description": "Fried titus"
+    },
+    {
+      "id": "protein-9",
+      "name": "Boiled Catfish",
+      "category": "Proteins",
+      "price": 400,
+      "image": "/menu/proteins/Boiled Catfish.JPG",
+      "description": "Fried titus"
+    },
+    {
+      "id": "food-1",
+      "name": "Asun Rice",
+      "category": "Food",
+      "price": 6500,
+      "image": "/menu/foods/Asun Rice and Croker Fish.JPG",
+      "description": "Spicy asun rice and croker fish"
+    },
+    {
+      "id": "food-2",
+      "name": "Beans",
+      "category": "Food",
+      "price": 700,
+      "image": "/menu/foods/Bread and Beans.jpg",
+      "description": "Tasty bread and beans with zobo"
+    },
+    {
+      "id": "food-3",
+      "name": "Chinese Rice",
+      "category": "Food",
+      "price": 2300,
+      "image": "/menu/foods/Chinese and Grilled Turkey.JPG",
+      "description": "Asian-style fried rice"
+    },
+    {
+      "id": "food-4",
+      "name": "Asun Spaghetti",
+      "category": "Food",
+      "price": 4800,
+      "image": "/menu/foods/Asun Spaghetti and Grilled Turkey.jpg",
+      "description": "Asun spaghetti and grilled turkey"
+    },
+    {
+      "id": "food-5",
+      "name": "Jollof Spaghetti",
+      "category": "Food",
+      "price": 2500,
+      "image": "/menu/foods/Jollof Spaghetti and Titus Fish.JPG",
+      "description": "Jollof spaghetti and titus fish"
+    },
+    {
+      "id": "food-6",
+      "name": "Coconut Rice",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/Coconut Rice, Stick Gizzard, Plantain, and Coleslaw.JPG",
+      "description": "Coconut rice, stick gizzard, plantain, and coleslaw"
+    },
+    {
+      "id": "food-7",
+      "name": "Yam Porridge",
+      "category": "Food",
+      "price": 1500,
+      "image": "/menu/foods/Yam Porridge and Grilled Chicken.jpg",
+      "description": "Tasty yam porridge with grilled chicken"
+    },
+    {
+      "id": "food-8",
+      "name": "White Rice",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/White Rice, Plantain, Chicken and Sauce.JPG",
+      "description": "White rice, plantain, chicken and sauce"
+    },
+    {
+      "id": "food-9",
+      "name": "Meddy Sure",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/Meddy Sure.jpg",
+      "description": "Enjoy meddy sure with croker fish, plantain and grilled chicken"
+    },
+    {
+      "id": "food-10",
+      "name": "Jollof Rice",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/Jollof Rice, Plantain, and Croker Fish.JPG",
+      "description": "Jollof rice, plantain, and croker fish"
+    },
+    {
+      "id": "food-11",
+      "name": "Boiled Plantain",
+      "category": "Food",
+      "price": 1200,
+      "image": "/menu/foods/Boiled Plantain, Eforiro, and Grilled Turkey.JPG",
+      "description": "Boiled plantain, eforiro, and grilled turkey"
+    }
+  ],
+  "branches": [
+    {
+      "id": "egbeda",
+      "name": "Egbeda",
+      "whatsappNumber": "+2348166634363"
+    },
+    {
+      "id": "cement",
+      "name": "Cement Bus Stop",
+      "whatsappNumber": "+2347073569696"
+    },
+    {
+      "id": "baruwa",
+      "name": "Baruwa",
+      "whatsappNumber": "+2348127629913"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-1",
+      "customerName": "Adebayo O.",
+      "rating": 5,
+      "comment": "The jollof rice is absolutely amazing! Reminds me of home. Best Nigerian restaurant in Lagos!",
+      "date": "2025-10-15"
+    },
+    {
+      "id": "review-2",
+      "customerName": "Chioma N.",
+      "rating": 5,
+      "comment": "Their egusi soup is the best I've ever tasted. The pounded yam is always fresh and smooth. Highly recommend!",
+      "date": "2025-02-18"
+    },
+    {
+      "id": "review-3",
+      "customerName": "Tunde A.",
+      "rating": 5,
+      "comment": "Great food, great service! The suya is perfectly spiced and the portions are generous. Will definitely order again!",
+      "date": "2025-08-11"
+    },
+    {
+      "id": "review-4",
+      "customerName": "Blessing I.",
+      "rating": 5,
+      "comment": "Love the variety of food options. The pastries are always fresh and the grilled fish is outstanding!",
+      "date": "2025-8-22"
+    },
+    {
+      "id": "review-5",
+      "customerName": "Emeka P.",
+      "rating": 5,
+      "comment": "Best buka in the area! Authentic Nigerian food at affordable prices. The customer service is top-notch too!",
+      "date": "2025-10-23"
+    }
+  ],
+  "carouselImages": [
+    {
+      "id": "carousel-1",
+      "image": "/carousel/IMG_6164.JPG",
+      "alt": "Welcoming restaurant interior"
+    },
+    {
+      "id": "carousel-2",
+      "image": "/menu/intercontinental/Shredded Beef Rice.jpg",
+      "alt": "Delicious Jollof rice with grilled chicken"
+    },
+    {
+      "id": "carousel-3",
+      "image": "/menu/pastries/Burger.JPG",
+      "alt": "Fresh pastries and bread"
+    },
+    {
+      "id": "carousel-4",
+      "image": "/menu/foods/Jollof Spaghetti and Titus Fish.JPG",
+      "alt": "Grilled tilapia fish"
+    },
+    {
+      "id": "carousel-5",
+      "image": "/carousel/Abula.jpg",
+      "alt": "Abula"
+    },
+    {
+      "id": "carousel-6",
+      "image": "/public/menu/african/Native Rice.jpg",
+      "alt": "Assorted meat and chicken pies"
+    },
+    {
+      "id": "carousel-7",
+      "image": "/public/menu/grills/Shawarma.jpg",
+      "alt": "Shawarma"
+    }
+  ]
+}
