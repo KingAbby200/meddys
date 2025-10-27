@@ -845,12 +845,12 @@
     },
     {
       "id": "carousel-6",
-      "image": "/public/menu/african/Native Rice.jpg",
+      "image": "/menu/african/Native Rice.jpg",
       "alt": "Assorted meat and chicken pies"
     },
     {
       "id": "carousel-7",
-      "image": "/public/menu/grills/Shawarma.jpg",
+      "image": "/menu/grills/Shawarma.jpg",
       "alt": "Shawarma"
     }
   ]
