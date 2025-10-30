@@ -386,31 +386,6 @@
     },
     {
       "id": "snacks-1",
-      "name": "Banana Yoghurt",
-      "category": "Snacks",
-      "price": "2000",
-      "image": "/menu/snacks/Banana Yoghurt.jpg",
-      "description": "Banana yoghurt at its freshest"
-    },
-    {
-      "id": "snacks-2",
-      "name": "Vanilla Yoghurt",
-      "category": "Snacks",
-      "price": "2000",
-      "image": "/menu/snacks/Vanilla Yoghurt.jpg",
-      "description": "Vanilla yoghurt at its freshest"
-    },
-    
-    {
-      "id": "snacks-3",
-      "name": "Strawberry Yoghurt",
-      "category": "Snacks",
-      "price": "2000",
-      "image": "/menu/snacks/Strawberry Yoghurt.jpg",
-      "description": "Strawberry yoghurt at its freshest"
-    },
-    {
-      "id": "snacks-4",
       "name": "Parfait",
       "category": "Snacks",
       "price": "2000",
@@ -418,7 +393,7 @@
       "description": "Parfait at its freshest"
     },
     {
-      "id": "snacks-5",
+      "id": "snacks-2",
       "name": "Kuli-Kuli",
       "category": "Snacks",
       "price": "2000",
@@ -426,7 +401,7 @@
       "description": "Tasty kuli kuli"
     },
     {
-      "id": "snacks-6",
+      "id": "snacks-3",
       "name": "Chin Chin",
       "category": "Snacks",
       "price": "2000",
@@ -434,12 +409,36 @@
       "description": "Crunchy chin chin"
     },
     {
-      "id": "snacks-7",
+      "id": "snacks-4",
       "name": "Plantain Chips",
       "category": "Snacks",
       "price": "2000",
       "image": "/menu/snacks/Plantain Chips.jpg",
       "description": "Crunchy plantain chips"
+    },
+    {
+      "id": "snacks-5",
+      "name": "Banana Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Banana Yoghurt.jpg",
+      "description": "Banana yoghurt at its freshest"
+    },
+    {
+      "id": "snacks-6",
+      "name": "Vanilla Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Vanilla Yoghurt.jpg",
+      "description": "Vanilla yoghurt at its freshest"
+    },
+    {
+      "id": "snacks-7",
+      "name": "Strawberry Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Strawberry Yoghurt.jpg",
+      "description": "Strawberry yoghurt at its freshest"
     },
     {
       "id": "snacks-8",
@@ -454,8 +453,8 @@
       "name": "Smyle Ice Cream (1 Litre)",
       "category": "Snacks",
       "price": "2000",
-      "image": "/menu/snacks/1 litre of ice cream.jpg",
-      "description": "Tasty ice cream"
+      "image": "/menu/snacks/Smyle Ice Cream (1 Litre).jpg",
+      "description": "1 litre of ice cream"
     },
     {
       "id": "snacks-10",
@@ -470,7 +469,7 @@
       "name": "Vanilla FanIce (250 ml)",
       "category": "Snacks",
       "price": "2000",
-      "image": "/menu/snacks/Strawberry FanIce (250 ml).jpg",
+      "image": "/menu/snacks/Vanilla FanIce (250 ml).jpg",
       "description": "Tasty ice cream"
     },
     {
@@ -486,7 +485,7 @@
       "name": "Vanilla-Strawberry FanIce (900 ml)",
       "category": "Snacks",
       "price": "2000",
-      "image": "/menu/snacks/Vanilla-Strawberry FanIce (250 ml).jpg",
+      "image": "/menu/snacks/Vanilla-Strawberry FanIce (900 ml).jpg",
       "description": "Tasty ice cream"
     },
     {
@@ -534,7 +533,7 @@
       "name": "5 Alive",
       "category": "Drinks",
       "price": "2000",
-      "image": "/menu/drinks/Coke.jpg",
+      "image": "/menu/drinks/Five Alive.jpg",
       "description": ""
     },
     {
