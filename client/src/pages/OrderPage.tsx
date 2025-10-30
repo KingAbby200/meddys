@@ -269,12 +269,12 @@ export default function OrderPage({
                         </div>
                         <div>
                           <Label htmlFor="instructions" className="text-sm font-medium">
-                            (E.g. I want the soup poured on top of the amala and not in separate take away plates) 
+                             Enter your special instructions
                           </Label>
                           <Input
                             id="instructions"
                             type="text"
-                            placeholder="Enter your special instructions"
+                            placeholder="(E.g. I want the soup poured on top of the amala and not in separate take away plates)"
                             value={instructions}
                             onChange={(e) => setInstructions(e.target.value)}
                             className="mt-1"
