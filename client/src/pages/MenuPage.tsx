@@ -55,10 +55,10 @@ export default function MenuPage({ menuItems, onAddToCart }: MenuPageProps) {
           <h1 className="font-poppins font-bold text-4xl sm:text-5xl text-foreground mb-4">
             Our Menu
           </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground font-bold text-lg max-w-2xl mx-auto">
             Browse our delicious selection of African and intercontinental dishes
           </p>
-          <p className="text-muted-foreground text-lg max-w-2xl mt-2 mx-auto">
+          <p className="text-muted-foreground text-md max-w-2xl mt-4 mx-auto">
             Order our special combos by tapping on the "+" button or place a custom order on the "Order Now" page
           </p>
         </div>
