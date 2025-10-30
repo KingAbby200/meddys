@@ -383,9 +383,210 @@
       "price": 1200,
       "image": "/menu/foods/Boiled Plantain, Eforiro, and Grilled Turkey.JPG",
       "description": "Boiled plantain, eforiro, and grilled turkey"
+    },
+    {
+      "id": "snacks-1",
+      "name": "Banana Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Banana Yoghurt.jpg",
+      "description": "Banana yoghurt at its freshest"
+    },
+    {
+      "id": "snacks-2",
+      "name": "Vanilla Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Vanilla Yoghurt.jpg",
+      "description": "Vanilla yoghurt at its freshest"
+    },
+    
+    {
+      "id": "snacks-3",
+      "name": "Strawberry Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Strawberry Yoghurt.jpg",
+      "description": "Strawberry yoghurt at its freshest"
+    },
+    {
+      "id": "snacks-4",
+      "name": "Parfait",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Parfait.jpg",
+      "description": "Parfait at its freshest"
+    },
+    {
+      "id": "snacks-5",
+      "name": "Kuli-Kuli",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Kuli Kuli.jpg",
+      "description": "Tasty kuli kuli"
+    },
+    {
+      "id": "snacks-6",
+      "name": "Chin Chin",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Chin Chin.jpg",
+      "description": "Crunchy chin chin"
+    },
+    {
+      "id": "snacks-7",
+      "name": "Plantain Chips",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Plantain Chips.jpg",
+      "description": "Crunchy plantain chips"
+    },
+    {
+      "id": "snacks-8",
+      "name": "Go Slo Ice Cream",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Go Slo Ice Cream.jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-9",
+      "name": "Smyle Ice Cream (1 Litre)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/1 litre of ice cream.jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-10",
+      "name": "Strawberry FanIce (250 ml)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Strawberry FanIce (250 ml).jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-11",
+      "name": "Vanilla FanIce (250 ml)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Strawberry FanIce (250 ml).jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-12",
+      "name": "Vanilla FanIce (450 ml)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Vanilla FanIce (450 ml).jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-13",
+      "name": "Vanilla-Strawberry FanIce (900 ml)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Vanilla-Strawberry FanIce (250 ml).jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-14",
+      "name": "White Popcorn",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Popcorn White.jpg",
+      "description": "Crunchy popcorn"
+    },
+    {
+      "id": "snacks-15",
+      "name": "Brown Popcorn",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Popcorn Brown.jpg",
+      "description": "Crunchy popcorn"
+    },
+    {
+      "id": "drinks-1",
+      "name": "Bottled Water",
+      "category": "Drinks",
+      "price": "300",
+      "image": "/menu/drinks/Bottle Water.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-2",
+      "name": "Coke",
+      "category": "Drinks",
+      "price": "600",
+      "image": "/menu/drinks/Coke.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-3",
+      "name": "Fanta",
+      "category": "Drinks",
+      "price": "600",
+      "image": "/menu/drinks/Fanta.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-4",
+      "name": "5 Alive",
+      "category": "Drinks",
+      "price": "2000",
+      "image": "/menu/drinks/Coke.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-5",
+      "name": "Hollandia Yoghurt",
+      "category": "Drinks",
+      "price": "2000",
+      "image": "/menu/drinks/Hollandia Yoghurt.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-6",
+      "name": "Orange Sosa (1 Litre)",
+      "category": "Drinks",
+      "price": "1500",
+      "image": "/menu/drinks/Orange Sosa (1 Litre).jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-7",
+      "name": "Orange Sosa (35 cl)",
+      "category": "Drinks",
+      "price": "800",
+      "image": "/menu/drinks/Orange Sosa (35 cl).jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-8",
+      "name": "Viju Milk",
+      "category": "Drinks",
+      "price": "1200",
+      "image": "/menu/drinks/Viju Milk.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-9",
+      "name": "Zobo",
+      "category": "Drinks",
+      "price": "1100",
+      "image": "/menu/drinks/Zobo.jpg",
+      "description": ""
     }
   ],
   "orderItems": [
+    {
+      "id": "takeaway",
+      "name": "Take Away Plate",
+      "category": "African Dishes",
+      "price": 400,
+      "image": "/menu/african/Jollof_Rice.jpg",
+      "description": "Classic Nigerian jollof rice served with succulent grilled chicken and fried plantains"
+    },
     {
       "id": "african-1",
       "name": "Jollof Rice",
@@ -761,6 +962,199 @@
       "price": 1200,
       "image": "/menu/foods/Boiled Plantain, Eforiro, and Grilled Turkey.JPG",
       "description": "Boiled plantain, eforiro, and grilled turkey"
+    },
+    {
+      "id": "snacks-1",
+      "name": "Banana Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Banana Yoghurt.jpg",
+      "description": "Banana yoghurt at its freshest"
+    },
+    {
+      "id": "snacks-2",
+      "name": "Vanilla Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Vanilla Yoghurt.jpg",
+      "description": "Vanilla yoghurt at its freshest"
+    },
+    
+    {
+      "id": "snacks-3",
+      "name": "Strawberry Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Strawberry Yoghurt.jpg",
+      "description": "Strawberry yoghurt at its freshest"
+    },
+    {
+      "id": "snacks-4",
+      "name": "Parfait",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Parfait.jpg",
+      "description": "Parfait at its freshest"
+    },
+    {
+      "id": "snacks-5",
+      "name": "Kuli-Kuli",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Kuli Kuli.jpg",
+      "description": "Tasty kuli kuli"
+    },
+    {
+      "id": "snacks-6",
+      "name": "Chin Chin",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Chin Chin.jpg",
+      "description": "Crunchy chin chin"
+    },
+    {
+      "id": "snacks-7",
+      "name": "Plantain Chips",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Plantain Chips.jpg",
+      "description": "Crunchy plantain chips"
+    },
+    {
+      "id": "snacks-8",
+      "name": "Go Slo Ice Cream",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Go Slo Ice Cream.jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-9",
+      "name": "Smyle Ice Cream (1 Litre)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/1 litre of ice cream.jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-10",
+      "name": "Strawberry FanIce (250 ml)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Strawberry FanIce (250 ml).jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-11",
+      "name": "Vanilla FanIce (250 ml)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Strawberry FanIce (250 ml).jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-12",
+      "name": "Vanilla FanIce (450 ml)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Vanilla FanIce (450 ml).jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-13",
+      "name": "Vanilla-Strawberry FanIce (900 ml)",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Vanilla-Strawberry FanIce (250 ml).jpg",
+      "description": "Tasty ice cream"
+    },
+    {
+      "id": "snacks-14",
+      "name": "White Popcorn",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Popcorn White.jpg",
+      "description": "Crunchy popcorn"
+    },
+    {
+      "id": "snacks-15",
+      "name": "Brown Popcorn",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Popcorn Brown.jpg",
+      "description": "Crunchy popcorn"
+    },
+    {
+      "id": "drinks-1",
+      "name": "Bottled Water",
+      "category": "Drinks",
+      "price": "300",
+      "image": "/menu/drinks/Bottle Water.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-2",
+      "name": "Coke",
+      "category": "Drinks",
+      "price": "600",
+      "image": "/menu/drinks/Coke.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-3",
+      "name": "Fanta",
+      "category": "Drinks",
+      "price": "600",
+      "image": "/menu/drinks/Fanta.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-4",
+      "name": "5 Alive",
+      "category": "Drinks",
+      "price": "2000",
+      "image": "/menu/drinks/Coke.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-5",
+      "name": "Hollandia Yoghurt",
+      "category": "Drinks",
+      "price": "2000",
+      "image": "/menu/drinks/Hollandia Yoghurt.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-6",
+      "name": "Orange Sosa (1 Litre)",
+      "category": "Drinks",
+      "price": "1500",
+      "image": "/menu/drinks/Orange Sosa (1 Litre).jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-7",
+      "name": "Orange Sosa (35 cl)",
+      "category": "Drinks",
+      "price": "800",
+      "image": "/menu/drinks/Orange Sosa (35 cl).jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-8",
+      "name": "Viju Milk",
+      "category": "Drinks",
+      "price": "1200",
+      "image": "/menu/drinks/Viju Milk.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-9",
+      "name": "Zobo",
+      "category": "Drinks",
+      "price": "1100",
+      "image": "/menu/drinks/Zobo.jpg",
+      "description": ""
     }
   ],
   "branches": [
