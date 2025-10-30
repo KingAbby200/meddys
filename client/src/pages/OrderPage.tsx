@@ -40,14 +40,17 @@ export default function OrderPage({
 
   const categorizedItems = useMemo(() => {
     const categories = [
+      "Take Away",
       "Soups",
       "Swallow",
       "Proteins",
       "Food",
+      "Drinks",
       "Pastries",
       "African Dishes",
       "Intercontinental",
       "Grills",
+      "Snacks",
     ];
 
     const grouped: Record<string, MenuItem[]> = {};
