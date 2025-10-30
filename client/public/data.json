@@ -13,7 +13,7 @@
       "name": "Egusi Soup with Pounded Yam",
       "category": "African Dishes",
       "price": 3000,
-      "image": "/menu/african/Egusi and Goat Meat.jpg",
+      "image": "/menu/african/Egusi and Pounded Yam.jpg",
       "description": "Rich egusi soup with assorted meat and fish, served with smooth pounded yam"
     },
     {
@@ -378,6 +378,14 @@
     },
     {
       "id": "food-11",
+      "name": "Moi-Moi",
+      "category": "Food",
+      "price": 500,
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": "food-12",
       "name": "Boiled Plantain",
       "category": "Food",
       "price": 1200,
