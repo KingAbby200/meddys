@@ -6,7 +6,8 @@ export function generateWhatsAppMessage(
   total: number,
   customerName?: string,
   customerPhone?: string,
-  deliveryAddress?: string
+  deliveryAddress?: string,
+  instructions?: string
 ): string {
   let message = `*New Order for Meddy's Africana Buka - ${branch.name}*\n\n`;
 
@@ -34,7 +35,10 @@ export function generateWhatsAppMessage(
 
   message += `────────────────\n`;
   message += `*Total Amount: ₦${total.toLocaleString()}*\n\n`;
-  message += `Thank you for choosing Meddy's Africana Buka!`;
+   if (instructions) {
+    message += `*Instructions:* ${instructions}\n`;
+  }
+  message += `_Thank you for choosing Meddy's Africana Buka!_`;
 
   return message;
 }
@@ -45,9 +49,10 @@ export function sendWhatsAppOrder(
   total: number,
   customerName?: string,
   customerPhone?: string,
-  deliveryAddress?: string
+  deliveryAddress?: string,
+  instructions?: string
 ): void {
-  const message = generateWhatsAppMessage(items, branch, total, customerName, customerPhone, deliveryAddress);
+  const message = generateWhatsAppMessage(items, branch, total, customerName, customerPhone, deliveryAddress, instructions);
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${branch.whatsappNumber.replace(/\D/g, "")}?text=${encodedMessage}`;
   
