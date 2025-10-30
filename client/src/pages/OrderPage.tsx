@@ -21,7 +21,7 @@ interface OrderPageProps {
   onAddToCart: (item: MenuItem) => void;
   onUpdateQuantity: (menuItemId: string, quantity: number) => void;
   onRemoveItem: (menuItemId: string) => void;
-  onPlaceOrder: (customerName?: string, customerPhone?: string, deliveryAddress?: string) => void;
+  onPlaceOrder: (customerName?: string, customerPhone?: string, deliveryAddress?: string, instructions?: string) => void;
 }
 
 export default function OrderPage({
@@ -37,6 +37,7 @@ export default function OrderPage({
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomerPhone] = useState("");
   const [deliveryAddress, setDeliveryAddress] = useState("");
+  const [instructions, setInstructions] = useState("");
 
   const categorizedItems = useMemo(() => {
     const categories = [
@@ -76,7 +77,7 @@ export default function OrderPage({
       alert("Your cart is empty");
       return;
     }
-    onPlaceOrder(customerName, customerPhone, deliveryAddress);
+    onPlaceOrder(customerName, customerPhone, deliveryAddress, instructions);
   };
 
   return (
@@ -264,6 +265,20 @@ export default function OrderPage({
                             className="mt-1"
                             data-testid="input-delivery-address"
                             required={true}
+                          />
+                        </div>
+                        <div>
+                          <Label htmlFor="instructions" className="text-sm font-medium">
+                            (E.g. I want the soup poured on top of the amala and not in separate take away plates) 
+                          </Label>
+                          <Input
+                            id="instructions"
+                            type="text"
+                            placeholder="Enter your special instructions"
+                            value={instructions}
+                            onChange={(e) => setInstructions(e.target.value)}
+                            className="mt-1"
+                            data-testid="input-instructions"
                           />
                         </div>
                       </div>
