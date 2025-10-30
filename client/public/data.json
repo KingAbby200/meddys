@@ -582,7 +582,7 @@
     {
       "id": "takeaway",
       "name": "Take Away Plate",
-      "category": "African Dishes",
+      "category": "Take Away",
       "price": 400,
       "image": "/menu/african/Jollof_Rice.jpg",
       "description": "Classic Nigerian jollof rice served with succulent grilled chicken and fried plantains"
