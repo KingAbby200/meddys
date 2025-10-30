@@ -22,6 +22,8 @@ const categories = [
   "Swallow",
   "Proteins",
   "Food",
+  "Drinks",
+  "Snacks",
 ];
 
 export default function MenuPage({ menuItems, onAddToCart }: MenuPageProps) {
