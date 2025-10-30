@@ -58,7 +58,7 @@ function Router() {
     }
   }, [selectedBranch]);
 
-  const handlePlaceOrder = (customerName?: string, customerPhone?: string, deliveryAddress?: string) => {
+  const handlePlaceOrder = (customerName?: string, customerPhone?: string, deliveryAddress?: string, instructions?: string) => {
     if (!selectedBranch) {
       alert("Please select a branch first");
       return;
@@ -69,7 +69,7 @@ function Router() {
       return;
     }
 
-    sendWhatsAppOrder(cart, selectedBranch, cartTotal, customerName, customerPhone, deliveryAddress);
+    sendWhatsAppOrder(cart, selectedBranch, cartTotal, customerName, customerPhone, deliveryAddress, instructions);
     clearCart();
   };
 
