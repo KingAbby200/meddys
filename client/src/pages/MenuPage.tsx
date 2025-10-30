@@ -58,6 +58,9 @@ export default function MenuPage({ menuItems, onAddToCart }: MenuPageProps) {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Browse our delicious selection of African and intercontinental dishes
           </p>
+          <p className="text-muted-foreground text-lg max-w-2xl mt-2 mx-auto">
+            Order our special combos by tapping on the "+" button or place a custom order on the "Order Now" page
+          </p>
         </div>
 
         <div className="mb-8 max-w-2xl mx-auto">
