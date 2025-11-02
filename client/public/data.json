@@ -5,72 +5,72 @@
       "name": "Jollof Rice with Grilled Chicken",
       "category": "African Dishes",
       "price": 2500,
-      "image": "/menu/african/Jollof_Rice.jpg",
-      "description": "Classic Nigerian jollof rice served with succulent grilled chicken and fried plantains"
+      "image": "/menu/african/Jollof.jpg",
+      "description": "Classic Nigerian jollof rice (N700)"
     },
     {
       "id": "african-2",
       "name": "Egusi Soup with Pounded Yam",
       "category": "African Dishes",
-      "price": 3000,
+      "price": 8900,
       "image": "/menu/african/Egusi and Pounded Yam.jpg",
-      "description": "Rich egusi soup with assorted meat and fish, served with smooth pounded yam"
+      "description": "Rich egusi soup (N500) and goat meat (N3,000 x 2), served with smooth pounded yam (N500 x 4)"
     },
     {
       "id": "african-3",
-      "name": "Ofada Rice with Ayamase",
+      "name": "Ofada Rice, Ofada Sauce, Titus Fish with Plantain",
       "category": "African Dishes",
-      "price": 2800,
+      "price": 7200,
       "image": "/menu/african/Ofada.jpg",
-      "description": "Local ofada rice served with spicy designer stew and assorted meat"
+      "description": "Local ofada rice (N700 x 3) served with spicy ofada sauce, titus fish (N3,500), and plantain (N200 x 7)"
     },
     {
       "id": "african-4",
       "name": "Native Rice",
       "category": "African Dishes",
-      "price": 2200,
+      "price": 3400,
       "image": "/menu/african/Native Rice.jpg",
-      "description": "Flavorful native rice with mixed vegetables, shrimp, and ponmo"
+      "description": "Flavorful native rice (N1,000 x 3) with mixed vegetables, shrimp, and ponmo"
     },
     {
       "id": "intercontinental-1",
       "name": "Shredded Beef Rice",
       "category": "Intercontinental",
-      "price": 2500,
+      "price": 13900,
       "image": "/menu/intercontinental/Shredded Beef Rice.jpg",
-      "description": "Tasty Shredded beef rice with fried fish and grilled chicken"
+      "description": "Tasty Shredded beef rice (N1,500 x 2) with fried croker fish (N6,000) and grilled chicken chest (N4,500)"
     },
     {
       "id": "intercontinental-2",
-      "name": "Chinese Fried Rice",
+      "name": "Chinese Rice",
       "category": "Intercontinental",
-      "price": 2300,
+      "price": 13900,
       "image": "/menu/intercontinental/Chinese_Rice.jpg",
-      "description": "Asian-style fried rice with shrimp, eggs, and mixed vegetables"
+      "description": "Asian-style chinese rice (N1,500 x 2) with grilled chicken chest (N4,500) and croker fish (N6,000)"
     },
     {
       "id": "intercontinental-3",
       "name": "Basmati White Rice",
       "category": "Intercontinental",
-      "price": "2500",
+      "price": "3400",
       "image": "/menu/intercontinental/Basmati.jpg",
-      "description": ""
+      "description": "Special white rice (N1,000 x 3)"
     },
     {
       "id": "intercontinental-4",
       "name": "Jambalaya Rice",
       "category": "Intercontinental",
-      "price": "2500",
+      "price": "9900",
       "image": "/menu/intercontinental/Jambalaya_Rice.jpg",
-      "description": "Jambalaya Rice, Grilled Chicken, and Hake Fish"
+      "description": "Jambalaya Rice (N1,500), Grilled Chicken Chest (N4,500) and Fried Fish (N3,500)"
     },
     {
       "id": "intercontinental-5",
       "name": "Yamarita",
       "category": "Intercontinental",
-      "price": "1400",
+      "price": "10400",
       "image": "/menu/intercontinental/Yamarita.jpg",
-      "description": "Yamarita and Snail"
+      "description": "Yamarita (N1,000 x 5) and Snail (N5,000)"
     },
     {
       "id": "grills-1",
@@ -92,7 +92,7 @@
       "id": "grills-3",
       "name": "Grilled Fish",
       "category": "Grills",
-      "price": 4000,
+      "price": 6000,
       "image": "/menu/grills/GrilledFish.jpg",
       "description": "Whole tilapia fish grilled to perfection with peppers and spices"
     },
@@ -116,7 +116,7 @@
       "id": "pastries-2",
       "name": "Super Roll",
       "category": "Pastries",
-      "price": 800,
+      "price": 1500,
       "image": "/menu/pastries/Super_roll.jpg",
       "description": "Golden pastry filled with savory chicken and vegetables"
     },
@@ -132,7 +132,7 @@
       "id": "pastries-4",
       "name": "Hot Dog",
       "category": "Pastries",
-      "price": 1000,
+      "price": 700,
       "image": "/menu/pastries/Hot Dog.jpg",
       "description": "Sweet satisfying hot dogs"
     },
@@ -164,39 +164,39 @@
       "id": "soups-1",
       "name": "Egusi Soup",
       "category": "Soups",
-      "price": 1500,
+      "price": 3900,
       "image": "/menu/soups/Egusi and Goat Meat.jpg",
-      "description": "Traditional melon seed soup with leafy vegetables"
+      "description": "Traditional egusi soup (N500) with goat meat (N3,000)"
     },
     {
       "id": "soups-2",
       "name": "Efo Riro",
       "category": "Soups",
-      "price": 1300,
+      "price": 3900,
       "image": "/menu/soups/Eforiro and Goat Meat.JPG",
-      "description": "Fresh efo soup with goat meat"
+      "description": "Fresh efo soup (N500) with goat meat (N3,000)"
     },
     {
       "id": "soups-3",
-      "name": "Gbegiri and Ewedu",
+      "name": "Abula and Goat Meat",
       "category": "Soups",
-      "price": 1400,
+      "price": 1800,
       "image": "/menu/soups/Abula and Goat Meat.jpg",
-      "description": "Tatsy abula and goat meat"
+      "description": "Tatsy amala (N300 x 3) and beef (N500)"
     },
     {
       "id": "soups-4",
       "name": "Catfish Stew",
       "category": "Soups",
-      "price": 1400,
+      "price": 4400,
       "image": "/menu/soups/Catfish.JPG",
-      "description": "Spicy catfish stew"
+      "description": "Spicy catfish stew (N4,000)"
     },
     {
       "id": "swallow-1",
       "name": "Pounded Yam",
       "category": "Swallow",
-      "price": 800,
+      "price": 500,
       "image": "/menu/swallows/Pounded Yam.JPG",
       "description": "Smooth and stretchy pounded yam, egusi and goat meat"
     },
@@ -204,7 +204,7 @@
       "id": "swallow-2",
       "name": "Eba (Garri)",
       "category": "Swallow",
-      "price": 500,
+      "price": 300,
       "image": "/menu/swallows/Eba.JPG",
       "description": "Traditional cassava swallow"
     },
@@ -220,7 +220,7 @@
       "id": "swallow-4",
       "name": "Fufu",
       "category": "Swallow",
-      "price": 700,
+      "price": 300,
       "image": "/menu/swallows/Fufu.jpg",
       "description": "Traditional cassava and plantain swallow"
     },
@@ -228,7 +228,7 @@
       "id": "protein-1",
       "name": "Goat Meat",
       "category": "Proteins",
-      "price": 1000,
+      "price": 3000,
       "image": "/menu/proteins/Goat Meat.JPG",
       "description": "Tender goat meat portion"
     },
@@ -236,7 +236,7 @@
       "id": "protein-2",
       "name": "Snail",
       "category": "Proteins",
-      "price": 800,
+      "price": 6000,
       "image": "/menu/proteins/Snail.jpg",
       "description": "Succulent snails"
     },
@@ -244,7 +244,7 @@
       "id": "protein-3",
       "name": "Chicken",
       "category": "Proteins",
-      "price": 1200,
+      "price": 4500,
       "image": "/menu/grills/Grilled Chicken.jpg",
       "description": "Grilled or fried chicken"
     },
@@ -252,7 +252,7 @@
       "id": "protein-4",
       "name": "Turkey",
       "category": "Proteins",
-      "price": 1500,
+      "price": 5000,
       "image": "/menu/proteins/Turkey.jpg",
       "description": "Succulent turkey portion"
     },
@@ -260,7 +260,7 @@
       "id": "protein-5",
       "name": "Ponmo",
       "category": "Proteins",
-      "price": 200,
+      "price": 700,
       "image": "/menu/proteins/Pomo.jpg",
       "description": ""
     },
@@ -268,7 +268,7 @@
       "id": "protein-6",
       "name": "Panla",
       "category": "Proteins",
-      "price": 1800,
+      "price": 3500,
       "image": "/menu/proteins/Panla.JPG",
       "description": "Tasty panla portion"
     },
@@ -276,7 +276,7 @@
       "id": "protein-7",
       "name": "Boiled Titus",
       "category": "Proteins",
-      "price": 400,
+      "price": 3500,
       "image": "/menu/proteins/Boiled Titus.JPG",
       "description": "Boiled titus"
     },
@@ -284,7 +284,7 @@
       "id": "protein-8",
       "name": "Fried Titus",
       "category": "Proteins",
-      "price": 400,
+      "price": 3500,
       "image": "/menu/proteins/Fried Titus.jpg",
       "description": "Fried titus"
     },
@@ -292,7 +292,7 @@
       "id": "protein-9",
       "name": "Boiled Catfish",
       "category": "Proteins",
-      "price": 400,
+      "price": 4000,
       "image": "/menu/proteins/Boiled Catfish.JPG",
       "description": "Fried titus"
     },
@@ -300,97 +300,97 @@
       "id": "food-1",
       "name": "Asun Rice",
       "category": "Food",
-      "price": 6500,
+      "price": 7900,
       "image": "/menu/foods/Asun Rice and Croker Fish.JPG",
-      "description": "Spicy asun rice and croker fish"
+      "description": "Spicy asun rice (N1,500) and croker fish (N6,000)"
     },
     {
       "id": "food-2",
       "name": "Bread and Beans",
       "category": "Food",
-      "price": 1500,
+      "price": 4900,
       "image": "/menu/foods/Bread and Beans.jpg",
-      "description": "Tasty bread and beans with zobo"
+      "description": "Tasty bread (N1,500), plain beans (N600 x 2), and eggs (N400 x 2) with zobo (N1,000)"
     },
     {
       "id": "food-3",
       "name": "Chinese Rice",
       "category": "Food",
-      "price": 2300,
+      "price": 8400,
       "image": "/menu/foods/Chinese Rice and Grilled Turkeys.JPG",
-      "description": "Asian-style fried rice"
+      "description": "Asian-style chinese (N1,500 x 2) rice and turkey (N5,000)"
     },
     {
       "id": "food-4",
       "name": "Asun Spaghetti",
       "category": "Food",
-      "price": 4800,
+      "price": 9900,
       "image": "/menu/foods/Asun Spaghetti and Grilled Turkey.jpg",
-      "description": "Asun spaghetti and grilled turkey"
+      "description": "Asun spaghetti (N1,500 x 3) and grilled turkey (N5,000)"
     },
     {
       "id": "food-5",
       "name": "Jollof Spaghetti",
       "category": "Food",
-      "price": 2500,
+      "price": 6000,
       "image": "/menu/foods/Jollof Spaghetti and Titus Fish.JPG",
-      "description": "Jollof spaghetti and titus fish"
+      "description": "Jollof spaghetti (N700 x 3) and titus fish (N3,500)"
     },
     {
       "id": "food-6",
       "name": "Coconut Rice",
       "category": "Food",
-      "price": 1200,
+      "price": 9400,
       "image": "/menu/foods/Coconut Rice, Stick Gizzard, Plantain, and Coleslaw.JPG",
-      "description": "Coconut rice, stick gizzard, plantain, and coleslaw"
+      "description": "Coconut rice (N1,000 x 2) stick gizzard (N2,000 x 3), and plantain (N200 x 5)"
     },
     {
       "id": "food-7",
       "name": "Yam Porridge",
       "category": "Food",
-      "price": 1500,
+      "price": 7000,
       "image": "/menu/foods/Yam Porridge and Grilled Chicken.jpg",
-      "description": "Tasty yam porridge with grilled chicken"
+      "description": "Tasty yam porridge (N700 x 3) with grilled chicken chest (N4,500)"
     },
     {
       "id": "food-8",
       "name": "White Rice",
       "category": "Food",
-      "price": 1200,
+      "price": 8700,
       "image": "/menu/foods/White Rice, Plantain, Chicken and Sauce.JPG",
-      "description": "White rice, plantain, chicken and sauce"
+      "description": "White rice (N700 x 2), plantain (N200 x 12), chicken chest (N4,500) and sauce"
     },
     {
       "id": "food-9",
       "name": "Meddy Sure",
       "category": "Food",
-      "price": 1200,
+      "price": 14700,
       "image": "/menu/foods/Meddy Sure.jpg",
-      "description": "Enjoy meddy sure with croker fish, plantain and grilled chicken"
+      "description": "Enjoy meddy sure (N1,500 x 2) with croker fish (N6,000) plantain (N200 x 4) and grilled chicken (N4,500)"
     },
     {
       "id": "food-10",
       "name": "Jollof Rice",
       "category": "Food",
-      "price": 1200,
+      "price": 9500,
       "image": "/menu/foods/Jollof Rice, Plantain, and Croker Fish.JPG",
-      "description": "Jollof rice, plantain, and croker fish"
+      "description": "Jollof rice (N700 x 3), plantain (N200 x 5), and croker fish (N6,000)"
     },
     {
       "id": "food-11",
       "name": "Moi-Moi",
       "category": "Food",
-      "price": 500,
-      "image": "",
-      "description": ""
+      "price": 6900,
+      "image": "/menu/foods/Moi Moi, Plantain, Turkey and Coleslaw.JPG",
+      "description": "moi moi (N500 x 2) turkey (N4,500) plantain (N200 x 5)"
     },
     {
       "id": "food-12",
       "name": "Boiled Plantain",
       "category": "Food",
-      "price": 1200,
+      "price": 7800,
       "image": "/menu/foods/Boiled Plantain, Eforiro, and Grilled Turkey.JPG",
-      "description": "Boiled plantain, eforiro, and grilled turkey"
+      "description": "Boiled plantain (N600 x 4), efo riro (N500), and grilled turkey (N4,500)"
     },
     {
       "id": "snacks-1",
@@ -404,7 +404,7 @@
       "id": "snacks-2",
       "name": "Kuli-Kuli",
       "category": "Snacks",
-      "price": "2000",
+      "price": "1500",
       "image": "/menu/snacks/Kuli Kuli.jpg",
       "description": "Tasty kuli kuli"
     },
@@ -412,7 +412,7 @@
       "id": "snacks-3",
       "name": "Chin Chin",
       "category": "Snacks",
-      "price": "2000",
+      "price": "3000",
       "image": "/menu/snacks/Chin Chin.jpg",
       "description": "Crunchy chin chin"
     },
@@ -420,7 +420,7 @@
       "id": "snacks-4",
       "name": "Plantain Chips",
       "category": "Snacks",
-      "price": "2000",
+      "price": "5500",
       "image": "/menu/snacks/Plantain Chips.jpg",
       "description": "Crunchy plantain chips"
     },
@@ -428,7 +428,7 @@
       "id": "snacks-5",
       "name": "Banana Yoghurt",
       "category": "Snacks",
-      "price": "2000",
+      "price": "4500",
       "image": "/menu/snacks/Banana Yoghurt.jpg",
       "description": "Banana yoghurt at its freshest"
     },
@@ -436,7 +436,7 @@
       "id": "snacks-6",
       "name": "Vanilla Yoghurt",
       "category": "Snacks",
-      "price": "2000",
+      "price": "4500",
       "image": "/menu/snacks/Vanilla Yoghurt.jpg",
       "description": "Vanilla yoghurt at its freshest"
     },
@@ -538,9 +538,9 @@
     },
     {
       "id": "drinks-4",
-      "name": "5 Alive",
+      "name": "5 Alive (Pulpy)",
       "category": "Drinks",
-      "price": "2000",
+      "price": "1700",
       "image": "/menu/drinks/Five Alive.jpg",
       "description": ""
     },
@@ -556,7 +556,7 @@
       "id": "drinks-6",
       "name": "Orange Sosa (1 Litre)",
       "category": "Drinks",
-      "price": "1500",
+      "price": "2000",
       "image": "/menu/drinks/Orange Sosa (1 Litre).jpg",
       "description": ""
     },
@@ -564,7 +564,7 @@
       "id": "drinks-7",
       "name": "Orange Sosa (35 cl)",
       "category": "Drinks",
-      "price": "800",
+      "price": "700",
       "image": "/menu/drinks/Orange Sosa (35 cl).jpg",
       "description": ""
     },
@@ -580,7 +580,7 @@
       "id": "drinks-9",
       "name": "Zobo",
       "category": "Drinks",
-      "price": "1100",
+      "price": "1500",
       "image": "/menu/drinks/Zobo.jpg",
       "description": ""
     }
@@ -598,7 +598,7 @@
       "id": "african-1",
       "name": "Jollof Rice",
       "category": "African Dishes",
-      "price": 1500,
+      "price": 700,
       "image": "/menu/african/Jollof_Rice.jpg",
       "description": "Classic Nigerian jollof rice served with succulent grilled chicken and fried plantains"
     },
@@ -606,7 +606,7 @@
       "id": "african-3",
       "name": "Ofada Rice",
       "category": "African Dishes",
-      "price": 2800,
+      "price": 700,
       "image": "/menu/african/Ofada.jpg",
       "description": "Local ofada rice served with spicy designer stew and assorted meat"
     },
@@ -614,7 +614,7 @@
       "id": "african-4",
       "name": "Native Rice",
       "category": "African Dishes",
-      "price": 2200,
+      "price": 1000,
       "image": "/menu/african/Native Rice.jpg",
       "description": "Flavorful native rice with mixed vegetables, shrimp, and ponmo"
     },
@@ -622,7 +622,7 @@
       "id": "intercontinental-1",
       "name": "Shredded Beef Rice",
       "category": "Intercontinental",
-      "price": 2500,
+      "price": 1500,
       "image": "/menu/intercontinental/Shredded Beef Rice.jpg",
       "description": "Tasty Shredded beef rice with fried fish and grilled chicken"
     },
@@ -638,7 +638,7 @@
       "id": "intercontinental-3",
       "name": "Basmati White Rice",
       "category": "Intercontinental",
-      "price": "2500",
+      "price": "1000",
       "image": "/menu/intercontinental/Basmati.jpg",
       "description": ""
     },
@@ -646,7 +646,7 @@
       "id": "intercontinental-4",
       "name": "Jambalaya Rice",
       "category": "Intercontinental",
-      "price": "2500",
+      "price": "1500",
       "image": "/menu/intercontinental/Jambalaya_Rice.jpg",
       "description": "Jambalaya Rice, Grilled Chicken, and Hake Fish"
     },
@@ -654,7 +654,7 @@
       "id": "intercontinental-5",
       "name": "Yamarita",
       "category": "Intercontinental",
-      "price": "1400",
+      "price": "1000",
       "image": "/menu/intercontinental/Yamarita.jpg",
       "description": "Yamarita and Snail"
     },
@@ -678,7 +678,7 @@
       "id": "grills-3",
       "name": "Grilled Fish",
       "category": "Grills",
-      "price": 4000,
+      "price": 6000,
       "image": "/menu/grills/GrilledFish.jpg",
       "description": "Whole tilapia fish grilled to perfection with peppers and spices"
     },
@@ -694,7 +694,7 @@
       "id": "pastries-1",
       "name": "Burger",
       "category": "Pastries",
-      "price": 5000,
+      "price": 6000,
       "image": "/menu/pastries/Burger.JPG",
       "description": "Fluffy burgers filled with seasoned meat and veggies"
     },
@@ -702,7 +702,7 @@
       "id": "pastries-2",
       "name": "Super Roll",
       "category": "Pastries",
-      "price": 800,
+      "price": 1500,
       "image": "/menu/pastries/Super_roll.jpg",
       "description": "Golden pastry filled with savory chicken and vegetables"
     },
@@ -718,7 +718,7 @@
       "id": "pastries-4",
       "name": "Hot Dog",
       "category": "Pastries",
-      "price": 1000,
+      "price": 700,
       "image": "/menu/pastries/Hot Dog.jpg",
       "description": "Sweet satisfying hot dogs"
     },
@@ -750,7 +750,7 @@
       "id": "soups-1",
       "name": "Egusi Soup",
       "category": "Soups",
-      "price": 1500,
+      "price": 500,
       "image": "/menu/soups/Egusi and Goat Meat.JPG",
       "description": "Traditional melon seed soup with leafy vegetables"
     },
@@ -758,15 +758,15 @@
       "id": "soups-2",
       "name": "Efo Riro",
       "category": "Soups",
-      "price": 1300,
+      "price": 500,
       "image": "/menu/soups/Eforiro and Goat Meat.jpg",
       "description": "Fresh efo soup with goat meat"
     },
     {
       "id": "soups-3",
-      "name": "Gbegiri and Ewedu",
+      "name": "Gbegiri and Ewedu (Free with swallow)",
       "category": "Soups",
-      "price": 1400,
+      "price": 0,
       "image": "/menu/soups/Abula and Goat Meat.jpg",
       "description": "Tatsy abula and goat meat"
     },
@@ -774,7 +774,7 @@
       "id": "soups-4",
       "name": "Catfish Stew",
       "category": "Soups",
-      "price": 1400,
+      "price": 4000,
       "image": "/menu/soups/Catfish.JPG",
       "description": "Spicy catfish stew"
     },
@@ -782,7 +782,7 @@
       "id": "swallow-1",
       "name": "Pounded Yam",
       "category": "Swallow",
-      "price": 800,
+      "price": 700,
       "image": "/menu/swallows/Punded Yam.JPG",
       "description": "Smooth and stretchy pounded yam, egusi and goat meat"
     },
@@ -806,7 +806,7 @@
       "id": "swallow-4",
       "name": "Fufu",
       "category": "Swallow",
-      "price": 700,
+      "price": 300,
       "image": "/menu/swallows/Fufu.jpg",
       "description": "Traditional cassava and plantain swallow"
     },
@@ -814,7 +814,7 @@
       "id": "protein-1",
       "name": "Goat Meat",
       "category": "Proteins",
-      "price": 1000,
+      "price": 3000,
       "image": "/menu/proteins/Goat Meat.JPG",
       "description": "Tender goat meat portion"
     },
@@ -822,7 +822,7 @@
       "id": "protein-2",
       "name": "Snail",
       "category": "Proteins",
-      "price": 800,
+      "price": 6000,
       "image": "/menu/proteins/Snail.jpg",
       "description": "Succulent snails"
     },
@@ -830,7 +830,7 @@
       "id": "protein-3",
       "name": "Chicken",
       "category": "Proteins",
-      "price": 1200,
+      "price": 4500,
       "image": "/menu/grills/Grilled Chicken.jpg",
       "description": "Grilled or fried chicken"
     },
@@ -838,7 +838,7 @@
       "id": "protein-4",
       "name": "Turkey",
       "category": "Proteins",
-      "price": 1500,
+      "price": 4500,
       "image": "/menu/proteins/Turkey.jpg",
       "description": "Succulent turkey portion"
     },
@@ -846,7 +846,7 @@
       "id": "protein-5",
       "name": "Ponmo",
       "category": "Proteins",
-      "price": 200,
+      "price": 700,
       "image": "/menu/proteins/Pomo.jpg",
       "description": ""
     },
@@ -854,7 +854,7 @@
       "id": "protein-6",
       "name": "Panla",
       "category": "Proteins",
-      "price": 1800,
+      "price": 3000,
       "image": "/menu/proteins/Panla.JPG",
       "description": "Tasty panla portion"
     },
@@ -862,7 +862,7 @@
       "id": "protein-7",
       "name": "Boiled Titus",
       "category": "Proteins",
-      "price": 400,
+      "price": 3500,
       "image": "/menu/proteins/Boiled Titus.JPG",
       "description": "Boiled titus"
     },
@@ -870,7 +870,7 @@
       "id": "protein-8",
       "name": "Fried Titus",
       "category": "Proteins",
-      "price": 400,
+      "price": 3500,
       "image": "/menu/proteins/Fried Titus.JPG",
       "description": "Fried titus"
     },
@@ -878,7 +878,7 @@
       "id": "protein-9",
       "name": "Boiled Catfish",
       "category": "Proteins",
-      "price": 400,
+      "price": 6000,
       "image": "/menu/proteins/Boiled Catfish.JPG",
       "description": "Fried titus"
     },
@@ -886,7 +886,7 @@
       "id": "food-1",
       "name": "Asun Rice",
       "category": "Food",
-      "price": 6500,
+      "price": 1500,
       "image": "/menu/foods/Asun Rice and Croker Fish.JPG",
       "description": "Spicy asun rice and croker fish"
     },
@@ -894,7 +894,7 @@
       "id": "food-2",
       "name": "Beans",
       "category": "Food",
-      "price": 700,
+      "price": 600,
       "image": "/menu/foods/Bread and Beans.jpg",
       "description": "Tasty bread and beans with zobo"
     },
@@ -902,7 +902,7 @@
       "id": "food-3",
       "name": "Chinese Rice",
       "category": "Food",
-      "price": 2300,
+      "price": 1500,
       "image": "/menu/foods/Chinese and Grilled Turkey.JPG",
       "description": "Asian-style fried rice"
     },
@@ -910,7 +910,7 @@
       "id": "food-4",
       "name": "Asun Spaghetti",
       "category": "Food",
-      "price": 4800,
+      "price": 1500,
       "image": "/menu/foods/Asun Spaghetti and Grilled Turkey.jpg",
       "description": "Asun spaghetti and grilled turkey"
     },
@@ -918,7 +918,7 @@
       "id": "food-5",
       "name": "Jollof Spaghetti",
       "category": "Food",
-      "price": 2500,
+      "price": 700,
       "image": "/menu/foods/Jollof Spaghetti and Titus Fish.JPG",
       "description": "Jollof spaghetti and titus fish"
     },
@@ -926,7 +926,7 @@
       "id": "food-6",
       "name": "Coconut Rice",
       "category": "Food",
-      "price": 1200,
+      "price": 1000,
       "image": "/menu/foods/Coconut Rice, Stick Gizzard, Plantain, and Coleslaw.JPG",
       "description": "Coconut rice, stick gizzard, plantain, and coleslaw"
     },
@@ -934,7 +934,7 @@
       "id": "food-7",
       "name": "Yam Porridge",
       "category": "Food",
-      "price": 1500,
+      "price": 700,
       "image": "/menu/foods/Yam Porridge and Grilled Chicken.jpg",
       "description": "Tasty yam porridge with grilled chicken"
     },
@@ -942,7 +942,7 @@
       "id": "food-8",
       "name": "White Rice",
       "category": "Food",
-      "price": 1200,
+      "price": 700,
       "image": "/menu/foods/White Rice, Plantain, Chicken and Sauce.JPG",
       "description": "White rice, plantain, chicken and sauce"
     },
@@ -950,7 +950,7 @@
       "id": "food-9",
       "name": "Meddy Sure",
       "category": "Food",
-      "price": 1200,
+      "price": 1500,
       "image": "/menu/foods/Meddy Sure.jpg",
       "description": "Enjoy meddy sure with croker fish, plantain and grilled chicken"
     },
@@ -958,7 +958,7 @@
       "id": "food-10",
       "name": "Jollof Rice",
       "category": "Food",
-      "price": 1200,
+      "price": 700,
       "image": "/menu/foods/Jollof Rice, Plantain, and Croker Fish.JPG",
       "description": "Jollof rice, plantain, and croker fish"
     },
@@ -966,7 +966,7 @@
       "id": "food-11",
       "name": "Boiled Plantain",
       "category": "Food",
-      "price": 1200,
+      "price": 600,
       "image": "/menu/foods/Boiled Plantain, Eforiro, and Grilled Turkey.JPG",
       "description": "Boiled plantain, eforiro, and grilled turkey"
     },
@@ -974,7 +974,7 @@
       "id": "snacks-1",
       "name": "Banana Yoghurt",
       "category": "Snacks",
-      "price": "2000",
+      "price": "4500",
       "image": "/menu/snacks/Banana Yoghurt.jpg",
       "description": "Banana yoghurt at its freshest"
     },
@@ -991,7 +991,7 @@
       "id": "snacks-3",
       "name": "Strawberry Yoghurt",
       "category": "Snacks",
-      "price": "2000",
+      "price": "4500",
       "image": "/menu/snacks/Strawberry Yoghurt.jpg",
       "description": "Strawberry yoghurt at its freshest"
     },
@@ -1007,7 +1007,7 @@
       "id": "snacks-5",
       "name": "Kuli-Kuli",
       "category": "Snacks",
-      "price": "2000",
+      "price": "1500",
       "image": "/menu/snacks/Kuli Kuli.jpg",
       "description": "Tasty kuli kuli"
     },
@@ -1015,7 +1015,7 @@
       "id": "snacks-6",
       "name": "Chin Chin",
       "category": "Snacks",
-      "price": "2000",
+      "price": "3000",
       "image": "/menu/snacks/Chin Chin.jpg",
       "description": "Crunchy chin chin"
     },
@@ -1023,7 +1023,7 @@
       "id": "snacks-7",
       "name": "Plantain Chips",
       "category": "Snacks",
-      "price": "2000",
+      "price": "5500",
       "image": "/menu/snacks/Plantain Chips.jpg",
       "description": "Crunchy plantain chips"
     },
@@ -1031,7 +1031,7 @@
       "id": "snacks-8",
       "name": "Go Slo Ice Cream",
       "category": "Snacks",
-      "price": "2000",
+      "price": "1800",
       "image": "/menu/snacks/Go Slo Ice Cream.jpg",
       "description": "Tasty ice cream"
     },
@@ -1117,10 +1117,10 @@
     },
     {
       "id": "drinks-4",
-      "name": "5 Alive",
+      "name": "5 Alive (Pulpy)",
       "category": "Drinks",
-      "price": "2000",
-      "image": "/menu/drinks/Coke.jpg",
+      "price": "1700",
+      "image": "/menu/drinks/Five Alive.jpg",
       "description": ""
     },
     {
@@ -1135,7 +1135,7 @@
       "id": "drinks-6",
       "name": "Orange Sosa (1 Litre)",
       "category": "Drinks",
-      "price": "1500",
+      "price": "2000",
       "image": "/menu/drinks/Orange Sosa (1 Litre).jpg",
       "description": ""
     },
@@ -1143,7 +1143,7 @@
       "id": "drinks-7",
       "name": "Orange Sosa (35 cl)",
       "category": "Drinks",
-      "price": "800",
+      "price": "700",
       "image": "/menu/drinks/Orange Sosa (35 cl).jpg",
       "description": ""
     },
