@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm ci && npm run build",
-  "outputDirectory": "/dist/public",
+  "outputDirectory": "/public",
   "installCommand": "npm ci",
   "framework": "vite"
 }
