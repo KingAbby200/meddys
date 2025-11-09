@@ -1,20 +1,6 @@
 {
   "buildCommand": "npm ci && npm run build",
-  "outputDirectory": "",
+  "outputDirectory": "dist",
   "installCommand": "npm ci",
-  "framework": "vite",
-  "headers": [
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        { "key": "Content-Type", "value": "application/javascript" }
-      ]
-    },
-    {
-      "source": "/assets/(.*)\\.css",
-      "headers": [
-        { "key": "Content-Type", "value": "text/css" }
-      ]
-    }
-  ]
+  "framework": "vite"
 }
