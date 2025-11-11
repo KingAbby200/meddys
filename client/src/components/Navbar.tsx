@@ -30,16 +30,13 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
   ];
 
   return (
-    <nav className="sticky top-0 z-50 text-background bg-black border-b border-border/10 min-h-24 backdrop-blur-sm py-4">
+    <nav className="sticky top-0 z-50 bg-white text-black border-b border-gray-200 min-h-24 backdrop-blur-sm py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" data-testid="link-home">
             <div className="flex flex-col space-y-2 items-center cursor-pointer hover-elevate active-elevate-2 px-2 py-4 rounded-md">
-              {/*<div className="w-20 h-10 sm:w-24 sm:h-12 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-poppins font-bold text-lg sm:text-xl">Meddy's</span>
-              </div>*/}
               <img src="/meddys.jpg" alt="logo" width="180px" />
-              <p className="text-xs text-background/80">Africana Buka</p>
+              <p className="text-xs text-black/70">Africana Buka</p>
             </div>
           </Link>
 
@@ -49,8 +46,8 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 <span
                   className={`text-sm font-medium cursor-pointer hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors ${
                     location === link.path
-                      ? "text-accent bg-accent/20"
-                      : "text-background hover:text-accent"
+                      ? "text-orange-600 bg-orange-100"
+                      : "text-black hover:text-orange-600"
                   }`}
                 >
                   {link.label}
@@ -59,7 +56,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
             ))}
           </div>
 
-          <div className="flex flex-col items-left ml-2 text-xs gap-1 font-bold">
+          <div className="flex flex-col items-left ml-2 text-xs gap-1 font-bold text-black">
             <span>Select the branch closest to you</span>
             <div className="flex items-center space-x-2 sm:space-x-4">
               <Select
@@ -70,7 +67,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 }}
               >
                 <SelectTrigger 
-                  className="w-[120px] sm:w-[160px] bg-background/10 border-background/20 text-background hover:bg-background/20" 
+                  className="w-[120px] sm:w-[160px] bg-gray-50 border-gray-300 text-black hover:bg-gray-100" 
                   data-testid="select-branch"
                 >
                   <SelectValue placeholder="Select branch" />
@@ -88,7 +85,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="relative text-background hover:text-accent"
+                  className="relative text-black hover:text-orange-600"
                 >
                   <ShoppingCart className="w-5 h-5" />
                   {cartItemCount > 0 && (
@@ -106,19 +103,19 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden text-background"
+                className="md:hidden text-black"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 data-testid="button-mobile-menu"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </Button>
-              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-foreground/95 backdrop-blur-sm border-t border-background/10">
+        <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
           <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
               <Link key={link.path} href={link.path}>
@@ -126,8 +123,8 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 ${
                     location === link.path
-                      ? "text-accent bg-accent/20"
-                      : "text-background hover:text-accent"
+                      ? "text-orange-600 bg-orange-100"
+                      : "text-black hover:text-orange-600 hover:bg-gray-100"
                   }`}
                   data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
                 >
