@@ -24,17 +24,51 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-  { path: "/", label: "Home" },
-  { path: "/menu", label: "Menu" },
-  { path: "/#about", label: "About" },       
-  { path: "/#contact", label: "Contact" },    
-  { path: "/order", label: "Order Now" },
-];
+    { path: "/", label: "Home" },
+    { path: "/menu", label: "Menu" },
+    { path: "/#about", label: "About" },
+    { path: "/#contact", label: "Contact" },
+    { path: "/order", label: "Order Now" },
+  ];
+
+  // Helper: Check if current page matches link (including hash)
+  const isActive = (linkPath: string) => {
+    if (linkPath === "/") return location === "/";
+    if (linkPath.startsWith("/#")) {
+      const hash = linkPath.slice(1);
+      return location === "/" && window.location.hash === hash;
+    }
+    return location.startsWith(linkPath);
+  };
+
+  // Helper: Handle smooth scroll for hash links
+  const handleHashClick = (e: React.MouseEvent, path: string) => {
+    if (path.includes("#")) {
+      e.preventDefault();
+      const [basePath, hash] = path.split("#");
+      const id = hash;
+
+      // Navigate to base path first (if not already there)
+      if (location !== basePath) {
+        window.location.href = path; // Full navigation
+        return;
+      }
+
+      // Same page → smooth scroll
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      setMobileMenuOpen(false);
+      window.history.pushState(null, "", path);
+    }
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white text-black border-b border-gray-200 min-h-24 backdrop-blur-sm py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Logo */}
           <Link href="/" data-testid="link-home">
             <div className="flex flex-col space-y-2 items-center cursor-pointer hover-elevate active-elevate-2 px-2 py-4 rounded-md">
               <img src="/meddysLogo.png" alt="logo" width="180px" />
@@ -42,12 +76,18 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
             </div>
           </Link>
 
+          {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link key={link.path} href={link.path} data-testid={`link-${link.label.toLowerCase().replace(" ", "-")}`}>
+              <Link
+                key={link.path}
+                href={link.path}
+                onClick={(e) => handleHashClick(e, link.path)}
+                data-testid={`link-${link.label.toLowerCase().replace(" ", "-")}`}
+              >
                 <span
                   className={`text-sm font-medium cursor-pointer hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors ${
-                    location === link.path
+                    isActive(link.path)
                       ? "text-orange-600 bg-orange-100"
                       : "text-black hover:text-orange-600"
                   }`}
@@ -58,6 +98,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
             ))}
           </div>
 
+          {/* Branch + Cart + Mobile Toggle */}
           <div className="flex flex-col items-left ml-2 text-xs gap-1 font-bold text-black">
             <span>Select the branch closest to you</span>
             <div className="flex items-center space-x-2 sm:space-x-4">
@@ -68,8 +109,8 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                   if (branch) onBranchChange(branch);
                 }}
               >
-                <SelectTrigger 
-                  className="w-[120px] sm:w-[160px] bg-gray-50 border-gray-300 text-black hover:bg-gray-100" 
+                <SelectTrigger
+                  className="w-[120px] sm:w-[160px] bg-gray-50 border-gray-300 text-black hover:bg-gray-100"
                   data-testid="select-branch"
                 >
                   <SelectValue placeholder="Select branch" />
@@ -83,7 +124,12 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 </SelectContent>
               </Select>
 
-              <Link href="/order" data-testid="link-cart">
+              {/* CART ICON → LINKS TO /order#order-cart */}
+              <Link
+                href="/order#order-cart"
+                onClick={(e) => handleHashClick(e, "/order#order-cart")}
+                data-testid="link-cart"
+              >
                 <Button
                   variant="ghost"
                   size="icon"
@@ -102,6 +148,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 </Button>
               </Link>
 
+              {/* Mobile Menu Toggle */}
               <Button
                 variant="ghost"
                 size="icon"
@@ -116,24 +163,52 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
           <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
-              <Link key={link.path} href={link.path}>
+              <Link
+                key={link.path}
+                href={link.path}
+                onClick={(e) => {
+                  handleHashClick(e, link.path);
+                  setMobileMenuOpen(false);
+                }}
+                data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
+              >
                 <div
-                  onClick={() => setMobileMenuOpen(false)}
                   className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 ${
-                    location === link.path
+                    isActive(link.path)
                       ? "text-orange-600 bg-orange-100"
                       : "text-black hover:text-orange-600 hover:bg-gray-100"
                   }`}
-                  data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
                 >
                   {link.label}
                 </div>
               </Link>
             ))}
+
+            {/* Mobile Cart Link */}
+            <Link
+              href="/order#order-cart"
+              onClick={(e) => {
+                handleHashClick(e, "/order#order-cart");
+                setMobileMenuOpen(false);
+              }}
+              data-testid="mobile-link-cart"
+            >
+              <div
+                className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 flex items-center space-x-2 ${
+                  location.startsWith("/order")
+                    ? "text-orange-600 bg-orange-100"
+                    : "text-black hover:text-orange-600 hover:bg-gray-100"
+                }`}
+              >
+                <ShoppingCart className="w-5 h-5" />
+                <span>Cart {cartItemCount > 0 && `(${cartItemCount})`}</span>
+              </div>
+            </Link>
           </div>
         </div>
       )}
