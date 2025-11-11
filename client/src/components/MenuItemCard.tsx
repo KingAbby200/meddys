@@ -24,7 +24,7 @@ export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
           onClick={() => onAddToCart(item)}
           data-testid={`button-add-to-cart-${item.id}`}
         >
-          <Plus className="w-8 h-8" />
+          <Plus className="w-12 h-12" />
       </Button>
       </div>
       <div className="p-4">
