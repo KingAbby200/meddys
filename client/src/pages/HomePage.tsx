@@ -21,7 +21,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
     <div className="min-h-screen">
       {/* HERO SECTION – ZOOM ANIMATION */}
       <section
-        className="relative h-[80vh] sm:h-[85vh] flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
+        className="relative h-[85vh] sm:h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         {/* Zooming Background */}
@@ -33,10 +33,10 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
         
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
           <h1 className="font-poppins font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-fadeIn">
-            Experience the rich flavors of authentic African cuisine, intercontinental dishes, and freshly baked pastries
+            Crave It. Taste It. Love It.
           </h1>
           <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-300">
-            From sizzling jollof to golden pastries. Every dish tells a story of flavour, family, and tradition.
+            Experience the rich flavors of authentic African cuisine, intercontinental dishes, and freshly baked pastries
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn animation-delay-600">
             <Link href="/menu">
@@ -113,13 +113,13 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
               </h2>
               <p className="text-lg text-muted-foreground mb-4">
                 Meddy's Africana Buka was born from a passion to share the soul of African cuisine with Lagos. 
-                Founded in 2020, we blend tradition with innovation — serving jollof that sings, pastries that melt, and service that feels like family.
+                Founded in 2020, we blend tradition with innovation, serving jollof that sings, pastries that melt, and service that feels like family.
               </p>
               <p className="text-lg text-muted-foreground">
                 Every dish is made fresh daily using local ingredients. From our kitchen to your table, we deliver not just food — but an experience.
               </p>
             </div>
-            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-80" />
+            <img src={heroImage} className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-80" />
           </div>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <a href="tel:+2349012345678" className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <Phone className="w-10 h-10 text-orange-600 mb-3" />
+              <Phone className="w-10 h-10 text-red-600 mb-3" />
               <span className="font-semibold">Call Us</span>
               <span className="text-sm text-muted-foreground">+234 901 234 5678</span>
             </a>
@@ -142,10 +142,10 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
               <span className="text-sm text-muted-foreground">Chat with us</span>
             </a>
             <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm">
-              <MapPinIcon className="w-10 h-10 text-orange-600 mb-3" />
+              <MapPinIcon className="w-10 h-10 text-red-600 mb-3" />
               <span className="font-semibold">Visit Us</span>
               <span className="text-sm text-muted-foreground text-center">
-                Egbeda | Cement | Baruwa
+                1, Akowonjo Rd, Egbeda Bus Stop | Cement | Baruwa
               </span>
             </div>
           </div>
