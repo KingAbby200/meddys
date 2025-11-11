@@ -19,12 +19,12 @@ export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <Button
-          size="medium"
+          size="icon"
           className="absolute rounded-full bottom-10 left-2 bg-primary text-primary-foreground hover:bg-primary shadow-2xl"
           onClick={() => onAddToCart(item)}
           data-testid={`button-add-to-cart-${item.id}`}
         >
-          <Plus className="w-20 h-20" />
+          <Plus className="w-5 h-5" />
         </Button>
       </div>
       <div className="p-4">
