@@ -57,7 +57,7 @@ export function Carousel({ images }: CarouselProps) {
                      bg-red-600/90 hover:bg-red-600 
                      text-white font-medium 
                      backdrop-blur-md shadow-md 
-                     px-4 py-2 rounded-full 
+                     px-4 py-2 rounded-full ml-4
                      text-sm sm:text-base z-10"
           data-testid="button-view-all-menu"
         >
