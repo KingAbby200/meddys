@@ -54,7 +54,7 @@ export function Carousel({ images }: CarouselProps) {
           variant="ghost"
           size="sm"
           className="absolute -top-[300px] sm:-top-[400px] lg:-top-[500px] 
-                     bg-red-300/90 hover:bg-red-300 
+                     bg-red-800/90 hover:bg-red-800 
                      text-black font-medium 
                      backdrop-blur-md shadow-md 
                      px-4 py-2 rounded-full 
@@ -94,15 +94,15 @@ export function Carousel({ images }: CarouselProps) {
       </div>
 
       {/* Dots – Bottom Center */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? "bg-orange-400 w-8"
-                : "bg-orange-300/60 hover:bg-orange-300/80"
+                ? "bg-orange-200 w-8"
+                : "bg-orange-200/60 hover:bg-orange-200/80"
             }`}
             data-testid={`carousel-dot-${index}`}
           />
