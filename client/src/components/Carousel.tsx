@@ -53,7 +53,7 @@ export function Carousel({ images }: CarouselProps) {
         <Button
           variant="ghost"
           size="sm"
-          className="absolute -top-4 -right-4 
+          className="absolute -top-[300px] sm:-top-[400px] lg:-top-[500px] -right-4 
                      bg-white/90 hover:bg-white 
                      text-black font-medium 
                      backdrop-blur-md shadow-md 
