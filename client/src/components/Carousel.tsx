@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 interface CarouselImage {
   id: string;
@@ -55,10 +56,29 @@ export function Carousel({ images }: CarouselProps) {
         ))}
       </div>
 
+      {/* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */}
+      {/* NEW: "View all" Button – Top Right */}
+      <Link href="/menu">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="absolute top-4 right-4 
+                     bg-white/90 hover:bg-white 
+                     text-black font-medium 
+                     backdrop-blur-md shadow-md 
+                     px-4 py-2 rounded-full 
+                     text-sm sm:text-base"
+          data-testid="button-view-all-menu"
+        >
+          View all
+        </Button>
+      </Link>
+      {/* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */}
+
       <Button
         variant="ghost"
         size="lg"
-        className="left-4 bottom-40 md:bottom-48 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground backdrop-blur-md h-10 w-10 shadow-lg"
+        className="absolute left-4 bottom-40 md:bottom-48 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground backdrop-blur-md h-10 w-10 shadow-lg"
         onClick={goToPrevious}
         data-testid="button-carousel-prev"
       >
@@ -68,7 +88,7 @@ export function Carousel({ images }: CarouselProps) {
       <Button
         variant="ghost"
         size="lg"
-        className="absolute float-right mr-4 bottom-40 md:bottom-48 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground backdrop-blur-md h-10 w-10 shadow-lg"
+        className="absolute right-4 bottom-40 md:bottom-48 -translate-y-1/2 bg-background/90 hover:bg-background text-foreground backdrop-blur-md h-10 w-10 shadow-lg"
         onClick={goToNext}
         data-testid="button-carousel-next"
       >
