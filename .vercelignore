@@ -1,0 +1,4 @@
+server/
+dist/server/  # If any
+node_modules/
+.git/
