@@ -65,31 +65,33 @@ export function Carousel({ images }: CarouselProps) {
         </Button>
       </Link>
 
-      {/* Prev Button */}
-      <Button
-        variant="ghost"
-        size="lg"
-        className="absolute -left-28 top-1/2 -translate-y-1/2 
-                   bg-white/90 hover:bg-white text-black 
-                   backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
-        onClick={goToPrevious}
-        data-testid="button-carousel-prev"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </Button>
-
-      {/* Next Button */}
-      <Button
-        variant="ghost"
-        size="lg"
-        className="absolute -right-28 top-1/2 -translate-y-1/2 
-                   bg-white/90 hover:bg-white text-black 
-                   backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
-        onClick={goToNext}
-        data-testid="button-carousel-next"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </Button>
+      <div className="flex flex-row justify-between">
+        {/* Prev Button */}
+        <Button
+          variant="ghost"
+          size="lg"
+          className="ml-4 top-1/2 -translate-y-1/2 
+                     bg-white/90 hover:bg-white text-black 
+                     backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
+          onClick={goToPrevious}
+          data-testid="button-carousel-prev"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </Button>
+  
+        {/* Next Button */}
+        <Button
+          variant="ghost"
+          size="lg"
+          className="mr-4 top-1/2 -translate-y-1/2 
+                     bg-white/90 hover:bg-white text-black 
+                     backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
+          onClick={goToNext}
+          data-testid="button-carousel-next"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </Button>
+      </div>
 
       {/* Dots – Bottom Center */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
