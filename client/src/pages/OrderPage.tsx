@@ -175,7 +175,7 @@ export default function OrderPage({
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-6">
               <Card className="p-6">
-                <h2 className="font-poppins font-semibold text-2xl mb-4 flex items-center">
+                <h2 id="order-cart" className="font-poppins font-semibold text-2xl mb-4 flex items-center">
                   <ShoppingBag className="w-6 h-6 mr-2" />
                   Your Cart
                 </h2>
