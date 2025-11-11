@@ -65,7 +65,7 @@ export function Carousel({ images }: CarouselProps) {
         </Button>
       </Link>
 
-      <div className="flex flex-row justify-between top-1/2 -translate-y-1/2">
+      <div className="flex flex-row justify-between -top-[150px] sm:-top-[200px] lg:-top-[250px]">
         {/* Prev Button */}
         <Button
           variant="ghost"
@@ -94,15 +94,15 @@ export function Carousel({ images }: CarouselProps) {
       </div>
 
       {/* Dots – Bottom Center */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? "bg-white w-8"
-                : "bg-white/60 hover:bg-white/80"
+                ? "bg-orange-500 w-8"
+                : "bg-orange-500/60 hover:bg-orange-500/80"
             }`}
             data-testid={`carousel-dot-${index}`}
           />
