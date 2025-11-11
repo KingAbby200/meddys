@@ -19,7 +19,7 @@ export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <Button
-          size="large"
+          size="medium"
           className="absolute rounded-full bottom-10 left-2 bg-primary text-primary-foreground hover:bg-primary shadow-2xl"
           onClick={() => onAddToCart(item)}
           data-testid={`button-add-to-cart-${item.id}`}
