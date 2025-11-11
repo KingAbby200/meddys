@@ -24,10 +24,12 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/menu", label: "Menu" },
-    { path: "/order", label: "Order Now" },
-  ];
+  { path: "/", label: "Home" },
+  { path: "/menu", label: "Menu" },
+  { path: "/#about", label: "About" },       
+  { path: "/#contact", label: "Contact" },    
+  { path: "/order", label: "Order Now" },
+];
 
   return (
     <nav className="sticky top-0 z-50 bg-white text-black border-b border-gray-200 min-h-24 backdrop-blur-sm py-4">
