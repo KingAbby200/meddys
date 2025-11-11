@@ -1,6 +1,1 @@
-{
-  "buildCommand": "npm ci && npm run build",
-  "outputDirectory": "",
-  "installCommand": "npm ci",
-  "framework": "vite"
-}
+
