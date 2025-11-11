@@ -53,7 +53,7 @@ export function Carousel({ images }: CarouselProps) {
         <Button
           variant="ghost"
           size="sm"
-          className="absolute -top-[300px] sm:-top-[400px] lg:-top-[500px] -right-4 
+          className="top-4 right-4 
                      bg-white/90 hover:bg-white 
                      text-black font-medium 
                      backdrop-blur-md shadow-md 
@@ -69,7 +69,7 @@ export function Carousel({ images }: CarouselProps) {
       <Button
         variant="ghost"
         size="lg"
-        className="absolute -left-4 top-1/2 -translate-y-1/2 
+        className="left-4 top-1/2 -translate-y-1/2 
                    bg-white/90 hover:bg-white text-black 
                    backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
         onClick={goToPrevious}
@@ -82,7 +82,7 @@ export function Carousel({ images }: CarouselProps) {
       <Button
         variant="ghost"
         size="lg"
-        className="absolute -right-4 top-1/2 -translate-y-1/2 
+        className="right-4 top-1/2 -translate-y-1/2 
                    bg-white/90 hover:bg-white text-black 
                    backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
         onClick={goToNext}
