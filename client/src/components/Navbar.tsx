@@ -35,7 +35,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" data-testid="link-home">
             <div className="flex flex-col space-y-2 items-center cursor-pointer hover-elevate active-elevate-2 px-2 py-4 rounded-md">
-              <img src="/meddys.jpg" alt="logo" width="180px" />
+              <img src="/meddysLogo.png" alt="logo" width="180px" />
               <p className="text-xs text-black/70">Africana Buka</p>
             </div>
           </Link>
