@@ -53,9 +53,9 @@ export function Carousel({ images }: CarouselProps) {
         <Button
           variant="ghost"
           size="sm"
-          className="absolute -top-[300px] sm:-top-[400px] lg:-top-[500px] 
-                     bg-red-800/90 hover:bg-red-800 
-                     text-black font-medium 
+          className="absolute -top-[280px] sm:-top-[380px] lg:-top-[480px] 
+                     bg-red-600/90 hover:bg-red-600 
+                     text-white font-medium 
                      backdrop-blur-md shadow-md 
                      px-4 py-2 rounded-full 
                      text-sm sm:text-base z-10"
