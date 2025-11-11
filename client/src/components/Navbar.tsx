@@ -26,41 +26,31 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/menu", label: "Menu" },
-    { path: "/#about", label: "About" },
-    { path: "/#contact", label: "Contact" },
+    { path: "/#about", label: "About", hash: "about" },
+    { path: "/#contact", label: "Contact", hash: "contact" },
     { path: "/order", label: "Order Now" },
   ];
 
-  // Helper: Check if current page matches link (including hash)
-  const isActive = (linkPath: string) => {
+  // Check if current page matches link
+  const isActive = (linkPath: string, hash?: string) => {
     if (linkPath === "/") return location === "/";
-    if (linkPath.startsWith("/#")) {
-      const hash = linkPath.slice(1);
-      return location === "/" && window.location.hash === hash;
-    }
-    return location.startsWith(linkPath);
+    if (linkPath === "/order") return location.startsWith("/order");
+    if (linkPath === "/menu") return location === "/menu";
+    if (hash) return location === "/" && window.location.hash === `#${hash}`;
+    return false;
   };
 
-  // Helper: Handle smooth scroll for hash links
-  const handleHashClick = (e: React.MouseEvent, path: string) => {
-    if (path.includes("#")) {
-      e.preventDefault();
-      const [basePath, hash] = path.split("#");
-      const id = hash;
+  // Handle cross-page hash navigation
+  const navigateToHash = (basePath: string, hash?: string) => {
+    const targetUrl = hash ? `${basePath}#${hash}` : basePath;
+    window.location.href = targetUrl;
+  };
 
-      // Navigate to base path first (if not already there)
-      if (location !== basePath) {
-        window.location.href = path; // Full navigation
-        return;
-      }
-
-      // Same page → smooth scroll
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-      setMobileMenuOpen(false);
-      window.history.pushState(null, "", path);
+  // Same-page smooth scroll
+  const scrollToHash = (hash: string) => {
+    const element = document.getElementById(hash);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -78,24 +68,33 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                onClick={(e) => handleHashClick(e, link.path)}
-                data-testid={`link-${link.label.toLowerCase().replace(" ", "-")}`}
-              >
-                <span
+            {navLinks.map((link) => {
+              const isHashLink = link.hash;
+              return (
+                <button
+                  key={link.path}
+                  onClick={() => {
+                    if (isHashLink) {
+                      if (location === "/") {
+                        scrollToHash(link.hash!);
+                      } else {
+                        navigateToHash("/", link.hash!);
+                      }
+                    } else {
+                      navigateToHash(link.path);
+                    }
+                  }}
                   className={`text-sm font-medium cursor-pointer hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors ${
-                    isActive(link.path)
+                    isActive(link.path, link.hash)
                       ? "text-orange-600 bg-orange-100"
                       : "text-black hover:text-orange-600"
                   }`}
+                  data-testid={`link-${link.label.toLowerCase().replace(" ", "-")}`}
                 >
                   {link.label}
-                </span>
-              </Link>
-            ))}
+                </button>
+              );
+            })}
           </div>
 
           {/* Branch + Cart + Mobile Toggle */}
@@ -124,17 +123,19 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 </SelectContent>
               </Select>
 
-              {/* CART ICON → LINKS TO /order#order-cart */}
-              <Link
-                href="/order#order-cart"
-                onClick={(e) => handleHashClick(e, "/order#order-cart")}
+              {/* CART ICON → /order#order-cart */}
+              <button
+                onClick={() => {
+                  if (location.startsWith("/order")) {
+                    scrollToHash("order-cart");
+                  } else {
+                    navigateToHash("/order", "order-cart");
+                  }
+                }}
+                className="relative"
                 data-testid="link-cart"
               >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="relative text-black hover:text-orange-600"
-                >
+                <Button variant="ghost" size="icon" className="text-black hover:text-orange-600">
                   <ShoppingCart className="w-5 h-5" />
                   {cartItemCount > 0 && (
                     <Badge
@@ -146,7 +147,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                     </Badge>
                   )}
                 </Button>
-              </Link>
+              </button>
 
               {/* Mobile Menu Toggle */}
               <Button
@@ -167,48 +168,55 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
           <div className="px-4 py-4 space-y-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                onClick={(e) => {
-                  handleHashClick(e, link.path);
-                  setMobileMenuOpen(false);
-                }}
-                data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
-              >
-                <div
-                  className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 ${
-                    isActive(link.path)
+            {navLinks.map((link) => {
+              const isHashLink = link.hash;
+              return (
+                <button
+                  key={link.path}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    if (isHashLink) {
+                      if (location === "/") {
+                        scrollToHash(link.hash!);
+                      } else {
+                        navigateToHash("/", link.hash!);
+                      }
+                    } else {
+                      navigateToHash(link.path);
+                    }
+                  }}
+                  className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 ${
+                    isActive(link.path, link.hash)
                       ? "text-orange-600 bg-orange-100"
                       : "text-black hover:text-orange-600 hover:bg-gray-100"
                   }`}
+                  data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
                 >
                   {link.label}
-                </div>
-              </Link>
-            ))}
+                </button>
+              );
+            })}
 
-            {/* Mobile Cart Link */}
-            <Link
-              href="/order#order-cart"
-              onClick={(e) => {
-                handleHashClick(e, "/order#order-cart");
+            {/* Mobile Cart */}
+            <button
+              onClick={() => {
                 setMobileMenuOpen(false);
+                if (location.startsWith("/order")) {
+                  scrollToHash("order-cart");
+                } else {
+                  navigateToHash("/order", "order-cart");
+                }
               }}
+              className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 flex items-center space-x-2 ${
+                location.startsWith("/order")
+                  ? "text-orange-600 bg-orange-100"
+                  : "text-black hover:text-orange-600 hover:bg-gray-100"
+              }`}
               data-testid="mobile-link-cart"
             >
-              <div
-                className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 flex items-center space-x-2 ${
-                  location.startsWith("/order")
-                    ? "text-orange-600 bg-orange-100"
-                    : "text-black hover:text-orange-600 hover:bg-gray-100"
-                }`}
-              >
-                <ShoppingCart className="w-5 h-5" />
-                <span>Cart {cartItemCount > 0 && `(${cartItemCount})`}</span>
-              </div>
-            </Link>
+              <ShoppingCart className="w-5 h-5" />
+              <span>Cart {cartItemCount > 0 && `(${cartItemCount})`}</span>
+            </button>
           </div>
         </div>
       )}
