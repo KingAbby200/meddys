@@ -1,9 +1,9 @@
 // client/src/components/Navbar.tsx
-import { Link, useLocation, useRoute } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -21,19 +21,8 @@ interface NavbarProps {
 }
 
 export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches }: NavbarProps) {
-  const [location, setLocation] = useLocation();
+  const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [, params] = useRoute('/:page#*:hash?');
-
-  useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      const element = document.getElementById(hash);
-      if (element) {
-        setTimeout(() => element.scrollIntoView({ behavior: 'smooth' }), 0);
-      }
-    }
-  }, [location]);
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -44,23 +33,14 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
   ];
 
   const isActive = (path: string) => {
-    const basePath = path.split('#')[0];
-    return location.startsWith(basePath);
-  };
-
-  const handleClick = (path: string, e?: React.MouseEvent) => {
-    const [base, hash] = path.split('#');
-    setMobileMenuOpen(false);
-    if (location === base && hash) {
-      const element = document.getElementById(hash);
-      if (element) {
-        e?.preventDefault();
-        element.scrollIntoView({ behavior: 'smooth' });
-        history.replaceState(null, '', `#${hash}`);
-      }
-    } else {
-      setLocation(path);
+    if (path === "/") return location === "/";
+    if (path === "/menu") return location === "/menu";
+    if (path === "/order") return location.startsWith("/order");
+    if (path.startsWith("/#")) {
+      const hash = path.slice(1);
+      return location === "/" && window.location.hash === hash;
     }
+    return false;
   };
 
   return (
@@ -79,7 +59,6 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
               <Link
                 key={link.path}
                 href={link.path}
-                onClick={(e) => handleClick(link.path, e)}
                 data-testid={`link-${link.label.toLowerCase().replace(" ", "-")}`}
               >
                 <span
@@ -105,8 +84,8 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                   if (branch) onBranchChange(branch);
                 }}
               >
-                <SelectTrigger 
-                  className="w-[120px] sm:w-[160px] bg-gray-50 border-gray-300 text-black hover:bg-gray-100" 
+                <SelectTrigger
+                  className="w-[120px] sm:w-[160px] bg-gray-50 border-gray-300 text-black hover:bg-gray-100"
                   data-testid="select-branch"
                 >
                   <SelectValue placeholder="Select branch" />
@@ -120,11 +99,8 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 </SelectContent>
               </Select>
 
-              <Link 
-                href="/order#order-cart"
-                onClick={(e) => handleClick("/order#order-cart", e)}
-                data-testid="link-cart"
-              >
+              {/* CART → /order#order-cart */}
+              <Link href="/order#order-cart" data-testid="link-cart">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -164,10 +140,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
               <Link
                 key={link.path}
                 href={link.path}
-                onClick={(e) => {
-                  handleClick(link.path, e);
-                  setMobileMenuOpen(false);
-                }}
+                onClick={() => setMobileMenuOpen(false)}
                 data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
               >
                 <div
@@ -181,6 +154,19 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 </div>
               </Link>
             ))}
+
+            <Link href="/order#order-cart" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-link-cart">
+              <div
+                className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 flex items-center space-x-2 ${
+                  location.startsWith("/order")
+                    ? "text-orange-600 bg-orange-100"
+                    : "text-black hover:text-orange-600 hover:bg-gray-100"
+                }`}
+              >
+                <ShoppingCart className="w-5 h-5" />
+                <span>Cart {cartItemCount > 0 && `(${cartItemCount})`}</span>
+              </div>
+            </Link>
           </div>
         </div>
       )}
