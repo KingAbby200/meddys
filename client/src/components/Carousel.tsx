@@ -65,12 +65,12 @@ export function Carousel({ images }: CarouselProps) {
         </Button>
       </Link>
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between top-1/2 -translate-y-1/2">
         {/* Prev Button */}
         <Button
           variant="ghost"
           size="lg"
-          className="ml-4 top-1/2 -translate-y-1/2 
+          className="ml-4 top-1/2  
                      bg-white/90 hover:bg-white text-black 
                      backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
           onClick={goToPrevious}
@@ -83,7 +83,7 @@ export function Carousel({ images }: CarouselProps) {
         <Button
           variant="ghost"
           size="lg"
-          className="mr-4 top-1/2 -translate-y-1/2 
+          className="mr-4 
                      bg-white/90 hover:bg-white text-black 
                      backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
           onClick={goToNext}
