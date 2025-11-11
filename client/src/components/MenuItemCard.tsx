@@ -20,7 +20,7 @@ export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
         />
         <Button
           size="icon"
-          className="absolute rounded-full bottom-12 left-2 bg-primary text-primary-foreground hover:bg-primary shadow-2xl w-16 h-16 hover:scale-110 transition-all duration-200"
+          className="absolute rounded-full bottom-16 left-2 bg-primary text-primary-foreground hover:bg-primary shadow-2xl w-16 h-16 hover:scale-110 transition-all duration-200"
           onClick={() => onAddToCart(item)}
           data-testid={`button-add-to-cart-${item.id}`}
         >
