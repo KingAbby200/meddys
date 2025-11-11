@@ -1,8 +1,9 @@
-import { Link, useLocation } from "wouter";
+// client/src/components/Navbar.tsx
+import { Link, useLocation, useRoute } from "wouter";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Select,
   SelectContent,
@@ -20,37 +21,45 @@ interface NavbarProps {
 }
 
 export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches }: NavbarProps) {
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [, params] = useRoute('/:page#*:hash?');
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => element.scrollIntoView({ behavior: 'smooth' }), 0);
+      }
+    }
+  }, [location]);
 
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/menu", label: "Menu" },
-    { path: "/#about", label: "About", hash: "about" },
-    { path: "/#contact", label: "Contact", hash: "contact" },
+    { path: "/#about", label: "About" },
+    { path: "/#contact", label: "Contact" },
     { path: "/order", label: "Order Now" },
   ];
 
-  // Check if current page matches link
-  const isActive = (linkPath: string, hash?: string) => {
-    if (linkPath === "/") return location === "/";
-    if (linkPath === "/order") return location.startsWith("/order");
-    if (linkPath === "/menu") return location === "/menu";
-    if (hash) return location === "/" && window.location.hash === `#${hash}`;
-    return false;
+  const isActive = (path: string) => {
+    const basePath = path.split('#')[0];
+    return location.startsWith(basePath);
   };
 
-  // Handle cross-page hash navigation
-  const navigateToHash = (basePath: string, hash?: string) => {
-    const targetUrl = hash ? `${basePath}#${hash}` : basePath;
-    window.location.href = targetUrl;
-  };
-
-  // Same-page smooth scroll
-  const scrollToHash = (hash: string) => {
-    const element = document.getElementById(hash);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleClick = (path: string, e?: React.MouseEvent) => {
+    const [base, hash] = path.split('#');
+    setMobileMenuOpen(false);
+    if (location === base && hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        e?.preventDefault();
+        element.scrollIntoView({ behavior: 'smooth' });
+        history.replaceState(null, '', `#${hash}`);
+      }
+    } else {
+      setLocation(path);
     }
   };
 
@@ -58,7 +67,6 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
     <nav className="sticky top-0 z-50 bg-white text-black border-b border-gray-200 min-h-24 backdrop-blur-sm py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
           <Link href="/" data-testid="link-home">
             <div className="flex flex-col space-y-2 items-center cursor-pointer hover-elevate active-elevate-2 px-2 py-4 rounded-md">
               <img src="/meddysLogo.png" alt="logo" width="180px" />
@@ -66,38 +74,27 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
             </div>
           </Link>
 
-          {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => {
-              const isHashLink = link.hash;
-              return (
-                <button
-                  key={link.path}
-                  onClick={() => {
-                    if (isHashLink) {
-                      if (location === "/") {
-                        scrollToHash(link.hash!);
-                      } else {
-                        navigateToHash("/", link.hash!);
-                      }
-                    } else {
-                      navigateToHash(link.path);
-                    }
-                  }}
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                href={link.path}
+                onClick={(e) => handleClick(link.path, e)}
+                data-testid={`link-${link.label.toLowerCase().replace(" ", "-")}`}
+              >
+                <span
                   className={`text-sm font-medium cursor-pointer hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors ${
-                    isActive(link.path, link.hash)
+                    isActive(link.path)
                       ? "text-orange-600 bg-orange-100"
                       : "text-black hover:text-orange-600"
                   }`}
-                  data-testid={`link-${link.label.toLowerCase().replace(" ", "-")}`}
                 >
                   {link.label}
-                </button>
-              );
-            })}
+                </span>
+              </Link>
+            ))}
           </div>
 
-          {/* Branch + Cart + Mobile Toggle */}
           <div className="flex flex-col items-left ml-2 text-xs gap-1 font-bold text-black">
             <span>Select the branch closest to you</span>
             <div className="flex items-center space-x-2 sm:space-x-4">
@@ -108,8 +105,8 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                   if (branch) onBranchChange(branch);
                 }}
               >
-                <SelectTrigger
-                  className="w-[120px] sm:w-[160px] bg-gray-50 border-gray-300 text-black hover:bg-gray-100"
+                <SelectTrigger 
+                  className="w-[120px] sm:w-[160px] bg-gray-50 border-gray-300 text-black hover:bg-gray-100" 
                   data-testid="select-branch"
                 >
                   <SelectValue placeholder="Select branch" />
@@ -123,19 +120,16 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 </SelectContent>
               </Select>
 
-              {/* CART ICON → /order#order-cart */}
-              <button
-                onClick={() => {
-                  if (location.startsWith("/order")) {
-                    scrollToHash("order-cart");
-                  } else {
-                    navigateToHash("/order", "order-cart");
-                  }
-                }}
-                className="relative"
+              <Link 
+                href="/order#order-cart"
+                onClick={(e) => handleClick("/order#order-cart", e)}
                 data-testid="link-cart"
               >
-                <Button variant="ghost" size="icon" className="text-black hover:text-orange-600">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="relative text-black hover:text-orange-600"
+                >
                   <ShoppingCart className="w-5 h-5" />
                   {cartItemCount > 0 && (
                     <Badge
@@ -147,9 +141,8 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                     </Badge>
                   )}
                 </Button>
-              </button>
+              </Link>
 
-              {/* Mobile Menu Toggle */}
               <Button
                 variant="ghost"
                 size="icon"
@@ -164,59 +157,30 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
           <div className="px-4 py-4 space-y-2">
-            {navLinks.map((link) => {
-              const isHashLink = link.hash;
-              return (
-                <button
-                  key={link.path}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    if (isHashLink) {
-                      if (location === "/") {
-                        scrollToHash(link.hash!);
-                      } else {
-                        navigateToHash("/", link.hash!);
-                      }
-                    } else {
-                      navigateToHash(link.path);
-                    }
-                  }}
-                  className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 ${
-                    isActive(link.path, link.hash)
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                href={link.path}
+                onClick={(e) => {
+                  handleClick(link.path, e);
+                  setMobileMenuOpen(false);
+                }}
+                data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
+              >
+                <div
+                  className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 ${
+                    isActive(link.path)
                       ? "text-orange-600 bg-orange-100"
                       : "text-black hover:text-orange-600 hover:bg-gray-100"
                   }`}
-                  data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
                 >
                   {link.label}
-                </button>
-              );
-            })}
-
-            {/* Mobile Cart */}
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                if (location.startsWith("/order")) {
-                  scrollToHash("order-cart");
-                } else {
-                  navigateToHash("/order", "order-cart");
-                }
-              }}
-              className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 flex items-center space-x-2 ${
-                location.startsWith("/order")
-                  ? "text-orange-600 bg-orange-100"
-                  : "text-black hover:text-orange-600 hover:bg-gray-100"
-              }`}
-              data-testid="mobile-link-cart"
-            >
-              <ShoppingCart className="w-5 h-5" />
-              <span>Cart {cartItemCount > 0 && `(${cartItemCount})`}</span>
-            </button>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       )}
