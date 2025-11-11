@@ -54,7 +54,7 @@ export function Carousel({ images }: CarouselProps) {
           variant="ghost"
           size="sm"
           className="absolute -top-[300px] sm:-top-[400px] lg:-top-[500px] 
-                     bg-white/90 hover:bg-white 
+                     bg-red-300/90 hover:bg-red-300 
                      text-black font-medium 
                      backdrop-blur-md shadow-md 
                      px-4 py-2 rounded-full 
@@ -65,7 +65,7 @@ export function Carousel({ images }: CarouselProps) {
         </Button>
       </Link>
 
-      <div className="absolute flex flex-row justify-between -top-[150px] sm:-top-[200px] lg:-top-[250px]">
+      <div className="relative flex flex-row justify-between -top-[150px] sm:-top-[200px] lg:-top-[250px]">
         {/* Prev Button */}
         <Button
           variant="ghost"
@@ -94,7 +94,7 @@ export function Carousel({ images }: CarouselProps) {
       </div>
 
       {/* Dots – Bottom Center */}
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
         {images.map((_, index) => (
           <button
             key={index}
