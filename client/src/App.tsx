@@ -40,6 +40,21 @@ function Router() {
     cartTotal,
   } = useCart();
 
+  const [location] = useLocation(); // ← ADD THIS
+
+  // GLOBAL HASH LISTENER
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
