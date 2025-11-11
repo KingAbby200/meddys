@@ -353,3 +353,40 @@
     inset: -1px;
   }
 }
+
+/* ——————————————————————————————— */
+/* HERO ZOOM & FADE ANIMATIONS     */
+/* ——————————————————————————————— */
+
+@keyframes zoom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-zoom {
+  animation: zoom 20s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
