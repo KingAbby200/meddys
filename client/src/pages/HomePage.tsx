@@ -33,20 +33,27 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
         
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
           <h1 className="font-poppins font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-fadeIn">
-            Taste Africa in Every Bite
+            Experience the rich flavors of authentic African cuisine, intercontinental dishes, and freshly baked pastries
           </h1>
           <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-300">
-            From sizzling jollof to golden pastries — every dish tells a story of flavor, family, and tradition.
+            From sizzling jollof to golden pastries. Every dish tells a story of flavour, family, and tradition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn animation-delay-600">
             <Link href="/menu">
-              <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-base sm:text-lg px-8 py-6">
+              <Button size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary text-base sm:text-lg px-8 py-6"
+                data-testid="button-view-menu"
+              >
                 Explore Menu
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <Link href="/order">
-              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 text-base sm:text-lg px-8 py-6">
+              <Button size="lg" 
+                variant="outline" 
+                className="bg-background/10 border-background/30 text-background backdrop-blur-md hover:bg-background/20 text-base sm:text-lg px-8 py-6"
+                data-testid="button-order-now"
+              >
                 Order Now
               </Button>
             </Link>
@@ -72,25 +79,25 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                <Utensils className="w-8 h-8 text-orange-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
+                <Utensils className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-2">Authentic Cuisine</h3>
               <p className="text-muted-foreground">Traditional African recipes prepared with love</p>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                <Clock className="w-8 h-8 text-orange-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
+                <Clock className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-2">Fast Service</h3>
               <p className="text-muted-foreground">Quick prep and delivery to satisfy your cravings</p>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                <MapPin className="w-8 h-8 text-orange-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
+                <MapPin className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-2">Three Locations</h3>
-              <p className="text-muted-foreground">Egbeda, Cement, Baruwa — order from your nearest</p>
+              <p className="text-muted-foreground">Egbeda, Cement, Baruwa. Order from your nearest</p>
             </div>
           </div>
         </div>
