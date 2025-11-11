@@ -36,7 +36,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
             Crave It. Taste It. Love It.
           </h1>
           <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-300">
-            Experience the rich flavors of authentic African cuisine, intercontinental dishes, and freshly baked pastries
+            Experience the rich flavours of authentic African cuisine, intercontinental dishes, and freshly baked pastries
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn animation-delay-600">
             <Link href="/menu">
