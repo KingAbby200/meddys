@@ -1,4 +1,3 @@
-// client/src/components/Navbar.tsx
 import { Link, useLocation } from "wouter";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches }: NavbarProps) {
-  const [location] = useLocation();
+  const [location, navigate] = useLocation(); // ← Use navigate!
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -43,6 +42,35 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
     return false;
   };
 
+  // Handle navigation + hash
+  const handleNav = (target: string) => {
+    setMobileMenuOpen(false);
+
+    const [base, hash] = target.split("#");
+
+    if (location === base && hash) {
+      // Same page → just scroll
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      window.history.replaceState(null, "", `#${hash}`);
+    } else if (hash) {
+      // Different page + hash
+      navigate(base);
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+        window.history.replaceState(null, "", `#${hash}`);
+      }, 100);
+    } else {
+      // Normal navigation
+      navigate(target);
+    }
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-white text-black border-b border-gray-200 min-h-24 backdrop-blur-sm py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,21 +84,18 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.path}
-                href={link.path}
+                onClick={() => handleNav(link.path)}
+                className={`text-sm font-medium cursor-pointer hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors ${
+                  isActive(link.path)
+                    ? "text-orange-600 bg-orange-100"
+                    : "text-black hover:text-orange-600"
+                }`}
                 data-testid={`link-${link.label.toLowerCase().replace(" ", "-")}`}
               >
-                <span
-                  className={`text-sm font-medium cursor-pointer hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors ${
-                    isActive(link.path)
-                      ? "text-orange-600 bg-orange-100"
-                      : "text-black hover:text-orange-600"
-                  }`}
-                >
-                  {link.label}
-                </span>
-              </Link>
+                {link.label}
+              </button>
             ))}
           </div>
 
@@ -99,13 +124,12 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                 </SelectContent>
               </Select>
 
-              {/* CART → /order#order-cart */}
-              <Link href="/order#order-cart" data-testid="link-cart">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="relative text-black hover:text-orange-600"
-                >
+              {/* CART ICON */}
+              <button
+                onClick={() => handleNav("/order#order-cart")}
+                data-testid="link-cart"
+              >
+                <Button variant="ghost" size="icon" className="text-black hover:text-orange-600 relative">
                   <ShoppingCart className="w-5 h-5" />
                   {cartItemCount > 0 && (
                     <Badge
@@ -117,7 +141,7 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
                     </Badge>
                   )}
                 </Button>
-              </Link>
+              </button>
 
               <Button
                 variant="ghost"
@@ -133,40 +157,37 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
           <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.path}
-                href={link.path}
-                onClick={() => setMobileMenuOpen(false)}
-                data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
-              >
-                <div
-                  className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 ${
-                    isActive(link.path)
-                      ? "text-orange-600 bg-orange-100"
-                      : "text-black hover:text-orange-600 hover:bg-gray-100"
-                  }`}
-                >
-                  {link.label}
-                </div>
-              </Link>
-            ))}
-
-            <Link href="/order#order-cart" onClick={() => setMobileMenuOpen(false)} data-testid="mobile-link-cart">
-              <div
-                className={`block px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 flex items-center space-x-2 ${
-                  location.startsWith("/order")
+                onClick={() => handleNav(link.path)}
+                className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 ${
+                  isActive(link.path)
                     ? "text-orange-600 bg-orange-100"
                     : "text-black hover:text-orange-600 hover:bg-gray-100"
                 }`}
+                data-testid={`mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
               >
-                <ShoppingCart className="w-5 h-5" />
-                <span>Cart {cartItemCount > 0 && `(${cartItemCount})`}</span>
-              </div>
-            </Link>
+                {link.label}
+              </button>
+            ))}
+
+            <button
+              onClick={() => handleNav("/order#order-cart")}
+              className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium cursor-pointer hover-elevate active-elevate-2 flex items-center space-x-2 ${
+                location.startsWith("/order")
+                  ? "text-orange-600 bg-orange-100"
+                  : "text-black hover:text-orange-600 hover:bg-gray-100"
+              }`}
+              data-testid="mobile-link-cart"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              <span>Cart {cartItemCount > 0 && `(${cartItemCount})`}</span>
+            </button>
           </div>
         </div>
       )}
