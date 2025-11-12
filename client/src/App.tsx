@@ -147,7 +147,11 @@ function Router() {
               onPlaceOrder={handlePlaceOrder}
             />
           </Route>
-          <Route component={NotFound} />
+        
+          {/* CATCH-ALL: Must be LAST */}
+          <Route path="*">
+            <NotFound />
+          </Route>
         </Switch>
       </main>
       <Footer />
