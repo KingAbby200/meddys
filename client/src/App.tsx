@@ -40,14 +40,16 @@ function Router() {
     cartTotal,
   } = useCart();
 
-  const [location] = useLocation(); // ← ADD THIS
+  // Get current location for hash detection
+  const [location] = useLocation();
 
-  // GLOBAL HASH LISTENER
+  // GLOBAL HASH SCROLL LISTENER — Works after route change
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
+    const hash = window.location.hash.slice(1); // Remove #
     if (hash) {
       const element = document.getElementById(hash);
       if (element) {
+        // Wait for page render
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth" });
         }, 100);
@@ -55,6 +57,7 @@ function Router() {
     }
   }, [location]);
 
+  // Load data
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
@@ -67,13 +70,19 @@ function Router() {
       .catch((error) => console.error("Error loading menu data:", error));
   }, []);
 
+  // Save branch
   useEffect(() => {
     if (selectedBranch) {
       localStorage.setItem(BRANCH_STORAGE_KEY, JSON.stringify(selectedBranch));
     }
   }, [selectedBranch]);
 
-  const handlePlaceOrder = (customerName?: string, customerPhone?: string, deliveryAddress?: string, instructions?: string) => {
+  const handlePlaceOrder = (
+    customerName?: string,
+    customerPhone?: string,
+    deliveryAddress?: string,
+    instructions?: string
+  ) => {
     if (!selectedBranch) {
       alert("Please select a branch first");
       return;
@@ -84,7 +93,15 @@ function Router() {
       return;
     }
 
-    sendWhatsAppOrder(cart, selectedBranch, cartTotal, customerName, customerPhone, deliveryAddress, instructions);
+    sendWhatsAppOrder(
+      cart,
+      selectedBranch,
+      cartTotal,
+      customerName,
+      customerPhone,
+      deliveryAddress,
+      instructions
+    );
     clearCart();
   };
 
