@@ -400,11 +400,3 @@ html {
 .animate-bounce-once {
   animation: bounce-once 0.9s ease-out;
 }
-
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
