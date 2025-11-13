@@ -1,18 +1,6 @@
 {
-  "version": 2,
-  "framework": null,
-  "installCommand": "npm ci",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/public",
   "cleanUrls": true,
   "trailingSlash": false,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist/public" }
-    }
-  ],
   "headers": [
     {
       "source": "/data.json",
@@ -20,8 +8,5 @@
         { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=60" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
