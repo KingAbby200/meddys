@@ -56,9 +56,7 @@ export type CartItem = z.infer<typeof cartItemSchema>;
 export const branchSchema = z.object({
   id: z.string(),
   name: z.string(),
-  whatsappNumber: z.string(),
-  lat: z.number(),   // ← NEW: latitude
-  lng: z.number(),   // ← NEW: longitude
+  whatsappNumber: z.string()
 });
 
 export type Branch = z.infer<typeof branchSchema>;
