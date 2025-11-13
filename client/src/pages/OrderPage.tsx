@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Plus, Minus, Trash2, ShoppingBag } from "lucide-react";
+import { Plus, Minus, Trash2, ShoppingBag, Truck, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CartItem, MenuItem, OrderItem, Branch } from "@shared/schema";
@@ -12,6 +12,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { cn } from "@/lib/utils";
 
 interface OrderPageProps {
   cart: CartItem[];
@@ -21,7 +24,13 @@ interface OrderPageProps {
   onAddToCart: (item: MenuItem) => void;
   onUpdateQuantity: (menuItemId: string, quantity: number) => void;
   onRemoveItem: (menuItemId: string) => void;
-  onPlaceOrder: (customerName?: string, customerPhone?: string, deliveryAddress?: string, instructions?: string) => void;
+  onPlaceOrder: (
+    customerName: string,
+    customerPhone: string,
+    deliveryAddress: string,
+    instructions: string,
+    deliveryMethod: "pickup" | "delivery"
+  ) => void;
 }
 
 export default function OrderPage({
@@ -38,6 +47,7 @@ export default function OrderPage({
   const [customerPhone, setCustomerPhone] = useState("");
   const [deliveryAddress, setDeliveryAddress] = useState("");
   const [instructions, setInstructions] = useState("");
+  const [deliveryMethod, setDeliveryMethod] = useState<"pickup" | "delivery">("pickup");
 
   const categorizedItems = useMemo(() => {
     const categories = [
@@ -60,7 +70,7 @@ export default function OrderPage({
     });
 
     return grouped;
-  }, [menuItems]);
+  }, [orderItems]);
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -77,7 +87,22 @@ export default function OrderPage({
       alert("Your cart is empty");
       return;
     }
-    onPlaceOrder(customerName, customerPhone, deliveryAddress, instructions);
+    if (!customerName || !customerPhone) {
+      alert("Name and phone number are required");
+      return;
+    }
+    if (deliveryMethod === "delivery" && !deliveryAddress) {
+      alert("Delivery address is required for delivery");
+      return;
+    }
+
+    onPlaceOrder(
+      customerName,
+      customerPhone,
+      deliveryAddress,
+      instructions,
+      deliveryMethod
+    );
   };
 
   return (
@@ -215,18 +240,53 @@ export default function OrderPage({
                       </div>
                     ))}
 
-                    <div className="pt-4 border-t">
-                      <div className="flex justify-between items-center mb-4">
-                        <span className="font-poppins font-bold text-xl">Total:</span>
-                        <span className="font-poppins font-bold text-2xl text-primary" data-testid="text-total">
-                          ₦{total.toLocaleString()}
-                        </span>
+                    <div className="pt-4 border-t space-y-6">
+                      {/* === DELIVERY METHOD RADIO === */}
+                      <div>
+                        <Label className="text-base font-semibold mb-3 block">
+                          Delivery Method
+                        </Label>
+                        <RadioGroup
+                          value={deliveryMethod}
+                          onValueChange={(v) => setDeliveryMethod(v as "pickup" | "delivery")}
+                          className="grid grid-cols-2 gap-3"
+                        >
+                          <div>
+                            <RadioGroupItem value="pickup" id="pickup" className="peer sr-only" />
+                            <Label
+                              htmlFor="pickup"
+                              className={cn(
+                                "flex flex-col items-center justify-center rounded-lg border-2 p-4 cursor-pointer transition-all",
+                                "peer-checked:border-primary peer-checked:bg-primary/5",
+                                "hover:border-primary/50"
+                              )}
+                            >
+                              <Store className="w-6 h-6 mb-2 text-primary" />
+                              <span className="font-medium">Pickup</span>
+                            </Label>
+                          </div>
+                          <div>
+                            <RadioGroupItem value="delivery" id="delivery" className="peer sr-only" />
+                            <Label
+                              htmlFor="delivery"
+                              className={cn(
+                                "flex flex-col items-center justify-center rounded-lg border-2 p-4 cursor-pointer transition-all",
+                                "peer-checked:border-primary peer-checked:bg-primary/5",
+                                "hover:border-primary/50"
+                              )}
+                            >
+                              <Truck className="w-6 h-6 mb-2 text-primary" />
+                              <span className="font-medium">Delivery</span>
+                            </Label>
+                          </div>
+                        </RadioGroup>
                       </div>
 
-                      <div className="space-y-4 mb-4">
+                      {/* === FORM FIELDS === */}
+                      <div className="space-y-4">
                         <div>
                           <Label htmlFor="customer-name" className="text-sm font-medium">
-                            Your Name (Optional)
+                            Your Name <span className="text-destructive">*</span>
                           </Label>
                           <Input
                             id="customer-name"
@@ -235,52 +295,65 @@ export default function OrderPage({
                             value={customerName}
                             onChange={(e) => setCustomerName(e.target.value)}
                             className="mt-1"
+                            required
                             data-testid="input-customer-name"
                           />
                         </div>
+
                         <div>
                           <Label htmlFor="customer-phone" className="text-sm font-medium">
-                            Phone Number (Optional)
+                            Phone Number <span className="text-destructive">*</span>
                           </Label>
                           <Input
                             id="customer-phone"
                             type="tel"
-                            placeholder="Enter your phone"
+                            placeholder="e.g. 08012345678"
                             value={customerPhone}
                             onChange={(e) => setCustomerPhone(e.target.value)}
                             className="mt-1"
+                            required
                             data-testid="input-customer-phone"
                           />
                         </div>
-                        <div>
-                          <Label htmlFor="delivery-address" className="text-sm font-medium">
-                            Your Delivery Address (Required)
-                          </Label>
-                          <Input
-                            id="delivery-address"
-                            type="text"
-                            placeholder="Enter the delivery address"
-                            value={deliveryAddress}
-                            onChange={(e) => setDeliveryAddress(e.target.value)}
-                            className="mt-1"
-                            data-testid="input-delivery-address"
-                            required={true}
-                          />
-                        </div>
+
+                        {deliveryMethod === "delivery" && (
+                          <div className="animate-in slide-in-from-top-2 duration-300">
+                            <Label htmlFor="delivery-address" className="text-sm font-medium">
+                              Delivery Address <span className="text-destructive">*</span>
+                            </Label>
+                            <Input
+                              id="delivery-address"
+                              type="text"
+                              placeholder="Enter full delivery address"
+                              value={deliveryAddress}
+                              onChange={(e) => setDeliveryAddress(e.target.value)}
+                              className="mt-1"
+                              required
+                              data-testid="input-delivery-address"
+                            />
+                          </div>
+                        )}
+
                         <div>
                           <Label htmlFor="instructions" className="text-sm font-medium">
-                             Enter your special instructions
+                            Special Instructions
                           </Label>
-                          <Input
+                          <Textarea
                             id="instructions"
-                            type="text"
-                            placeholder="(E.g. I want the soup poured on top of the amala and not in separate take away plates)"
+                            placeholder="E.g. Pour soup on top of amala, no pepper, extra plantain..."
                             value={instructions}
                             onChange={(e) => setInstructions(e.target.value)}
-                            className="mt-1"
+                            className="mt-1 min-h-24 resize-none"
                             data-testid="input-instructions"
                           />
                         </div>
+                      </div>
+
+                      <div className="flex justify-between items-center mb-4">
+                        <span className="font-poppins font-bold text-xl">Total:</span>
+                        <span className="font-poppins font-bold text-2xl text-primary" data-testid="text-total">
+                          ₦{total.toLocaleString()}
+                        </span>
                       </div>
 
                       {!selectedBranch && (
