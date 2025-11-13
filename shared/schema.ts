@@ -5,14 +5,14 @@ export const menuItemSchema = z.object({
   id: z.string(),
   name: z.string(),
   category: z.enum([
-    'African Dishes',
-    'Intercontinental',
-    'Pastries',
-    'Grills',
-    'Soups',
-    'Swallow',
-    'Proteins',
-    'Food'
+    "African Dishes",
+    "Intercontinental",
+    "Pastries",
+    "Grills",
+    "Soups",
+    "Swallow",
+    "Proteins",
+    "Food",
   ]),
   price: z.number(),
   image: z.string(),
@@ -26,14 +26,14 @@ export const orderItemSchema = z.object({
   id: z.string(),
   name: z.string(),
   category: z.enum([
-    'African Dishes',
-    'Intercontinental',
-    'Pastries',
-    'Grills',
-    'Soups',
-    'Swallow',
-    'Proteins',
-    'Food'
+    "African Dishes",
+    "Intercontinental",
+    "Pastries",
+    "Grills",
+    "Soups",
+    "Swallow",
+    "Proteins",
+    "Food",
   ]),
   price: z.number(),
   image: z.string(),
@@ -52,11 +52,13 @@ export const cartItemSchema = z.object({
 
 export type CartItem = z.infer<typeof cartItemSchema>;
 
-// Branch Schema
+// Branch Schema – UPDATED with lat/lng
 export const branchSchema = z.object({
   id: z.string(),
   name: z.string(),
   whatsappNumber: z.string(),
+  lat: z.number(),   // ← NEW: latitude
+  lng: z.number(),   // ← NEW: longitude
 });
 
 export type Branch = z.infer<typeof branchSchema>;
