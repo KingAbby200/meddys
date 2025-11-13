@@ -17,6 +17,15 @@ interface HomePageProps {
 }
 
 export default function HomePage({ carouselImages, reviews }: HomePageProps) {
+
+  useEffect(() => {
+  console.log('HomePage mounted on device:', {
+    width: window.innerWidth,
+    userAgent: navigator.userAgent,
+    imageTest: document.querySelector('section') ? 'Hero exists' : 'Hero missing'
+  });
+}, []);
+  
   return (
     <div className="min-h-screen">
       {/* HERO SECTION – ZOOM ANIMATION */}
