@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/Carousel";
@@ -18,15 +17,6 @@ interface HomePageProps {
 }
 
 export default function HomePage({ carouselImages, reviews }: HomePageProps) {
-
-  useEffect(() => {
-  console.log('HomePage mounted on device:', {
-    width: window.innerWidth,
-    userAgent: navigator.userAgent,
-    imageTest: document.querySelector('section') ? 'Hero exists' : 'Hero missing'
-  });
-}, []);
-  
   return (
     <div className="min-h-screen">
       {/* HERO SECTION – ZOOM ANIMATION */}
@@ -40,10 +30,6 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
           style={{ 
             backgroundImage: `url(/hero/lobby.jpg)`, 
             backgroundColor: '#111827'  // Dark fallback color
-          }}
-          onError={(e) => {
-            e.currentTarget.style.backgroundImage = 'none';  // Hide broken image
-            console.log('Hero image fallback activated');
           }}
         />
         
