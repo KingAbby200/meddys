@@ -161,7 +161,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
         </div>
       </section>
 
-      <ReviewsSection reviews={reviews} />
+      {/*<ReviewsSection reviews={reviews} />*/}
     </div>
   );
 }
