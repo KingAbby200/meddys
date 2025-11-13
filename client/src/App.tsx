@@ -10,6 +10,7 @@ import HomePage from "@/pages/HomePage";
 import MenuPage from "@/pages/MenuPage";
 import OrderPage from "@/pages/OrderPage";
 import NotFound from "@/pages/not-found";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { useCart } from "@/hooks/useCart";
 import { sendWhatsAppOrder } from "@/utils/whatsapp";
 import { Branch, MenuItem, OrderItem, Review } from "@shared/schema";
@@ -153,6 +154,7 @@ function Router() {
             <NotFound />
           </Route>
         </Switch>
+        <WhatsAppFloat />
       </main>
       <Footer />
     </div>
