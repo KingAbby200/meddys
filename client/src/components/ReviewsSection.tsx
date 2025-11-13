@@ -1,7 +1,8 @@
+// client/src/components/ReviewsSection.tsx
 import { Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Review } from "@shared/schema";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 
 interface ReviewsSectionProps {
@@ -10,13 +11,32 @@ interface ReviewsSectionProps {
 
 export function ReviewsSection({ reviews }: ReviewsSectionProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const animationId = useRef<number | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  // Auto-scroll effect
+  // Only animate when in viewport
   useEffect(() => {
-    const container = scrollRef.current;
-    if (!container || reviews.length === 0) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
 
-    const scrollWidth = container.scrollWidth / 2; // because we duplicate
+    if (scrollRef.current) observer.observe(scrollRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Auto-scroll only on desktop OR when visible
+  useEffect(() => {
+    if (!isVisible || reviews.length === 0) return;
+
+    // DISABLE ON MOBILE (width < 768px)
+    if (window.innerWidth < 768) return;
+
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const scrollWidth = container.scrollWidth / 2;
     let position = 0;
     const speed = 0.5;
 
@@ -24,19 +44,21 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
       position += speed;
       if (position >= scrollWidth) position = 0;
       container.scrollLeft = position;
-      requestAnimationFrame(animate);
+      animationId.current = requestAnimationFrame(animate);
     };
 
-    const id = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(id);
-  }, [reviews]);
+    animationId.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationId.current) cancelAnimationFrame(animationId.current);
+    };
+  }, [isVisible, reviews]);
 
   const duplicated = [...reviews, ...reviews];
 
   return (
     <section className="py-12 sm:py-16 bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-10">
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-foreground mb-3">
             Customer Reviews
@@ -46,7 +68,6 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
           </p>
         </div>
 
-        {/* Scrollable Container */}
         <div
           ref={scrollRef}
           className="overflow-x-auto scrollbar-hide"
@@ -58,9 +79,7 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
                 key={`${review.id}-${index}`}
                 className="flex-shrink-0 w-[300px] sm:w-[360px] p-5 bg-card border shadow-sm hover:shadow-md transition-shadow"
               >
-                {/* Reviewer Info */}
                 <div className="flex items-center gap-3 mb-4">
-                  {/* Avatar Placeholder */}
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
                     {review.customerName.charAt(0).toUpperCase()}
                   </div>
@@ -74,7 +93,6 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
                   </div>
                 </div>
 
-                {/* Stars */}
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -88,24 +106,12 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
                   ))}
                 </div>
 
-                {/* Review Text */}
                 <p className="text-sm text-card-foreground leading-relaxed line-clamp-4">
                   "{review.comment}"
                 </p>
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Optional: Scroll Indicators */}
-        <div className="flex justify-center mt-6 gap-2">
-          {reviews.length > 1 &&
-            Array.from({ length: Math.ceil(reviews.length / 2) }).map((_, i) => (
-              <div
-                key={i}
-                className="w-2 h-2 rounded-full bg-muted-foreground/30"
-              />
-            ))}
         </div>
       </div>
     </section>
