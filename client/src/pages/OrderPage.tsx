@@ -48,36 +48,6 @@ export default function OrderPage({
   const [deliveryAddress, setDeliveryAddress] = useState("");
   const [instructions, setInstructions] = useState("");
   const [deliveryMethod, setDeliveryMethod] = useState<"pickup" | "delivery">("pickup");
-  const [deliveryInfo, setDeliveryInfo] = useState<{
-    fee: number;
-    distance?: number;
-    loading: boolean;
-    error?: string;
-  }>({ fee: 0, loading: false });
-
-  useEffect(() => {
-    if (!selectedBranch || deliveryMethod !== "delivery" || !deliveryAddress.trim()) {
-      setDeliveryInfo({ fee: 0, loading: false });
-      return;
-    }
-  
-    let cancelled = false;
-    setDeliveryInfo(prev => ({ ...prev, loading: true, error: undefined }));
-  
-    calculateDeliveryFee(selectedBranch, deliveryAddress).then(result => {
-      if (!cancelled) {
-        setDeliveryInfo({
-          fee: result.fee,
-          distance: result.distanceKm,
-          loading: false,
-          error: result.error
-        });
-      }
-    });
-  
-    return () => { cancelled = true; };
-  }, [deliveryAddress, deliveryMethod, selectedBranch]);
-  
 
   const categorizedItems = useMemo(() => {
     const categories = [
@@ -379,46 +349,11 @@ export default function OrderPage({
                         </div>
                       </div>
 
-                      <div className="pt-6 border-t space-y-3">
-                        {/* Subtotal */}
-                        <div className="flex justify-between text-base">
-                          <span className="text-muted-foreground">Subtotal</span>
-                          <span>₦{subtotal.toLocaleString()}</span>
-                        </div>
-  
-                        {/* Delivery Fee */}
-                        <div className="flex justify-between text-base">
-                          <span className="text-muted-foreground flex items-center gap-2">
-                            {deliveryMethod === "delivery" ? <Truck className="w-4 h-4" /> : <Store className="w-4 h-4" />}
-                            Delivery
-                          </span>
-                          <span className="flex items-center gap-2">
-                            {deliveryMethod === "pickup" ? (
-                              <span className="text-green-600 font-medium">Free</span>
-                            ) : deliveryInfo.loading ? (
-                              <span className="text-sm animate-pulse">Calculating...</span>
-                            ) : deliveryInfo.error ? (
-                              <span className="text-xs text-destructive">Invalid address</span>
-                            ) : (
-                              <>
-                                <span>₦{deliveryInfo.fee.toLocaleString()}</span>
-                                {deliveryInfo.distance && (
-                                  <span className="text-xs text-muted-foreground">
-                                    ({deliveryInfo.distance} km)
-                                  </span>
-                                )}
-                              </>
-                            )}
-                          </span>
-                        </div>
-  
-                        {/* Final Total */}
-                        <div className="flex justify-between items-center pt-3 border-t border-border">
-                          <span className="font-poppins font-bold text-xl">Total</span>
-                          <span className="font-poppins font-bold text-2xl text-primary">
-                            ₦{(subtotal + (deliveryMethod === "delivery" ? deliveryInfo.fee : 0)).toLocaleString()}
-                          </span>
-                        </div>
+                      <div className="flex justify-between items-center mb-4">
+                        <span className="font-poppins font-bold text-xl">Total:</span>
+                        <span className="font-poppins font-bold text-2xl text-primary" data-testid="text-total">
+                          ₦{total.toLocaleString()}
+                        </span>
                       </div>
 
                       {!selectedBranch && (
