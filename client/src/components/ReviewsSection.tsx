@@ -67,7 +67,6 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
                   </div>
 
                   <p className="text-sm text-card-foreground leading-relaxed line-clamp-4">
-                    ">
                     "{review.comment}"
                   </p>
                 </Card>
