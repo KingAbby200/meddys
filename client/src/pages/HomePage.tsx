@@ -20,53 +20,45 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
   return (
     <div className="min-h-screen">
       {/* HERO SECTION – ZOOM ANIMATION */}
-      <section className="relative min-h-[70vh] sm:min-h-[85vh] md:h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
-      style={{ 
-        backgroundImage: `url(${heroImage})`,
-        backgroundColor: '#1f2937',  // ← FALLBACK: Dark gray if image fails
-      }}
-    >
-      {/* Preload fallback overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80" />
-      
-      {/* Zooming Background (duplicate for fallback) */}
-      <div
-        className="absolute inset-0 bg-cover bg-center animate-zoom"
-        style={{ 
-          backgroundImage: `url(${heroImage})`,
-          backgroundColor: '#1f2937',  // ← SAME FALLBACK
-        }}
-      />
-      
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
-        <h1 className="font-poppins font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-yellow-500 mb-6 leading-tight animate-fadeIn">
-          Crave It. Taste It. Love It.
-        </h1>
-        <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-300">
-          Experience the rich flavours of authentic African cuisine, intercontinental dishes, and freshly baked pastries
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn animation-delay-600">
-          <Link href="/menu">
-            <Button size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary text-base sm:text-lg px-8 py-6"
-              data-testid="button-view-menu"
-            >
-              Explore Menu
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </Link>
-          <Link href="/order">
-            <Button size="lg" 
-              variant="outline" 
-              className="bg-background/10 border-background/30 text-background backdrop-blur-md hover:bg-background/20 text-base sm:text-lg px-8 py-6"
-              data-testid="button-order-now"
-            >
-              Order Now
-            </Button>
-          </Link>
+      <section className="relative min-h-screen sm:min-h-[85vh] flex items-center justify-center bg-gray-900 bg-cover bg-center bg-no-repeat overflow-hidden">
+        {/* Always-visible fallback background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black/80 to-black/90" />
+        
+        {/* Try image, but don't rely on it */}
+        <div
+          className="absolute inset-0 bg-cover bg-center animate-zoom"
+          style={{ 
+            backgroundImage: `url(/hero/lobby.jpg)`, 
+            backgroundColor: '#111827'  // Dark fallback color
+          }}
+          onError={(e) => {
+            e.currentTarget.style.backgroundImage = 'none';  // Hide broken image
+            console.log('Hero image fallback activated');
+          }}
+        />
+        
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto py-20">
+          <h1 className="font-poppins font-extrabold text-4xl sm:text-5xl lg:text-7xl text-yellow-500 mb-6 leading-tight animate-fadeIn">
+            Crave It. Taste It. Love It.
+          </h1>
+          <p className="text-base sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-300">
+            Experience the rich flavours of authentic African cuisine, intercontinental dishes, and freshly baked pastries
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn animation-delay-600">
+            <Link href="/menu">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary text-base sm:text-lg px-8 py-6">
+                Explore Menu
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Link href="/order">
+              <Button size="lg" variant="outline" className="bg-background/10 border-background/30 text-background backdrop-blur-md hover:bg-background/20 text-base sm:text-lg px-8 py-6">
+                Order Now
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* CAROUSEL */}
       <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
