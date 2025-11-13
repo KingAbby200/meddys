@@ -66,13 +66,6 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
           </Link>
         </div>
       </div>
-    
-      {/* DEBUG: Temp mobile indicator (remove after testing) */}
-      {import.meta.env.DEV && (
-        <div className="absolute bottom-4 right-4 text-xs text-white/50">
-          Mobile Debug: Hero Loaded
-        </div>
-      )}
     </section>
 
       {/* CAROUSEL */}
