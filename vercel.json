@@ -1,4 +1,9 @@
 {
+  "version": 2,
+  "framework": null,
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
@@ -7,6 +12,12 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=60" }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!_next/static|_next/image|favicon.ico|data.json).*)",
+      "destination": "/index.html"
     }
   ]
 }
