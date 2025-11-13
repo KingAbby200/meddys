@@ -79,21 +79,22 @@ function Router() {
   }, [selectedBranch]);
 
   const handlePlaceOrder = (
-    customerName?: string,
-    customerPhone?: string,
-    deliveryAddress?: string,
-    instructions?: string
+    customerName: string,
+    customerPhone: string,
+    deliveryAddress: string,
+    instructions: string,
+    deliveryMethod: "pickup" | "delivery"
   ) => {
     if (!selectedBranch) {
       alert("Please select a branch first");
       return;
     }
-
+  
     if (cart.length === 0) {
       alert("Your cart is empty");
       return;
     }
-
+  
     sendWhatsAppOrder(
       cart,
       selectedBranch,
@@ -101,11 +102,12 @@ function Router() {
       customerName,
       customerPhone,
       deliveryAddress,
-      instructions
+      instructions,
+      deliveryMethod
     );
     clearCart();
   };
-
+  
   if (!menuData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
