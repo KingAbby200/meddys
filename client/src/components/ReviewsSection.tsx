@@ -17,17 +17,18 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
     const scrollWidth = scrollContainer.scrollWidth;
     const clientWidth = scrollContainer.clientWidth;
 
-    // Don't animate if content fits or on mobile
-    if (scrollWidth <= clientWidth || window.innerWidth < 768) return;
+    if (scrollWidth <= clientWidth) return;
 
     let scrollPosition = 0;
     const scrollSpeed = 0.5;
 
     const animate = () => {
       scrollPosition += scrollSpeed;
+      
       if (scrollPosition >= scrollWidth / 2) {
         scrollPosition = 0;
       }
+      
       scrollContainer.scrollLeft = scrollPosition;
       requestAnimationFrame(animate);
     };
