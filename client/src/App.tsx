@@ -95,33 +95,16 @@ function Router() {
       return;
     }
   
-    if (!customerName || !customerPhone) {
-      alert("Name and phone number are required");
-      return;
-    }
-  
-    if (deliveryMethod === "delivery" && !deliveryAddress) {
-      alert("Delivery address is required");
-      return;
-    }
-  
-    const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    const deliveryFee = deliveryMethod === "delivery" ? deliveryInfo.fee : 0;
-    const finalTotal = subtotal + deliveryFee;
-  
     sendWhatsAppOrder(
       cart,
       selectedBranch,
-      finalTotal,
+      cartTotal,
       customerName,
       customerPhone,
       deliveryAddress,
       instructions,
-      deliveryMethod,
-      deliveryFee,
-      deliveryInfo.distance
+      deliveryMethod
     );
-  
     clearCart();
   };
   
