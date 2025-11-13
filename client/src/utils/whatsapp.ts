@@ -8,7 +8,9 @@ export function generateWhatsAppMessage(
   customerPhone: string,
   deliveryAddress: string,
   instructions: string,
-  deliveryMethod: "pickup" | "delivery"
+  deliveryMethod: "pickup" | "delivery",
+  deliveryFee: number,
+  distanceKm?: number
 ): string {
   let message = `*New Order for Meddy's Africana Buka - ${branch.name}*\n\n`;
 
@@ -17,28 +19,33 @@ export function generateWhatsAppMessage(
 
   if (deliveryMethod === "delivery") {
     message += `*Delivery Address:* ${deliveryAddress}\n`;
-    message += `*Delivery Method:* Dispatch Rider\n`;
-  } else {
-    message += `*Delivery Method:* Pickup\n`;
+    message += `*Delivery Fee:* ₦${deliveryFee.toLocaleString()}`;
+    if (distanceKm) message += ` (${distanceKm} km)`;
+    message += `\n`;
   }
+  message += `*Collection:* ${deliveryMethod === "delivery" ? "Dispatch Rider" : "Pickup"}\n\n`;
 
-  message += `\n*Order Details:*\n`;
+  message += `*Order Details:*\n`;
   message += `────────────────\n\n`;
 
   items.forEach((item, index) => {
     message += `${index + 1}. ${item.name}\n`;
     message += `   Quantity: ${item.quantity}\n`;
-    message += `   Price: ₦${item.price.toLocaleString()} × ${item.quantity} = ₦${(item.price * item.quantity).toLocaleString()}\n\n`;
+    messageslines += `   Price: ₦${item.price.toLocaleString()} × ${item.quantity} = ₦${(item.price * item.quantity).toLocaleString()}\n\n`;
   });
 
   message += `────────────────\n`;
+  if (deliveryMethod === "delivery") {
+    message += `*Subtotal:* ₦${(total - deliveryFee).toLocaleString()}\n`;
+    message += `*Delivery Fee:* ₦${deliveryFee.toLocaleString()}\n`;
+  }
   message += `*Total Amount: ₦${total.toLocaleString()}*\n\n`;
 
   if (instructions) {
-    message += `*Instructions:* ${instructions}\n`;
+    message += `*Special Instructions:* ${instructions}\n\n`;
   }
 
-  message += `_Thank you for choosing Meddy's Africana Buka!_`;
+  message += `_Thank you for choosing Meddy's!_`;
 
   return message;
 }
