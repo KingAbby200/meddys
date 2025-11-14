@@ -64,11 +64,11 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
                 className="flex-shrink-0 w-[300px] sm:w-[350px] p-6 bg-card hover-elevate"
                 data-testid={`review-card-${index}`}
               >
-                <div className="flex space-x-1">
+                <div className="flex items-center space-x-1 mb-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
                     {review.customerName.charAt(0).toUpperCase()}
                   </div>
-                  <p className="font-semibold text-card-foreground">
+                  <p className="font-semibold text-card-foreground mr-auto">
                     {review.customerName}
                   </p>
                   <div className="flex gap-1 mb-3">
