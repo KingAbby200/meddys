@@ -85,7 +85,7 @@ export function Carousel({ images }: CarouselProps) {
           variant="ghost"
           size="lg"
           className="mr-4 
-                     bottom-[80px] sm:bottom-[105px] lg:bottom-[130px]
+                     bottom-[75px] sm:bottom-[100px] lg:bottom-[125px]
                      bg-white/90 hover:bg-white text-black 
                      backdrop-blur-md p-4 rounded-full shadow-lg z-10"
           onClick={goToNext}
