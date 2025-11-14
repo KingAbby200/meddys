@@ -70,7 +70,8 @@ export function Carousel({ images }: CarouselProps) {
         <Button
           variant="ghost"
           size="lg"
-          className="ml-4 -top-1/2  
+          className="ml-4 
+                     bottom-[150px] sm:bottom-[200px] lg:bottom-[250px]
                      bg-white/90 hover:bg-white text-black 
                      backdrop-blur-md p-4 rounded-full shadow-lg z-10"
           onClick={goToPrevious}
@@ -83,7 +84,8 @@ export function Carousel({ images }: CarouselProps) {
         <Button
           variant="ghost"
           size="lg"
-          className="mr-4 -top-1/2
+          className="mr-4 
+                     bottom-[150px] sm:bottom-[200px] lg:bottom-[250px]
                      bg-white/90 hover:bg-white text-black 
                      backdrop-blur-md p-4 rounded-full shadow-lg z-10"
           onClick={goToNext}
