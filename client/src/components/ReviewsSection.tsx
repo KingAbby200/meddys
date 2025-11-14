@@ -20,7 +20,7 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
     if (scrollWidth <= clientWidth) return;
 
     let scrollPosition = 0;
-    const scrollSpeed = 0.5;
+    const scrollSpeed = 0.7;
 
     const animate = () => {
       scrollPosition += scrollSpeed;
