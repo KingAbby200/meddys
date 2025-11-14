@@ -54,8 +54,8 @@ export function Carousel({ images }: CarouselProps) {
           variant="ghost"
           size="sm"
           className="absolute -top-[280px] sm:-top-[380px] lg:-top-[480px] 
-                     bg-red-600/90 hover:bg-red-600 
-                     text-white font-medium 
+                     bg-background/10 border-background/30 text-background backdrop-blur-md hover:bg-background/20 
+                     text-background font-medium 
                      backdrop-blur-md shadow-md 
                      px-4 py-2 rounded-full ml-4
                      text-sm sm:text-base z-10"
