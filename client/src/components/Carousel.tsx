@@ -71,7 +71,7 @@ export function Carousel({ images }: CarouselProps) {
           variant="ghost"
           size="lg"
           className="ml-4 
-                     bottom-[150px] sm:bottom-[200px] lg:bottom-[250px]
+                     bottom-[80px] sm:bottom-[105px] lg:bottom-[130px]
                      bg-white/90 hover:bg-white text-black 
                      backdrop-blur-md p-4 rounded-full shadow-lg z-10"
           onClick={goToPrevious}
@@ -85,7 +85,7 @@ export function Carousel({ images }: CarouselProps) {
           variant="ghost"
           size="lg"
           className="mr-4 
-                     bottom-[150px] sm:bottom-[200px] lg:bottom-[250px]
+                     bottom-[80px] sm:bottom-[105px] lg:bottom-[130px]
                      bg-white/90 hover:bg-white text-black 
                      backdrop-blur-md p-4 rounded-full shadow-lg z-10"
           onClick={goToNext}
