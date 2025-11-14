@@ -64,33 +64,33 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
                 className="flex-shrink-0 w-[300px] sm:w-[350px] p-6 bg-card hover-elevate"
                 data-testid={`review-card-${index}`}
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
-                  {review.customerName.charAt(0).toUpperCase()}
-                </div>
-                <p className="font-semibold text-card-foreground">
-                  {review.customerName}
-                </p>
-                <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-4 h-4 ${
-                      i < review.rating
-                        ? "fill-yellow-400 text-yellow-400"
-                        : "fill-muted text-muted"
-                    }`}
-                  />
-                ))}
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3 mb-3"> 
-                    <p className="text-card-foreground mb-4 text-sm leading-relaxed">
-                      "{review.comment}"
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      {new Date(review.date).toLocaleDateString()}
-                    </p>
+                <div className="flex space-x-1">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
+                    {review.customerName.charAt(0).toUpperCase()}
                   </div>
+                  <p className="font-semibold text-card-foreground">
+                    {review.customerName}
+                  </p>
+                  <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${
+                        i < review.rating
+                          ? "fill-yellow-400 text-yellow-400"
+                          : "fill-muted text-muted"
+                      }`}
+                    />
+                  ))}
+                  </div>
+                </div>
+                <div className="flex flex-col gap-3 mb-3"> 
+                  <p className="text-card-foreground mb-4 text-sm leading-relaxed">
+                    "{review.comment}"
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {new Date(review.date).toLocaleDateString()}
+                  </p>
                 </div>
               </Card>
             ))}
