@@ -28,7 +28,7 @@ export function Carousel({ images }: CarouselProps) {
   const goToNext = () => setCurrentIndex((prev) => (prev + 1) % images.length);
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-xl">
+    <div className="relative w-full max-w-3xl mx-auto overflow-hidden">
       {/* Image Container */}
       <div className="relative h-[300px] sm:h-[400px] lg:h-[500px]">
         {images.map((image, index) => (
@@ -54,7 +54,7 @@ export function Carousel({ images }: CarouselProps) {
           variant="ghost"
           size="sm"
           className="absolute -top-[280px] sm:-top-[380px] lg:-top-[480px] 
-                     bg-background/10 border-background/30 text-background backdrop-blur-md hover:bg-background/20 
+                     bg-primary text-primary-foreground hover:bg-primary 
                      text-background font-medium 
                      backdrop-blur-md shadow-md 
                      px-4 py-2 rounded-full ml-4
@@ -72,7 +72,7 @@ export function Carousel({ images }: CarouselProps) {
           size="lg"
           className="ml-4 top-1/2  
                      bg-white/90 hover:bg-white text-black 
-                     backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
+                     backdrop-blur-md p-4 rounded-full shadow-lg z-10"
           onClick={goToPrevious}
           data-testid="button-carousel-prev"
         >
@@ -85,7 +85,7 @@ export function Carousel({ images }: CarouselProps) {
           size="lg"
           className="mr-4 
                      bg-white/90 hover:bg-white text-black 
-                     backdrop-blur-md h-10 w-10 rounded-full shadow-lg z-10"
+                     backdrop-blur-md p-4 rounded-full shadow-lg z-10"
           onClick={goToNext}
           data-testid="button-carousel-next"
         >
