@@ -197,7 +197,7 @@
       "name": "Pounded Yam",
       "category": "Swallow",
       "price": 500,
-      "image": "/menu/swallows/Pounded Yam.JPG",
+      "image": "/menu/swallows/Pounded Yam.jpg",
       "description": "Smooth and stretchy pounded yam, egusi and goat meat"
     },
     {
@@ -205,7 +205,7 @@
       "name": "Eba (Garri)",
       "category": "Swallow",
       "price": 300,
-      "image": "/menu/swallows/Eba.JPG",
+      "image": "/menu/swallows/Eba.jpg",
       "description": "Traditional cassava swallow"
     },
     {
@@ -229,7 +229,7 @@
       "name": "Goat Meat",
       "category": "Proteins",
       "price": 3000,
-      "image": "/menu/proteins/Goat Meat.JPG",
+      "image": "/menu/proteins/Goat Meat.jpg",
       "description": "Tender goat meat portion"
     },
     {
@@ -269,7 +269,7 @@
       "name": "Panla",
       "category": "Proteins",
       "price": 3500,
-      "image": "/menu/proteins/Panla.JPG",
+      "image": "/menu/proteins/Panla.jpg",
       "description": "Tasty panla portion"
     },
     {
@@ -277,7 +277,7 @@
       "name": "Boiled Titus",
       "category": "Proteins",
       "price": 3500,
-      "image": "/menu/proteins/Boiled Titus.JPG",
+      "image": "/menu/proteins/Boiled Titus.jpg",
       "description": "Boiled titus"
     },
     {
@@ -293,7 +293,7 @@
       "name": "Boiled Catfish",
       "category": "Proteins",
       "price": 4000,
-      "image": "/menu/proteins/Boiled Catfish.JPG",
+      "image": "/menu/proteins/Boiled Catfish.jpg",
       "description": "Fried titus"
     },
     {
