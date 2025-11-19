@@ -93,7 +93,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
                 <AlarmClock className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-2">Opening Hours</h3>
-              <p className="text-muted-foreground">8AM TO 10PM</p>
+              <p className="text-muted-foreground">8AM - 10PM</p>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
               <MapPinIcon className="w-10 h-10 text-red-600 mb-3" />
               <span className="font-semibold">Visit Us</span>
               <span className="text-sm text-muted-foreground text-center">
-                1, Akowonjo Rd, Egbeda Bus Stop | Cement | Baruwa
+                1, Akowonjo Rd, Egbeda Bus Stop | cement bus stop, 33 Ikuomola St, Agege, Lagos 100283, Lagos | 171 Ipaja Road, Baruwa, Lagos
               </span>
             </div>
           </div>
