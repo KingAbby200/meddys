@@ -2,8 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Branch } from "@shared/schema";
 
-const WHATSAPP_MESSAGE =
-  "Hi Meddy's Africana Buka! I'd like to place an order.";
+const WHATSAPP_MESSAGE = "Hi Meddy's Africana Buka! I'd like to place an order.";
 
 export function WhatsAppFloat() {
   const [branch, setBranch] = useState<Branch | null>(null);
