@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/Carousel";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { ArrowRight, Utensils, Clock, MapPin, Phone, MessageCircle, MapPinIcon } from "lucide-react";
-import heroImage from "/hero/lobby.jpg";
+import heroImage from "/hero/lobbyNight.jpg";
+import aboutImage from "/hero/lobby.jpg";
 
 interface HomePageProps {
   carouselImages: Array<{ id: string; image: string; alt: string }>;
