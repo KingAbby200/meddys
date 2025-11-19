@@ -104,23 +104,37 @@ export default function MenuPage({ menuItems, onAddToCart }: MenuPageProps) {
         )}
 
         {!searchQuery && (
-          <div className="mb-8">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
-                <Badge
-                  key={category}
-                  variant={selectedCategory === category ? "default" : "secondary"}
-                  className={`cursor-pointer px-4 py-2 text-sm hover-elevate active-elevate-2 ${
-                    selectedCategory === category
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground"
-                  }`}
-                  onClick={() => setSelectedCategory(category)}
-                  data-testid={`category-${category.toLowerCase().replace(/\s+/g, "-")}`}
-                >
-                  {category}
-                </Badge>
-              ))}
+          <div className="mb-8 max-w-2xl mx-auto">
+            <div className="relative flex items-center">
+              {/* Search Icon – fixed position */}
+              <Search className="absolute left-4 w-5 h-5 text-muted-foreground pointer-events-none" />
+          
+              {/* Input */}
+              <Input
+                type="search"
+                placeholder="Search for dishes..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="h-12 pl-12 pr-12 rounded-full border-2 text-base
+                           focus-visible:ring-primary focus-visible:ring-2
+                           transition-all duration-200"
+                data-testid="input-search"
+              />
+          
+              {/* Clear Button – only shows when there's text */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className={`absolute right-2 top-1/2 -translate-y-1/2 
+                           rounded-full hover:bg-accent/80 
+                           ${searchQuery ? "opacity-100" : "opacity-0 pointer-events-none"} 
+                           transition-opacity duration-200`}
+                onClick={() => setSearchQuery("")}
+                aria-label="Clear search"
+                data-testid="button-clear-search"
+              >
+                <X className="w-5 h-5" />
+              </Button>
             </div>
           </div>
         )}
