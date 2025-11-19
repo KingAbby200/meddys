@@ -122,22 +122,6 @@
     },
     {
       "id": "pastries-3",
-      "name": "Fresh Bread",
-      "category": "Pastries",
-      "price": 1500,
-      "image": "/menu/pastries/Bread.JPG",
-      "description": "Freshly baked bread, soft and warm"
-    },
-    {
-      "id": "pastries-4",
-      "name": "Hot Dog",
-      "category": "Pastries",
-      "price": 700,
-      "image": "/menu/pastries/Hot Dog.jpg",
-      "description": "Sweet satisfying hot dogs"
-    },
-    {
-      "id": "pastries-5",
       "name": "Sliced Bread",
       "category": "Pastries",
       "price": 1500,
@@ -145,7 +129,47 @@
       "description": "Freshly baked bread, soft and warm"
     },
     {
+      "id": "pastries-4",
+      "name": "Normal Bread",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Normal Bread.jpg",
+      "description": "Freshly baked bread, soft and warm"
+    },
+    {
+      "id": "pastries-5",
+      "name": "Sardine Bread (Big)",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Sardine Bread.jpg",
+      "description": "Freshly baked sardine bread, soft and warm"
+    },
+    {
       "id": "pastries-6",
+      "name": "Sardine Bread (Small)",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Sardine Bread (Small).jpg",
+      "description": "Freshly baked sardine bread in a smaller and affordable size"
+    },
+    {
+      "id": "pastries-7",
+      "name": "Burger Bread",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Burger Bread.jpg",
+      "description": "Freshly baked bread, soft and warm"
+    },
+    {
+      "id": "pastries-8",
+      "name": "Hot Dog",
+      "category": "Pastries",
+      "price": 700,
+      "image": "/menu/pastries/Hot Dog.jpg",
+      "description": "Sweet satisfying hot dogs"
+    },
+    {
+      "id": "pastries-9",
       "name": "Meddysto",
       "category": "Pastries",
       "price": 1200,
@@ -153,12 +177,36 @@
       "description": ""
     },
     {
-      "id": "pastries-7",
+      "id": "pastries-10",
+      "name": "Meat Pie",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Meat Pie.jpg",
+      "description": ""
+    },
+    {
+      "id": "pastries-11",
+      "name": "Chicken Pie",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Chicken Pie.jpg",
+      "description": ""
+    },
+    {
+      "id": "pastries-12",
       "name": "Egg Roll",
       "category": "Pastries",
       "price": 700,
       "image": "/menu/pastries/Egg Roll.jpg",
       "description": "Egg rolls that hit the spot"
+    },
+    {
+      "id": "pastries-13",
+      "name": "Special Roll",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Special Roll",
+      "description": ""
     },
     {
       "id": "soups-1",
@@ -426,6 +474,14 @@
     },
     {
       "id": "snacks-5",
+      "name": "Sandwich",
+      "category": "Snacks",
+      "price": "1200",
+      "image": "/menu/snacks/Sandwich.jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-6",
       "name": "Banana Yoghurt",
       "category": "Snacks",
       "price": "4500",
@@ -433,7 +489,7 @@
       "description": "Banana yoghurt at its freshest"
     },
     {
-      "id": "snacks-6",
+      "id": "snacks-7",
       "name": "Vanilla Yoghurt",
       "category": "Snacks",
       "price": "4500",
@@ -441,7 +497,7 @@
       "description": "Vanilla yoghurt at its freshest"
     },
     {
-      "id": "snacks-7",
+      "id": "snacks-8",
       "name": "Strawberry Yoghurt",
       "category": "Snacks",
       "price": "2000",
@@ -449,7 +505,7 @@
       "description": "Strawberry yoghurt at its freshest"
     },
     {
-      "id": "snacks-8",
+      "id": "snacks-9",
       "name": "Go Slo Ice Cream",
       "category": "Snacks",
       "price": "2000",
@@ -457,7 +513,7 @@
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-9",
+      "id": "snacks-10",
       "name": "Smyle Ice Cream (1 Litre)",
       "category": "Snacks",
       "price": "2000",
@@ -465,7 +521,7 @@
       "description": "1 litre of ice cream"
     },
     {
-      "id": "snacks-10",
+      "id": "snacks-11",
       "name": "Strawberry FanIce (250 ml)",
       "category": "Snacks",
       "price": "2000",
@@ -473,7 +529,7 @@
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-11",
+      "id": "snacks-12",
       "name": "Vanilla FanIce (250 ml)",
       "category": "Snacks",
       "price": "2000",
@@ -481,7 +537,7 @@
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-12",
+      "id": "snacks-13",
       "name": "Vanilla FanIce (450 ml)",
       "category": "Snacks",
       "price": "2000",
@@ -489,7 +545,7 @@
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-13",
+      "id": "snacks-14",
       "name": "Vanilla-Strawberry FanIce (900 ml)",
       "category": "Snacks",
       "price": "2000",
@@ -497,7 +553,7 @@
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-14",
+      "id": "snacks-15",
       "name": "White Popcorn",
       "category": "Snacks",
       "price": "2000",
@@ -505,7 +561,7 @@
       "description": "Crunchy popcorn"
     },
     {
-      "id": "snacks-15",
+      "id": "snacks-16",
       "name": "Brown Popcorn",
       "category": "Snacks",
       "price": "2000",
@@ -513,8 +569,48 @@
       "description": "Crunchy popcorn"
     },
     {
+      "id": "snacks-17",
+      "name": "Habib Yoghurt (100 ml)",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Habib Yoghurt (100 ml).jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-18",
+      "name": "Habib Yoghurt (550 ml)",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Habib Yoghurt (550 ml).jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-19",
+      "name": "Habib Yoghurt (500 ml)",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Habib Yoghurt (500 ml).jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-20",
+      "name": "Greek Yoghurt",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Greek Yoghurt.jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-21",
+      "name": "Sh'fabos Milky Yoghurt",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Sh'fabos Milky Yoghurt.jpg",
+      "description": ""
+    },
+    {
       "id": "drinks-1",
-      "name": "Bottled Water",
+      "name": "Aquavie Bottle Water",
       "category": "Drinks",
       "price": "300",
       "image": "/menu/drinks/Bottle Water.jpg",
@@ -522,6 +618,14 @@
     },
     {
       "id": "drinks-2",
+      "name": "Eva Bottle Water",
+      "category": "Drinks",
+      "price": "300",
+      "image": "/menu/drinks/Eva Bottle Water.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-3",
       "name": "Coke",
       "category": "Drinks",
       "price": "600",
@@ -529,7 +633,7 @@
       "description": ""
     },
     {
-      "id": "drinks-3",
+      "id": "drinks-4",
       "name": "Fanta",
       "category": "Drinks",
       "price": "600",
@@ -537,7 +641,15 @@
       "description": ""
     },
     {
-      "id": "drinks-4",
+      "id": "drinks-5",
+      "name": "Malta Guinness",
+      "category": "Drinks",
+      "price": "1000",
+      "image": "/menu/drinks/Malta Guinness.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-6",
       "name": "5 Alive (Pulpy)",
       "category": "Drinks",
       "price": "1700",
@@ -545,7 +657,7 @@
       "description": ""
     },
     {
-      "id": "drinks-5",
+      "id": "drinks-7",
       "name": "Hollandia Yoghurt",
       "category": "Drinks",
       "price": "2000",
@@ -553,7 +665,7 @@
       "description": ""
     },
     {
-      "id": "drinks-6",
+      "id": "drinks-8",
       "name": "Orange Sosa (1 Litre)",
       "category": "Drinks",
       "price": "2000",
@@ -561,7 +673,7 @@
       "description": ""
     },
     {
-      "id": "drinks-7",
+      "id": "drinks-9",
       "name": "Orange Sosa (35 cl)",
       "category": "Drinks",
       "price": "700",
@@ -569,7 +681,7 @@
       "description": ""
     },
     {
-      "id": "drinks-8",
+      "id": "drinks-10",
       "name": "Viju Milk",
       "category": "Drinks",
       "price": "1200",
@@ -577,13 +689,53 @@
       "description": ""
     },
     {
-      "id": "drinks-9",
+      "id": "drinks-11",
+      "name": "Viju Milk Choco",
+      "category": "Drinks",
+      "price": "1200",
+      "image": "/menu/drinks/Viju Milk Choco.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-12",
       "name": "Zobo",
       "category": "Drinks",
       "price": "1500",
       "image": "/menu/drinks/Zobo.jpg",
       "description": ""
-    }
+    },
+    {
+      "id": "drinks-13",
+      "name": "Tiger Nut",
+      "category": "Drinks",
+      "price": "1000",
+      "image": "/menu/drinks/Tiger Nut.jpg",
+      "description": ""
+    },
+    {
+      "id": "side_dish-1",
+      "name": "Coleslaw",
+      "category": "Side Dish",
+      "price": "1000",
+      "image": "/menu/side_dish/Coleslaw.jpg",
+      "description": ""
+    },
+    {
+      "id": "side_dish-2",
+      "name": "Salad (Large)",
+      "category": "Side Dish",
+      "price": "1000",
+      "image": "/menu/side_dish/Salad (Large).jpg",
+      "description": ""
+    },
+    {
+      "id": "side_dish-3",
+      "name": "Salad (Small)",
+      "category": "Side Dish",
+      "price": "",
+      "image": "/menu/side_dish/Salad (Small).jpg",
+      "description": ""
+    },
   ],
   "orderItems": [
     {
@@ -660,7 +812,15 @@
     },
     {
       "id": "grills-1",
-      "name": "Shawarma",
+      "name": "Shawarma (1 Sausage)",
+      "category": "Grills",
+      "price": 3000,
+      "image": "/menu/grills/Shawarma.jpg",
+      "description": "Mouth-watering Shawarma with double sausages"
+    },
+    {
+      "id": "grills-5",
+      "name": "Shawarma (2 Sausages)",
       "category": "Grills",
       "price": 3500,
       "image": "/menu/grills/Shawarma.jpg",
@@ -694,7 +854,7 @@
       "id": "pastries-1",
       "name": "Burger",
       "category": "Pastries",
-      "price": 6000,
+      "price": 5000,
       "image": "/menu/pastries/Burger.JPG",
       "description": "Fluffy burgers filled with seasoned meat and veggies"
     },
@@ -708,22 +868,6 @@
     },
     {
       "id": "pastries-3",
-      "name": "Fresh Bread",
-      "category": "Pastries",
-      "price": 1500,
-      "image": "/menu/pastries/Bread.JPG",
-      "description": "Freshly baked bread, soft and warm"
-    },
-    {
-      "id": "pastries-4",
-      "name": "Hot Dog",
-      "category": "Pastries",
-      "price": 700,
-      "image": "/menu/pastries/Hot Dog.jpg",
-      "description": "Sweet satisfying hot dogs"
-    },
-    {
-      "id": "pastries-5",
       "name": "Sliced Bread",
       "category": "Pastries",
       "price": 1500,
@@ -731,7 +875,47 @@
       "description": "Freshly baked bread, soft and warm"
     },
     {
+      "id": "pastries-4",
+      "name": "Normal Bread",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Normal Bread.jpg",
+      "description": "Freshly baked bread, soft and warm"
+    },
+    {
+      "id": "pastries-5",
+      "name": "Sardine Bread (Big)",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Sardine Bread.jpg",
+      "description": "Freshly baked sardine bread, soft and warm"
+    },
+    {
       "id": "pastries-6",
+      "name": "Sardine Bread (Small)",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Sardine Bread (Small).jpg",
+      "description": "Freshly baked sardine bread in a smaller and affordable size"
+    },
+    {
+      "id": "pastries-7",
+      "name": "Burger Bread",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Burger Bread.jpg",
+      "description": "Freshly baked bread, soft and warm"
+    },
+    {
+      "id": "pastries-8",
+      "name": "Hot Dog",
+      "category": "Pastries",
+      "price": 700,
+      "image": "/menu/pastries/Hot Dog.jpg",
+      "description": "Sweet satisfying hot dogs"
+    },
+    {
+      "id": "pastries-9",
       "name": "Meddysto",
       "category": "Pastries",
       "price": 1200,
@@ -739,12 +923,36 @@
       "description": ""
     },
     {
-      "id": "pastries-7",
+      "id": "pastries-10",
+      "name": "Meat Pie",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Meat Pie.jpg",
+      "description": ""
+    },
+    {
+      "id": "pastries-11",
+      "name": "Chicken Pie",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Chicken Pie.jpg",
+      "description": ""
+    },
+    {
+      "id": "pastries-12",
       "name": "Egg Roll",
       "category": "Pastries",
       "price": 700,
-      "image": "/menu/pastries/Egg Roll.JPG",
-      "description": "Sweet satisfying hot dogs"
+      "image": "/menu/pastries/Egg Roll.jpg",
+      "description": "Egg rolls that hit the spot"
+    },
+    {
+      "id": "pastries-13",
+      "name": "Special Roll",
+      "category": "Pastries",
+      "price": 1500,
+      "image": "/menu/pastries/Special Roll",
+      "description": ""
     },
     {
       "id": "soups-1",
@@ -972,31 +1180,6 @@
     },
     {
       "id": "snacks-1",
-      "name": "Banana Yoghurt",
-      "category": "Snacks",
-      "price": "4500",
-      "image": "/menu/snacks/Banana Yoghurt.jpg",
-      "description": "Banana yoghurt at its freshest"
-    },
-    {
-      "id": "snacks-2",
-      "name": "Vanilla Yoghurt",
-      "category": "Snacks",
-      "price": "2000",
-      "image": "/menu/snacks/Vanilla Yoghurt.jpg",
-      "description": "Vanilla yoghurt at its freshest"
-    },
-    
-    {
-      "id": "snacks-3",
-      "name": "Strawberry Yoghurt",
-      "category": "Snacks",
-      "price": "4500",
-      "image": "/menu/snacks/Strawberry Yoghurt.jpg",
-      "description": "Strawberry yoghurt at its freshest"
-    },
-    {
-      "id": "snacks-4",
       "name": "Parfait",
       "category": "Snacks",
       "price": "2000",
@@ -1004,7 +1187,7 @@
       "description": "Parfait at its freshest"
     },
     {
-      "id": "snacks-5",
+      "id": "snacks-2",
       "name": "Kuli-Kuli",
       "category": "Snacks",
       "price": "1500",
@@ -1012,7 +1195,7 @@
       "description": "Tasty kuli kuli"
     },
     {
-      "id": "snacks-6",
+      "id": "snacks-3",
       "name": "Chin Chin",
       "category": "Snacks",
       "price": "3000",
@@ -1020,7 +1203,7 @@
       "description": "Crunchy chin chin"
     },
     {
-      "id": "snacks-7",
+      "id": "snacks-4",
       "name": "Plantain Chips",
       "category": "Snacks",
       "price": "5500",
@@ -1028,23 +1211,55 @@
       "description": "Crunchy plantain chips"
     },
     {
+      "id": "snacks-5",
+      "name": "Sandwich",
+      "category": "Snacks",
+      "price": "1200",
+      "image": "/menu/snacks/Sandwich.jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-6",
+      "name": "Banana Yoghurt",
+      "category": "Snacks",
+      "price": "4500",
+      "image": "/menu/snacks/Banana Yoghurt.jpg",
+      "description": "Banana yoghurt at its freshest"
+    },
+    {
+      "id": "snacks-7",
+      "name": "Vanilla Yoghurt",
+      "category": "Snacks",
+      "price": "4500",
+      "image": "/menu/snacks/Vanilla Yoghurt.jpg",
+      "description": "Vanilla yoghurt at its freshest"
+    },
+    {
       "id": "snacks-8",
+      "name": "Strawberry Yoghurt",
+      "category": "Snacks",
+      "price": "2000",
+      "image": "/menu/snacks/Strawberry Yoghurt.jpg",
+      "description": "Strawberry yoghurt at its freshest"
+    },
+    {
+      "id": "snacks-9",
       "name": "Go Slo Ice Cream",
       "category": "Snacks",
-      "price": "1800",
+      "price": "2000",
       "image": "/menu/snacks/Go Slo Ice Cream.jpg",
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-9",
+      "id": "snacks-10",
       "name": "Smyle Ice Cream (1 Litre)",
       "category": "Snacks",
       "price": "2000",
-      "image": "/menu/snacks/1 litre of ice cream.jpg",
-      "description": "Tasty ice cream"
+      "image": "/menu/snacks/Smyle Ice Cream (1 Litre).jpg",
+      "description": "1 litre of ice cream"
     },
     {
-      "id": "snacks-10",
+      "id": "snacks-11",
       "name": "Strawberry FanIce (250 ml)",
       "category": "Snacks",
       "price": "2000",
@@ -1052,15 +1267,15 @@
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-11",
+      "id": "snacks-12",
       "name": "Vanilla FanIce (250 ml)",
       "category": "Snacks",
       "price": "2000",
-      "image": "/menu/snacks/Strawberry FanIce (250 ml).jpg",
+      "image": "/menu/snacks/Vanilla FanIce (250 ml).jpg",
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-12",
+      "id": "snacks-13",
       "name": "Vanilla FanIce (450 ml)",
       "category": "Snacks",
       "price": "2000",
@@ -1068,15 +1283,15 @@
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-13",
+      "id": "snacks-14",
       "name": "Vanilla-Strawberry FanIce (900 ml)",
       "category": "Snacks",
       "price": "2000",
-      "image": "/menu/snacks/Vanilla-Strawberry FanIce (250 ml).jpg",
+      "image": "/menu/snacks/Vanilla-Strawberry FanIce (900 ml).jpg",
       "description": "Tasty ice cream"
     },
     {
-      "id": "snacks-14",
+      "id": "snacks-15",
       "name": "White Popcorn",
       "category": "Snacks",
       "price": "2000",
@@ -1084,7 +1299,7 @@
       "description": "Crunchy popcorn"
     },
     {
-      "id": "snacks-15",
+      "id": "snacks-16",
       "name": "Brown Popcorn",
       "category": "Snacks",
       "price": "2000",
@@ -1092,8 +1307,48 @@
       "description": "Crunchy popcorn"
     },
     {
+      "id": "snacks-17",
+      "name": "Habib Yoghurt (100 ml)",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Habib Yoghurt (100 ml).jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-18",
+      "name": "Habib Yoghurt (550 ml)",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Habib Yoghurt (550 ml).jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-19",
+      "name": "Habib Yoghurt (500 ml)",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Habib Yoghurt (500 ml).jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-20",
+      "name": "Greek Yoghurt",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Greek Yoghurt.jpg",
+      "description": ""
+    },
+    {
+      "id": "snacks-21",
+      "name": "Sh'fabos Milky Yoghurt",
+      "category": "Snacks",
+      "price": "1000",
+      "image": "/menu/snacks/Sh'fabos Milky Yoghurt.jpg",
+      "description": ""
+    },
+    {
       "id": "drinks-1",
-      "name": "Bottled Water",
+      "name": "Aquavie Bottle Water",
       "category": "Drinks",
       "price": "300",
       "image": "/menu/drinks/Bottle Water.jpg",
@@ -1101,6 +1356,14 @@
     },
     {
       "id": "drinks-2",
+      "name": "Eva Bottle Water",
+      "category": "Drinks",
+      "price": "300",
+      "image": "/menu/drinks/Eva Bottle Water.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-3",
       "name": "Coke",
       "category": "Drinks",
       "price": "600",
@@ -1108,7 +1371,7 @@
       "description": ""
     },
     {
-      "id": "drinks-3",
+      "id": "drinks-4",
       "name": "Fanta",
       "category": "Drinks",
       "price": "600",
@@ -1116,7 +1379,15 @@
       "description": ""
     },
     {
-      "id": "drinks-4",
+      "id": "drinks-5",
+      "name": "Malta Guinness",
+      "category": "Drinks",
+      "price": "1000",
+      "image": "/menu/drinks/Malta Guinness.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-6",
       "name": "5 Alive (Pulpy)",
       "category": "Drinks",
       "price": "1700",
@@ -1124,7 +1395,7 @@
       "description": ""
     },
     {
-      "id": "drinks-5",
+      "id": "drinks-7",
       "name": "Hollandia Yoghurt",
       "category": "Drinks",
       "price": "2000",
@@ -1132,7 +1403,7 @@
       "description": ""
     },
     {
-      "id": "drinks-6",
+      "id": "drinks-8",
       "name": "Orange Sosa (1 Litre)",
       "category": "Drinks",
       "price": "2000",
@@ -1140,7 +1411,7 @@
       "description": ""
     },
     {
-      "id": "drinks-7",
+      "id": "drinks-9",
       "name": "Orange Sosa (35 cl)",
       "category": "Drinks",
       "price": "700",
@@ -1148,7 +1419,7 @@
       "description": ""
     },
     {
-      "id": "drinks-8",
+      "id": "drinks-10",
       "name": "Viju Milk",
       "category": "Drinks",
       "price": "1200",
@@ -1156,13 +1427,53 @@
       "description": ""
     },
     {
-      "id": "drinks-9",
+      "id": "drinks-11",
+      "name": "Viju Milk Choco",
+      "category": "Drinks",
+      "price": "1200",
+      "image": "/menu/drinks/Viju Milk Choco.jpg",
+      "description": ""
+    },
+    {
+      "id": "drinks-12",
       "name": "Zobo",
       "category": "Drinks",
-      "price": "1100",
+      "price": "1500",
       "image": "/menu/drinks/Zobo.jpg",
       "description": ""
-    }
+    },
+    {
+      "id": "drinks-13",
+      "name": "Tiger Nut",
+      "category": "Drinks",
+      "price": "1000",
+      "image": "/menu/drinks/Tiger Nut.jpg",
+      "description": ""
+    },
+    {
+      "id": "side_dish-1",
+      "name": "Coleslaw",
+      "category": "Side Dish",
+      "price": "1000",
+      "image": "/menu/side_dish/Coleslaw.jpg",
+      "description": ""
+    },
+    {
+      "id": "side_dish-2",
+      "name": "Salad (Large)",
+      "category": "Side Dish",
+      "price": "1000",
+      "image": "/menu/side_dish/Salad (Large).jpg",
+      "description": ""
+    },
+    {
+      "id": "side_dish-3",
+      "name": "Salad (Small)",
+      "category": "Side Dish",
+      "price": "1000",
+      "image": "/menu/side_dish/Salad (Small).jpg",
+      "description": ""
+    },
   ],
   "branches": [
     {
