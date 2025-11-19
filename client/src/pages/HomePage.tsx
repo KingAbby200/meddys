@@ -29,7 +29,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
         <div
           className="absolute inset-0 bg-cover bg-center animate-zoom"
           style={{ 
-            backgroundImage: `url(/hero/lobby.jpg)`, 
+            backgroundImage: `url(/hero/wooden-table.jpg)`, 
             backgroundColor: '#111827'  // Dark fallback color
           }}
         />
