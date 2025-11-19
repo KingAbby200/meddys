@@ -35,7 +35,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
         />
         
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto py-20">
-          <h1 className="font-poppins font-black drop-shadow-[2_2.0px_2.0px_rgba(0,0,0,1)] text-6xl sm:text-6xl lg:text-7xl text-primary mb-6 leading-tight animate-fadeIn">
+          <h1 className="font-poppins font-black drop-shadow-[2_2.0px_2.0px_rgba(255,255,255,1)] text-6xl sm:text-6xl lg:text-7xl text-primary mb-6 leading-tight animate-fadeIn">
             Crave It. Taste It. Love It.
           </h1>
           <p className="text-base sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-300">
@@ -108,11 +108,13 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
                 Our Story
               </h2>
               <p className="text-lg text-muted-foreground mb-4">
-                Meddy's Africana Buka was born from a passion to share the soul of African cuisine with Lagos. 
-                Founded in 2020, we blend tradition with innovation, serving jollof that sings, pastries that melt, and service that feels like family.
+                Meddy’s Africana Buka began with a simple dream: to bring the true heartbeat of African cooking to the streets of Lagos.
               </p>
-              <p className="text-lg text-muted-foreground">
-                Every dish is made fresh daily using local ingredients. From our kitchen to your table, we deliver not just food — but an experience.
+              <p className="text-lg text-muted-foreground mb-4">
+                Since 2020, we’ve been blending time-honored recipes with fresh ideas, serving jollof that dances on your tongue, pastries that melt the moment they touch your lips, and warmth that makes every guest feel like family.
+              </p>
+              <p className="text-lg text-muted-foreground mb-4">
+                Everything is made from scratch every single day, with ingredients sourced from local farmers and markets we know by name. What leaves our kitchen isn’t just food; it’s joy on a plate, a taste of home, and a little piece of Africa’s soul delivered straight to you.
               </p>
             </div>
             <img src={aboutImage} className="bg-gray-200 border-2 border-dashed rounded-xl w-full" />
@@ -130,7 +132,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
             <a href="tel:+2349012345678" className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Phone className="w-10 h-10 text-red-600 mb-3" />
               <span className="font-semibold">Call Us</span>
-              <span className="text-sm text-muted-foreground">+234 901 234 5678</span>
+              <span className="text-sm text-muted-foreground">+234 913 674 3651</span>
             </a>
             <a href="https://wa.me/2349012345678" className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <MessageCircle className="w-10 h-10 text-green-600 mb-3" />
