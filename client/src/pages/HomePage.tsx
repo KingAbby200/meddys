@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/Carousel";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { ArrowRight, Utensils, Clock, MapPin, Phone, MessageCircle, MapPinIcon, AlarmClock } from "lucide-react";
-import heroImage from "/hero/wooden-table.jpg";
+import heroImage from "/hero/wooden-table2.jpg";
 import aboutImage from "/hero/lobbyNight.jpg";
 
 interface HomePageProps {
@@ -27,9 +27,9 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
         
         {/* Try image, but don't rely on it */}
         <div
-          className="absolute inset-0 bg-contain bg-center animate-zoom"
+          className="absolute inset-0 bg-cover bg-bottom bg-no-repeat animate-zoom"
           style={{ 
-            backgroundImage: `url(/hero/wooden-table.jpg)`, 
+            backgroundImage: `url(/hero/wooden-table2.jpg)`, 
             backgroundColor: '#111827'  // Dark fallback color
           }}
         />
