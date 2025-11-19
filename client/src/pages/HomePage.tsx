@@ -49,7 +49,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
               </Button>
             </Link>
             <Link href="/order">
-              <Button size="lg" variant="outline" className="bg-background/10 border-background/30 text-background backdrop-blur-md hover:bg-background/20 text-base sm:text-lg px-8 py-6">
+              <Button size="lg" variant="outline" className="bg-background/10 border-background/30 text-background backdrop-blur-lg hover:bg-background/20 text-base sm:text-lg px-8 py-6">
                 Order Now
               </Button>
             </Link>
