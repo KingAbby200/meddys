@@ -732,7 +732,7 @@
       "id": "side_dish-3",
       "name": "Salad (Small)",
       "category": "Side Dish",
-      "price": "",
+      "price": "1000",
       "image": "/menu/side_dish/Salad (Small).jpg",
       "description": ""
     }
