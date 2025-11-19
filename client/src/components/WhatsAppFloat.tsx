@@ -9,15 +9,11 @@ export function WhatsAppFloat() {
   const [branch, setBranch] = useState<Branch | null>(null);
   const [hasBounced, setHasBounced] = useState(false);
 
-  // Load the selected branch from localStorage (same key the rest of the app uses)
   useEffect(() => {
     const stored = localStorage.getItem("meddys-selected-branch");
-    if (stored) {
-      setBranch(JSON.parse(stored));
-    }
+    if (stored) setBranch(JSON.parse(stored));
   }, []);
 
-  // Trigger the bounce animation once on mount
   useEffect(() => {
     const timer = setTimeout(() => setHasBounced(true), 100);
     return () => clearTimeout(timer);
@@ -25,9 +21,7 @@ export function WhatsAppFloat() {
 
   if (!branch?.whatsappNumber) return null;
 
-  const whatsappUrl = `https://wa.me/${
-    branch.whatsappNumber.replace(/\D/g, "")
-  }?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+  const whatsappUrl = `https://wa.me/${branch.whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (
     <a
@@ -35,16 +29,27 @@ export function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        fixed bottom-6 right-6 z-40
-        flex h-14 w-14 items-center justify-center
-        rounded-full bg-green-600 text-white shadow-lg
-        transition-transform duration-700 ease-out
-        hover:scale-110 hover:bg-green-700
+        fixed bottom-6 right-6 z-50
+        flex h-16 w-16 items-center justify-center
+        rounded-full bg-[#25D366] text-white shadow-2xl
+        transition-all duration-300
+        hover:scale-110 hover:bg-[#128C7E] hover:shadow-xl
         ${hasBounced ? "animate-bounce-once" : ""}
       `}
       aria-label="Chat with us on WhatsApp"
     >
-      <MessageCircle className="h-8 w-8" />
+      {/* Official WhatsApp Icon SVG */}
+      <svg
+        viewBox="0 0 32 32"
+        className="h-9 w-9 drop-shadow-md"
+        fill="currentColor"
+      >
+        <path d="M16.0001 0.333008C7.27209 0.333008 0.333435 7.27166 0.333435 15.9997C0.333435 18.8862 1.16177 21.577 2.59843 23.8324L0.333435 31.6663L8.42409 29.4633C10.6154 30.7316 13.2121 31.4663 16.0001 31.6663C24.7281 31.6663 31.6668 24.7277 31.6668 15.9997C31.6668 7.27166 24.7281 0.333008 16.0001 0.333008Z" />
+        <path
+          fill="white"
+          d="M12.5491 9.13331C12.2991 8.63331 12.0418 8.61665 11.7991 8.60831C11.6078 8.59998 11.3828 8.59998 11.1578 8.59998C10.9328 8.59998 10.5741 8.67498 10.2574 8.99998C9.94075 9.32498 9.17408 10.0416 9.17408 11.4996C9.17408 12.9576 10.1991 14.366 10.3574 14.591C10.5158 14.816 12.332 17.8743 15.3328 19.6663C17.7741 21.0996 18.6241 21.4663 19.4741 21.6746C20.3241 21.883 21.0741 21.84965 21.6741 21.7746C22.3328 21.6913 23.5491 21.0913 23.8418 20.3996C24.1341 19.708 24.1341 19.1333 24.05742 18.9746C23.9824 18.8163 23.6241 18.7413 23.2741 18.6246C22.9241 18.508 22.6991 18.433 22.4741 18.758C22.2491 19.083 21.7074 19.783 21.4574 20.008C21.2074 20.233 20.9574 20.258 20.6074 20.133C20.2574 20.008 19.3168 19.7413 18.1741 18.708C17.2991 17.908 16.7241 16.933 16.4741 16.583C16.2241 16.233 16.4418 16.008 16.6574 15.7913C16.8491 15.5996 17.0824 15.308 17.2991 15.108C17.5158 14.908 17.5991 14.758 17.7241 14.533C17.8491 14.308 17.7824 14.108 17.7074 13.933C17.6324 13.758 17.0741 12.7913 16.7741 12.1663C16.4824 11.5663 16.1824 11.6746 15.9741 11.6663C15.7741 11.658 15.5491 11.658 15.3241 11.658C15.0991 11.658 14.7074 11.733 14.3918 12.058C14.0761 12.383 13.3161 13.0996 13.3161 14.5576C13.3161 16.0156 14.3411 17.4413 14.4991 17.6663C14.6574 17.8913 15.9574 20.9496 18.4241 22.2996C19.1411 22.708 19.7241 22.983 20.1911 23.1663C20.9824 23.4496 21.7074 23.408 22.2741 23.2996C22.8991 23.183 24.0074 22.583 24.2824 21.8913C24.5574 21.19965 24.5491 20.583 24.3824 20.3996C24.2158 20.2163 23.9911 20.1413 23.6241 20.0246C23.2574 19.908 22.4741 19.1913 22.2241 19.0663C21.9741 18.9413 21.7491 19.0163 21.5241 19.3413C21.2991 19.6663 20.7574 20.3663 20.5074 20.5913C20.2574 20.8163 20.0074 20.8413 19.6574 20.7163C19.3074 20.5913 18.3668 20.3246 17.2241 19.2913C16.3491 18.4913 15.7741 17.5163 15.5241 17.1663C15.2741 16.8163 15.4918 16.5913 15.7074 16.3746C15.8991 16.1829 16.1324 15.8913 16.3491 15.6913C16.5658 15.4913 16.6491 15.3413 16.7741 15.1163C16.8991 14.8913 16.8324 14.6913 16.7574 14.5163C16.6824 14.3413 16.1241 13.3746 15.8241 12.7496C15.5491 12.1496 15.2491 12.258 15.0418 12.2496C14.8418 12.2413 14.6168 12.2413 14.3918 12.2413C14.1668 12.2413 13.7741 12.3163 13.4584 12.6413C13.1428 12.9663 12.7991 13.633 12.5491 13.133Z"
+        />
+      </svg>
     </a>
   );
 }
