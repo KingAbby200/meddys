@@ -301,7 +301,7 @@
       "name": "Asun Rice",
       "category": "Food",
       "price": 7900,
-      "image": "/menu/foods/Asun Rice and Croker Fish.JPG",
+      "image": "/menu/foods/Asun Rice and Croker Fish.jpg",
       "description": "Spicy asun rice (N1,500) and croker fish (N6,000)"
     },
     {
@@ -317,7 +317,7 @@
       "name": "Chinese Rice",
       "category": "Food",
       "price": 8400,
-      "image": "/menu/foods/Chinese Rice and Grilled Turkeys.JPG",
+      "image": "/menu/foods/Chinese Rice and Grilled Turkeys.jpg",
       "description": "Asian-style chinese (N1,500 x 2) rice and turkey (N5,000)"
     },
     {
@@ -333,7 +333,7 @@
       "name": "Jollof Spaghetti",
       "category": "Food",
       "price": 6000,
-      "image": "/menu/foods/Jollof Spaghetti and Titus Fish.JPG",
+      "image": "/menu/foods/Jollof Spaghetti and Titus Fish.jpg",
       "description": "Jollof spaghetti (N700 x 3) and titus fish (N3,500)"
     },
     {
@@ -341,7 +341,7 @@
       "name": "Coconut Rice",
       "category": "Food",
       "price": 9400,
-      "image": "/menu/foods/Coconut Rice, Stick Gizzard, Plantain, and Coleslaw.JPG",
+      "image": "/menu/foods/Coconut Rice, Stick Gizzard, Plantain, and Coleslaw.jpg",
       "description": "Coconut rice (N1,000 x 2) stick gizzard (N2,000 x 3), and plantain (N200 x 5)"
     },
     {
@@ -357,7 +357,7 @@
       "name": "White Rice",
       "category": "Food",
       "price": 8700,
-      "image": "/menu/foods/White Rice, Plantain, Chicken and Sauce.JPG",
+      "image": "/menu/foods/White Rice, Plantain, Chicken and Sauce.jpg",
       "description": "White rice (N700 x 2), plantain (N200 x 12), chicken chest (N4,500) and sauce"
     },
     {
@@ -373,7 +373,7 @@
       "name": "Jollof Rice",
       "category": "Food",
       "price": 9500,
-      "image": "/menu/foods/Jollof Rice, Plantain, and Croker Fish.JPG",
+      "image": "/menu/foods/Jollof Rice, Plantain, and Croker Fish.jpg",
       "description": "Jollof rice (N700 x 3), plantain (N200 x 5), and croker fish (N6,000)"
     },
     {
@@ -381,7 +381,7 @@
       "name": "Moi-Moi",
       "category": "Food",
       "price": 6900,
-      "image": "/menu/foods/Moi Moi, Plantain, Turkey and Coleslaw.JPG",
+      "image": "/menu/foods/Moi Moi, Plantain, Turkey and Coleslaw.jpg",
       "description": "moi moi (N500 x 2) turkey (N4,500) plantain (N200 x 5)"
     },
     {
@@ -389,7 +389,7 @@
       "name": "Boiled Plantain",
       "category": "Food",
       "price": 7800,
-      "image": "/menu/foods/Boiled Plantain, Eforiro, and Grilled Turkey.JPG",
+      "image": "/menu/foods/Boiled Plantain, Eforiro, and Grilled Turkey.jpg",
       "description": "Boiled plantain (N600 x 4), efo riro (N500), and grilled turkey (N4,500)"
     },
     {
