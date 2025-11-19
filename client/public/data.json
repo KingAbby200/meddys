@@ -2,7 +2,7 @@
   "menuItems": [
     {
       "id": "african-1",
-      "name": "Jollof Rice with Grilled Chicken",
+      "name": "Jollof Rice",
       "category": "African Dishes",
       "price": 2500,
       "image": "/menu/african/Jollof.jpg",
