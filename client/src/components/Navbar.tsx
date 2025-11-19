@@ -144,13 +144,13 @@ export function Navbar({ cartItemCount, selectedBranch, onBranchChange, branches
               </button>
 
               <Button
-                variant="ghost"
+                variant="outline"
                 size="icon"
                 className="md:hidden text-black"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 data-testid="button-mobile-menu"
               >
-                {mobileMenuOpen ? <X className="w-10 h-10" /> : <Menu className="w-10 h-10" />}
+                {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
               </Button>
             </div>
           </div>
