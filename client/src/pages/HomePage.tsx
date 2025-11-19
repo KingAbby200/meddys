@@ -35,7 +35,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
         />
         
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto py-20">
-          <h1 className="font-poppins font-extrabold text-4xl sm:text-5xl lg:text-7xl text-yellow-500 mb-6 leading-tight animate-fadeIn">
+          <h1 className="font-poppins font-extrabold text-6xl sm:text-6xl lg:text-7xl text-primary border-white border-2 md:border-4 mb-6 leading-tight animate-fadeIn">
             Crave It. Taste It. Love It.
           </h1>
           <p className="text-base sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto animate-fadeIn animation-delay-300">
