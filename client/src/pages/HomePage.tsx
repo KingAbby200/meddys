@@ -90,7 +90,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
             </div>
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
-                <Clock className="w-8 h-8 text-red-600" />
+                <AlarmClock className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-2">Opening Hours</h3>
               <p className="text-muted-foreground">8AM TO 10PM</p>
