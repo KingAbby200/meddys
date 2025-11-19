@@ -66,7 +66,8 @@ export default function MenuPage({ menuItems, onAddToCart }: MenuPageProps) {
 
         <div className="mb-8 max-w-2xl mx-auto">
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
+            
             <Input
               type="search"
               placeholder="Search for dishes..."
@@ -75,17 +76,24 @@ export default function MenuPage({ menuItems, onAddToCart }: MenuPageProps) {
               className="pl-12 pr-12 h-12 text-base rounded-full border-2 focus-visible:ring-primary"
               data-testid="input-search"
             />
-            {searchQuery && (
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-2 top-1/2 -translate-y-1/2"
-                onClick={() => setSearchQuery("")}
-                data-testid="button-clear-search"
-              >
-                <X className="w-5 h-5" />
-              </Button>
-            )}
+            
+            {/* Always reserve space on the right — only show X when there's text */}
+            <div className="absolute right-2 top-1/2 -translate-y-1/2">
+              {searchQuery ? (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 rounded-full hover:bg-accent"
+                  onClick={() => setSearchQuery("")}
+                  data-testid="button-clear-search"
+                >
+                  <X className="w-5 h-5" />
+                </Button>
+              ) : (
+                /* Invisible placeholder to maintain layout */
+                <div className="h-8 w-8" />
+              )}
+            </div>
           </div>
         </div>
 
