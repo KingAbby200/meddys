@@ -133,7 +133,7 @@
       "name": "Sardine Bread (Small)",
       "category": "Pastries",
       "price": 800,
-      "image": "/menu/pastries/Sardine Bread (Small).jpg",
+      "image": "/menu/pastries/Sardine Bread (small).jpg",
       "description": "Freshly baked sardine bread in a smaller and affordable size"
     },
     {
@@ -197,7 +197,7 @@
       "name": "Special Roll",
       "category": "Pastries",
       "price": 1500,
-      "image": "/menu/pastries/Special Roll",
+      "image": "/menu/pastries/Special Roll.jpg",
       "description": ""
     },
     {
