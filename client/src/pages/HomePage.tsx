@@ -111,7 +111,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
                 Meddy’s Africana Buka began with a simple dream: to bring the true heartbeat of African cooking to the streets of Lagos.
               </p>
               <p className="text-lg text-muted-foreground mb-4">
-                Since 2020, we’ve been blending time-honored recipes with fresh ideas, serving jollof that dances on your tongue, pastries that melt the moment they touch your lips, and warmth that makes every guest feel like family.
+                Since 2017, we’ve been blending time-honored recipes with fresh ideas, serving jollof that dances on your tongue, pastries that melt the moment they touch your lips, and warmth that makes every guest feel like family.
               </p>
               <p className="text-lg text-muted-foreground mb-4">
                 Everything is made from scratch every single day, with ingredients sourced from local farmers and markets we know by name. What leaves our kitchen isn’t just food; it’s joy on a plate, a taste of home, and a little piece of Africa’s soul delivered straight to you.
