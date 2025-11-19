@@ -62,6 +62,7 @@ export default function OrderPage({
       "Intercontinental",
       "Grills",
       "Snacks",
+      "Side Dish",
     ];
 
     const grouped: Record<string, MenuItem[]> = {};
