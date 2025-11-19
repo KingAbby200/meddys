@@ -735,7 +735,7 @@
       "price": "",
       "image": "/menu/side_dish/Salad (Small).jpg",
       "description": ""
-    },
+    }
   ],
   "orderItems": [
     {
@@ -1473,7 +1473,7 @@
       "price": "1000",
       "image": "/menu/side_dish/Salad (Small).jpg",
       "description": ""
-    },
+    }
   ],
   "branches": [
     {
