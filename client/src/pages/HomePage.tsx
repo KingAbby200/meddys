@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/Carousel";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { ArrowRight, Utensils, Clock, MapPin, Phone, MessageCircle, MapPinIcon, AlarmClock } from "lucide-react";
-import heroImage from "/hero/lobby.jpg";
+import heroImage from "/hero/wooden-table.jpg";
 import aboutImage from "/hero/lobbyNight.jpg";
 
 interface HomePageProps {
