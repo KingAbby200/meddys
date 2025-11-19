@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/Carousel";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { ArrowRight, Utensils, Clock, MapPin, Phone, MessageCircle, MapPinIcon } from "lucide-react";
-import heroImage from "/hero/lobbyNight.jpg";
-import aboutImage from "/hero/lobby.jpg";
+import heroImage from "/hero/lobby.jpg";
+import aboutImage from "/hero/lobbyNight.jpg";
 
 interface HomePageProps {
   carouselImages: Array<{ id: string; image: string; alt: string }>;
@@ -115,7 +115,7 @@ export default function HomePage({ carouselImages, reviews }: HomePageProps) {
                 Every dish is made fresh daily using local ingredients. From our kitchen to your table, we deliver not just food — but an experience.
               </p>
             </div>
-            <img src={heroImage} className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-80" />
+            <img src={heroImage} className="bg-gray-200 border-2 border-dashed rounded-xl w-full" />
           </div>
         </div>
       </section>
