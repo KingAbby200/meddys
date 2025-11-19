@@ -517,8 +517,8 @@
       "name": "Beans Porridge",
       "category": "Food",
       "price": 900,
-      "image": "/menu/foods/Porridge Beans.webp",
-      "description": "Jollof rice"
+      "image": "/menu/foods/Beans Porridge.jpg",
+      "description": ""
     },
     {
       "id": "food-12",
